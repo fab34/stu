@@ -1,0 +1,326 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+}
+
+body {
+  font-size: 1.2rem;
+}
+
+ol, ul {
+  list-style: none outside none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  height: 0;
+}
+
+#slowLife {
+  width: 950px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+#itemG .styleG {
+  padding-bottom: 10px;
+}
+#itemG .styleG .head {
+  height: 53px;
+  overflow: hidden;
+  position: relative;
+}
+#itemG .styleG .backBarBg {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(50%, rgba(238, 238, 238, 0.5)), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #eeeeee, rgba(238, 238, 238, 0.5), #ffffff);
+  background-image: -moz-linear-gradient(top, #eeeeee, rgba(238, 238, 238, 0.5), #ffffff);
+  background-image: -o-linear-gradient(top, #eeeeee, rgba(238, 238, 238, 0.5), #ffffff);
+  background-image: linear-gradient(top, #eeeeee, rgba(238, 238, 238, 0.5), #ffffff);
+  border-top: 2px solid #ff8c64;
+  bottom: 0;
+  height: 41px;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+#itemG .styleG .infoBlock {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  background-color: #ff8c64;
+  height: 46px;
+  left: 20px;
+  max-width: auto;
+  min-width: 150px;
+  position: absolute;
+  top: 1px;
+  z-index: 9;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+#itemG .styleG .infoBlock .cornerL {
+  position: absolute;
+  left: -11px;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-bottom: 11px solid #ff622c;
+  border-left: 11px solid transparent;
+  border-right: 0 solid transparent;
+}
+#itemG .styleG .infoBlock .cornerR {
+  position: absolute;
+  right: -11px;
+  top: 0;
+  height: 0;
+  width: 0;
+  border-bottom: 11px solid #ff622c;
+  border-left: 0 solid transparent;
+  border-right: 11px solid transparent;
+}
+#itemG .styleG .infoBlock .infoCont {
+  color: white;
+}
+#itemG .styleG .infoBlock .infoCont .floor {
+  color: #ff8c64;
+  font: bold 1.6rem/2.2rem Arial;
+  padding-left: 17px;
+  position: absolute;
+  top: 9px;
+  z-index: 9;
+}
+#itemG .styleG .infoBlock .infoCont .title {
+  padding-top: 10px;
+  margin: 0 12px 0 46px;
+  color: white;
+  font: bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+}
+#itemG .styleG .infoBlock .infoCont .eyeIcon {
+  position: absolute;
+  margin: 0 auto;
+  width: 32px;
+  height: 40px;
+  overflow: hidden;
+  background: transparent;
+  top: 4px;
+  left: 10px;
+  z-index: 2;
+}
+#itemG .styleG .infoBlock .infoCont .eyeIcon .downArr {
+  border-top: 12px white solid;
+  border-right: 8px transparent solid;
+  border-bottom: 0px transparent solid;
+  border-left: 8px transparent solid;
+  left: 8px;
+  position: absolute;
+  top: 25px;
+}
+#itemG .styleG .infoBlock .infoCont .eyeIcon .downArr:after {
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
+  -ms-border-radius: 28px;
+  -o-border-radius: 28px;
+  border-radius: 28px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  background-color: white;
+  content: "";
+  display: block;
+  height: 28px;
+  left: -14px;
+  position: absolute;
+  top: -36px;
+  width: 28px;
+}
+#itemG .styleG .rightmore {
+  margin-top: 24px;
+  position: absolute;
+  right: 10px;
+  text-align: right;
+  width: 500px;
+  z-index: 9;
+}
+#itemG .styleG .rightmore a {
+  color: rgba(0, 0, 0, 0.4);
+  font: 1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+  padding-right: 4px;
+}
+#itemG .styleG .rightmore a:hover {
+  text-decoration: underline;
+  color: #cc0000;
+}
+#itemG .boxdiv {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 5px;
+}
+#itemG .boxdiv .water-col {
+  float: left;
+  margin: 0 10px;
+  min-height: 1px;
+  width: 215px;
+}
+#itemG .boxdiv .water-col .water-item {
+  background: #fff;
+  box-shadow: 0 5px 8px #c3c3c3;
+  margin-top: 20px;
+  position: relative;
+  table-layout: fixed;
+  word-break: break-all;
+}
+#itemG .boxdiv .water-col .water-item:hover .img-list {
+  height: 71px;
+}
+#itemG .boxdiv .water-col .water-item .weekly-love {
+  background: url("../images/tab-G.png") no-repeat 0 0;
+  color: #fff;
+  font: bold 1.6rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  height: 33px;
+  margin-left: -4px;
+  top: 182px;
+  padding-left: 6px;
+  position: absolute;
+  width: 125px;
+  z-index: 10;
+}
+#itemG .boxdiv .water-col .water-item .cover {
+  position: relative;
+}
+#itemG .boxdiv .water-col .water-item .cover img {
+  border: 0 none;
+  display: block;
+  transition: all 0.3s ease-in-out 0s;
+}
+#itemG .boxdiv .water-col .water-item .cover a:hover img {
+  opacity: 0.8;
+  transition: all 0.3s ease-in-out 0s;
+}
+#itemG .boxdiv .water-col .water-item .cover .info {
+  background: rgba(255, 0, 0, 0.8);
+  border-radius: 2px;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  color: white;
+  font-family: verdana;
+  height: 16px;
+  line-height: 15px;
+  margin-top: -20px;
+  padding: 1px 5px;
+  position: absolute;
+  right: 0px;
+}
+#itemG .boxdiv .water-col .water-item .cover .info .yen {
+  font-family: Arial;
+  font-style: normal;
+}
+#itemG .boxdiv .water-col .water-item .img-list {
+  height: 0;
+  margin-top: 1px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out 0s;
+  width: 216px;
+}
+#itemG .boxdiv .water-col .water-item .img-list img {
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+#itemG .boxdiv .water-col .water-item .pdName {
+  color: #1d1d1d;
+  margin-top: 5px;
+  padding: 0 10px 5px;
+  line-height: 1.8rem;
+}
+#itemG .boxdiv .water-col .water-item .actions {
+  position: relative;
+  z-index: 1;
+}
+#itemG .boxdiv .water-col .water-item .actions .dg-sns-widget {
+  padding: 0 10px 5px;
+}
+#itemG .boxdiv .water-col .water-item .actions .reply-num {
+  background: url("http://img02.taobaocdn.com/tps/i2/T17bsEXjtXXXauUnsh-180-177.png") no-repeat scroll -167px -58px rgba(0, 0, 0, 0);
+  color: #cdcdcd;
+  display: block;
+  height: 22px;
+  line-height: 21px;
+  overflow: hidden;
+  padding-left: 18px;
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+#itemG .boxdiv .water-col .water-item .desc {
+  border-top: 1px dashed #ccc;
+  color: #6a6a6a;
+  line-height: 1.6rem;
+  margin-top: 4px;
+  padding: 6px 10px 10px;
+}

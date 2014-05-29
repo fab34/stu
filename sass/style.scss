@@ -1,0 +1,159 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/utilities/general/hacks";
+
+html{font-size:62.5%;font-family:"微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;}
+body{font-size:1.2rem;}
+#styleA{
+	.head{
+		height: 53px;
+		overflow: hidden;
+		width: 950px;
+		background: url("http://img.taobao.com/L1/142/411490519/assets/images/titlebg.png") no-repeat scroll 0 -53px rgba(0, 0, 0, 0);
+		.floor {
+	    	color: rgb(204, 0, 0);
+	    	float: left;
+		    font-family: arial;
+		    font-size: 16px;
+		    font-weight: bold;
+		    height: 100%;
+		    line-height: 44px;
+		    margin-left: 32px;
+		    text-align: center;
+		    width: 28px;
+		}
+		.title {
+			color: rgb(255, 255, 255);
+		    float: left;
+		    font-family: ΢���ź�;
+		    font-size: 20px;
+		    font-weight: bold;
+		    height: 100%;
+		    letter-spacing: 1px;
+		    line-height: 45px;
+		    margin-left: 7px;
+		    padding: 0 4px;
+			background: url("http://img.taobao.com/L1/142/411490519/assets/images/titletextbg.png") repeat scroll 0 -53px rgba(0, 0, 0, 0);	}
+		.flowbg {
+			float: left;
+	    	height: 100%;
+	    	width: 20px;
+		    background: url("http://img.taobao.com/L1/142/411490519/assets/images/flowbg.png") no-repeat scroll 0 -53px rgba(0, 0, 0, 0);
+		}
+		.rightmore {
+		    float: right;
+		    margin-top: 24px;
+		    padding-right: 10px;
+		    text-align: right;
+		    width: 500px;
+		    a {
+			    color: rgb(79, 79, 79);
+			    padding-right: 12px;
+			    text-decoration: none;
+			}
+		}
+	}
+}
+
+#styleB{
+	.head{
+		height: 53px;
+		overflow: hidden;
+		position: relative;
+		width: 950px;
+	}
+	.backBarBg{
+		@include background-image(linear-gradient(bottom,#eeeeee,rgba(#eeeeee,1),#ffffff));
+		border-top: 2px solid #cc0000;
+		bottom:0;
+		height: 41px;
+		position: absolute;
+		width: 100%;
+		z-index: 1;
+	}
+	.infoBlock{
+		@include border-radius(10px);
+		border-top-left-radius:0;
+		border-top-right-radius:0;
+		background-color:#cc0000;
+		height:46px;
+		left: 20px;
+		max-width:auto;
+		min-width:150px;
+		position:absolute;
+		top:1px;
+		z-index:9;
+		box-shadow:1px 1px 2px rgba(10%,10%,20%,0.6);
+		.cornerL{
+			position: absolute;
+			left:-11px;
+			top:0;
+			height:0;
+			width:0;
+			border-bottom:11px solid #a00000;
+			border-left:11px solid transparent;
+			border-right:0 solid transparent;
+		}
+		.cornerR{
+			position: absolute;
+			right:-11px;
+			top:0;
+			height:0;
+			width:0;
+			border-bottom:11px solid #a00000;
+			border-left:0 solid transparent;
+			border-right:11px solid transparent;
+		}
+		.infoCont{
+			color:#fff;
+			.floor{
+				color:#cc0000;//cc0000
+				font:bold 1.6rem/2.2rem Arial;
+				padding-left:17px;
+				position:absolute;
+				top:9px;
+				z-index:9;
+			}
+			.title{
+				padding-top:10px;
+				margin:0 12px 0 46px;
+				color:#ffffff;
+				font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;;
+				}
+			
+			.eyeIcon {
+			    position:absolute;
+			    margin: 0 auto;
+			    width: 32px;
+			    height: 40px;
+			    overflow: hidden;
+			    background:transparent;
+			    top:4px;
+			    left:10px;
+			    z-index:2;
+				.downArr {
+				    border-top: 12px #ffffff solid;
+				    border-right: 8px transparent solid;
+				    border-bottom:0px transparent solid;
+				    border-left: 8px transparent solid;
+				    left:8px;
+				    position: absolute;
+				    top:25px;
+				    &:after {
+						@include border-radius(28px);
+					    @include transform(rotate(0deg));
+						background-color: #ffffff;
+					    content: "";
+					    display: block;
+					    height:28px;
+					    left: -14px;
+					    position: absolute;
+					    top: -36px;
+					    width: 28px;
+					}
+				}
+			}
+		}
+	}
+}

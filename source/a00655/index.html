@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>多图轮换js焦点图</title>
+<script type="text/javascript" src="js/min_contentslider.js"></script>
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+</HEAD>
+<body>
+<div style="width:400px; margin:10px auto;">
+	<DIV class=syFocusThumb>
+    	<DIV id=syFocusThumb class=sliderwrapper>
+            <DIV class=contentdiv>
+				<DIV class=dPic>
+                    <A href="#" target=_blank>
+                        <IMG alt="A" src="images/2_1.jpg" width=350 height=200>
+                    </A>
+                </DIV>
+            </DIV>
+            <DIV class=contentdiv>
+                <DIV class=dPic>
+                    <A href="#" target=_blank>
+                        <IMG alt="B" src="images/60x200.jpg" width=350 height=200>
+                    </A>
+                </DIV>
+            </DIV>
+            <DIV class=contentdiv>
+                <DIV class=dPic>
+                    <A href="#" target=_blank>
+                        <IMG alt="C" src="images/2_1.jpg" width=350 height=200>
+                    </A>
+                </DIV>
+            </DIV>
+            <DIV class=contentdiv>
+                <DIV class=dPic>
+                    <A href="#" target=_blank>
+                        <IMG alt="D" src="images/350-200_2.jpg" width=350 height=200>
+                    </A>
+                </DIV>
+            </DIV>
+            <DIV class=contentdiv>
+                <DIV class=dPic>
+                    <A href="#" target=_blank>
+                        <IMG alt="E" src="images/emnb350.jpg" width=350 height=200>
+                    </A>
+                </DIV>
+            </DIV>
+    	</DIV>
+		<DIV id=paginate-syFocusThumb class=pagination>
+        	<I id=prev class=prev title=上一幅></I>
+            <DIV class=thumbWrap>
+                <DIV class=holder>
+                    <I class=toc>
+                        <A href="#" target=_blank>
+                            <IMG alt="A" src="images/2_1.jpg" width=70 height=40>
+                        </A>
+                    </I>
+                    <I class=toc>
+                        <A href="#" target=_blank>
+                            <IMG alt="B" src="images/60x200.jpg" width=70 height=40>
+                        </A>
+                    </I>
+                    <I class=toc>
+                        <A href="#" target=_blank>
+                            <IMG alt="C" src="images/2_1.jpg" width=70 height=40>
+                        </A>
+                    </I>
+                    <I class=toc>
+                        <A href="#" target=_blank>
+                            <IMG alt="D" src="images/350-200_2.jpg" width=70 height=40>
+                        </A>
+                    </I>
+                    <I class=toc>
+                        <A href="#" target=_blank>
+                            <IMG alt="E" src="images/123.jpg" width=70 height=40>
+                        </A>
+                    </I>
+                </DIV>
+            </DIV>
+      		<I id=next class=next title=下一幅></I>
+    	</DIV>
+	</DIV>
+</div>
+<SCRIPT type=text/javascript>
+//焦点图初始化
+featuredcontentslider.init({
+id: "syFocusThumb", //指定ID
+contentsource: ["inline", ""], //有效值: ["inline", ""] 嵌入html or ["ajax", "path_to_file"] 嵌入utf-8文件
+toc: "scroll", //有效值: "#increment" 标记序号, "markup", ["markup1", "markup2", etc]标记具体内容
+nextprev: ["", ""], //next_pre标记 ，如："上一条" "下一条"，设置为 "" 为不出现
+revealtype: "click", //鼠标事件有效值: “click” or “mouseover”
+enablefade: [false, 0.15], // 切换褪色度 “true”or “false”
+autorotate: [true, 3500], // 切换停留时间 “true”or “false”
+delay: 0, //事件延迟时间(默认值：0，单位：ms)
+//playtab: 4, 默认的播放舌签
+onChange: function(previndex, curindex){ //触发处理；previndex 触发处理上一个记录； curindex 触发处理上一个记录 可以自定义函数控制；参考亲子网首页“亲子部落-相册”
+}
+});
+</SCRIPT> 
+</body>
+</html>

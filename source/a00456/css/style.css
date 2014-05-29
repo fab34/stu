@@ -1,0 +1,45 @@
+@charset "utf-8";
+/****CSS RESET****/
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {margin: 0;padding: 0;border: 0;outline: 0;font-size: 100%;vertical-align: baseline;background: transparent;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+/* remember to define focus styles! */
+:focus {outline: 0;}
+/* remember to highlight inserts somehow! */
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+/* tables still need 'cellspacing="0"' in the markup */
+table {border-collapse: collapse;border-spacing: 0;}
+
+p a,p{font-size:12px;color:#666;}
+/****Container CSS****/
+#wrapper{width:1000px; margin: 0 auto;}
+#content{width:1000px; float:left; display:inline; margin:30px 0 0 0;}
+#content_left{width:300px; float:left; display:inline;}
+
+/****gallery CSS*****/
+#large_image_holder{width:650px; float:left; display:inline; margin: 0 0 0 18px;}
+#large_images{width:650px; float:left; display:inline; position:relative; z-index:10; padding:10px;  border:#464646 3px dashed; height:400px;}
+#large_images li{position:absolute; z-index:11; left:10;}
+#thumb_holder{width:300px;height:213px; float:left; display:inline; border:#464646 3px dashed;}
+#thumb_holder li {width:80px; float:left; display:inline; margin:10px;}
+.info_holder{width:300px;height:207px; float:left; display:inline;}
+
+.title{float:left; display:inline; width:300px; }
+.hide{display:none;}
+
+/****Credist****/
+.by{font-family:'Georgia',Times New Roman,Times,serif; text-transform:lowercase; color:#464646;font-style:italic; font-size:0.8em; line-height:1.1em; margin:0 0 0.5em 0;  }
+.name{font-family:'Georgia',Times New Roman,Times,serif; text-transform:lowercase;color:#E62E25;font-style:italic;  }
+.h_link{font-family:'Georgia',Times New Roman,Times,serif;color:#E62E25; font-style:italic;}

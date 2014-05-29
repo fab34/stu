@@ -1,0 +1,166 @@
+.kuan460 {
+	WIDTH: 460px;
+	TEXT-ALIGN: left;
+	height:203px;
+	margin:0 auto;
+}
+.blue01:link {
+	FONT-SIZE: 14px;
+	COLOR: #074495;
+	TEXT-DECORATION: none
+}
+.blue01:visited {
+	FONT-SIZE: 14px;
+	COLOR: #074495;
+	TEXT-DECORATION: none
+}
+.blue01:active {
+	FONT-SIZE: 14px;
+	COLOR: #074495;
+	TEXT-DECORATION: underline
+}
+.blue01:hover {
+	FONT-SIZE: 14px;
+	COLOR: #074495;
+	TEXT-DECORATION: underline
+}
+#Carousel {
+	VISIBILITY: hidden;
+	MARGIN-BOTTOM: 0px;
+	WIDTH: 460px;
+	HEIGHT: 200px
+}
+#Carousel .bg {
+	WIDTH: 460px;
+	POSITION: absolute;
+	HEIGHT: 200px
+}
+#Carousel .slide {
+	WIDTH: 460px;
+	POSITION: absolute;
+	HEIGHT: 200px
+}
+#Carousel .frame {
+	WIDTH: 460px;
+	POSITION: absolute;
+	HEIGHT: 200px
+}
+#Carousel .slide .text {
+	FONT-SIZE: 12px;
+	FLOAT: left;
+	MARGIN: 10px 0px 0px 18px;
+	WIDTH: 250px;
+	LINE-HEIGHT: 16px;
+	FONT-FAMILY: arial;
+	POSITION: absolute
+}
+#Carousel .slide .text H1 {
+	PADDING-RIGHT: 0px;
+	PADDING-LEFT: 0px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 20px;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px 0px 6px;
+	LINE-HEIGHT: 22px;
+	PADDING-TOP: 0px;
+	FONT-FAMILY: "黑体", Arial Black, sans-serif
+}
+#Carousel .slide .text H1 A {
+	COLOR: #000;
+	TEXT-DECORATION: none
+}
+#Carousel .slide .text A {
+	COLOR: #06c
+}
+#Carousel .slide .text H1 A:hover {
+	TEXT-DECORATION: underline
+}
+#Carousel .dark .text H1 A {
+	COLOR: #fff
+}
+#Carousel #music .text H1 A {
+	COLOR: #fff
+}
+#Carousel #music .text {
+	COLOR: #e3e3e3
+}
+#Carousel #music .text A {
+	COLOR: #fff
+}
+#Carousel .dark {
+	COLOR: #fff
+}
+#Carousel .dark .text A {
+	COLOR: #ffff00
+}
+#Carousel .slide .image {
+	MARGIN-TOP: 10px;
+	FLOAT: right;
+	WIDTH: 200px;
+	TEXT-ALIGN: center
+}
+#Carousel .slide .screen {
+	MARGIN-TOP: 10px;
+	WIDTH: 200px
+}
+#Carousel .slide .album {
+	MARGIN: 19px 0px 0px;
+	WIDTH: 180px
+}
+#Carousel .slide .feature {
+	MARGIN-TOP: 30px
+}
+#Carousel #CaroLinks {
+	MARGIN-TOP: 112px;
+	VISIBILITY: visible;
+	MARGIN-LEFT: 9px;
+	WIDTH: 460px;
+	LINE-HEIGHT: 42px;
+	POSITION: absolute
+}
+#CaroLinks .bubble .bbg {
+	POSITION: absolute
+}
+#CaroLinks .bubble {
+	FLOAT: left;
+	WIDTH: 222px;
+	HEIGHT: 42px
+}
+#CaroLinks .bubble#on A {
+	TEXT-DECORATION: underline
+}
+#CaroLinks .bubble A IMG {
+	MARGIN-TOP: 2px;
+	FLOAT: left;
+	MARGIN-RIGHT: 6px
+}
+#CaroLinks .bubble A SPAN {
+	MARGIN-TOP: 8px;
+	DISPLAY: block;
+	FLOAT: left;
+	OVERFLOW: hidden;
+	WIDTH: 158px;
+	CURSOR: pointer;
+	WHITE-SPACE: nowrap;
+	TEXT-OVERFLOW: clip
+}
+#CaroLinks .bubble A {
+	MARGIN-TOP: 5px;
+	DISPLAY: block;
+	FONT-SIZE: 12px;
+	MARGIN-LEFT: 10px;
+	OVERFLOW: hidden;
+	WIDTH: 200px;
+	COLOR: #06c;
+	LINE-HEIGHT: 15px;
+	MARGIN-RIGHT: 5px;
+	FONT-FAMILY: verdana;
+	POSITION: absolute;
+	HEIGHT: 30px;
+	TEXT-OVERFLOW: clip;
+	TEXT-DECORATION: none
+}
+#CaroLinks .bubble A:hover {
+	TEXT-DECORATION: underline
+}
+/* 酷站代码整理 http://www.5icool.org */
