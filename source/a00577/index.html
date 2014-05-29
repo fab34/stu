@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>带关闭功能的节日头部背景</title>
+<style>
+body { margin:0;}
+#layout { width:950px; margin:0 auto; text-align:center;}
+
+/* aoyun start */
+#clStyle{position:absolute;top:6px;right:6px;display:block;height:43px;width:18px;overflow:hidden;background:url(images/close.gif) no-repeat 0 0;cursor:pointer;}
+#clStyle.hover{background-position:-18px 0;}
+
+.AyStyle{background: url(images/indexbg.jpg) no-repeat center top #fff;}
+p,p a{font-size:12px;color:#666;}
+/* aoyun End */
+</style>
+</head>
+
+<body class="AyStyle">
+<!-- aoyun start -->
+<div id="toolbar" style="height:32px;"></div>
+<div id="clStyle" title="关闭背景"></div>
+<script language="javascript" type="text/javascript">
+<!--
+g("clStyle").onclick = function(){
+ document.body.className = "";
+ g("toolbar").style.display = "none";
+ this.style.display = "none";
+};
+g("clStyle").onmouseover = function(){this.className = "hover"};
+g("clStyle").onmouseout = function(){this.className = ""};
+//-->
+</script>
+<!-- aoyun end -->
+<div id="layout"><img src="images/index.jpg" /><br /><p style="text-align:center;"></div>
+</body>
+</html>
