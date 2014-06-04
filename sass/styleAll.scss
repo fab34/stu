@@ -3,6 +3,7 @@
 @import "compass/utilities";
 @import "compass/utilities/general/hacks";
 
+<<<<<<< HEAD
 // Mixins
 @mixin corner($position, $sizeX, $sizeY, $color){
     border-style: solid;
@@ -37,16 +38,21 @@
     }
 }
 
+=======
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 html{font-size:62.5%;font-family:"微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;}
 body{font-size:1.2rem;}
 ol, ul {list-style: none outside none;}
 a {text-decoration: none;}
+<<<<<<< HEAD
 .clearfix:after {
 	clear: both;
 	content: " ";
 	display: block;
 	height: 0;
 }
+=======
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 
 $red01:#cc0000;
 $red02:#a00000;
@@ -60,7 +66,10 @@ $styleC:rgba(192,100,100,1);
 $styleD:rgba(255,100,128,1);
 $styleE:rgba(206,168,78,1);
 $styleF:rgba(255,180,50,1);
+<<<<<<< HEAD
 $styleG:rgba(255,140,100,1);
+=======
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 
 #slowLife{
 	width: 950px;
@@ -132,7 +141,11 @@ $styleG:rgba(255,140,100,1);
 					padding-top:10px;
 					margin:0 12px 0 46px;
 					color:$wht01;
+<<<<<<< HEAD
 					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+=======
+					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;;
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 					}
 				
 				.eyeIcon {
@@ -405,7 +418,11 @@ $styleG:rgba(255,140,100,1);
 					padding-top:10px;
 					margin:0 12px 0 46px;
 					color:$wht01;
+<<<<<<< HEAD
 					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+=======
+					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;;
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 					}
 				
 				.eyeIcon {
@@ -549,7 +566,11 @@ $styleG:rgba(255,140,100,1);
 							}
 						}
 					}
+<<<<<<< HEAD
 					.text {
+=======
+					 .text {
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 					    color: rgb(42, 42, 42);
 					    display: block;
 					    height: 42px;
@@ -964,6 +985,10 @@ $styleG:rgba(255,140,100,1);
 	}
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 #itemF{
 	.styleF{
 		padding-bottom:10px; 
@@ -1102,6 +1127,7 @@ $styleG:rgba(255,140,100,1);
 					width: 230px;
 				}
 				.imgdiv {
+<<<<<<< HEAD
 				    display: block;
 				    height: 240px;
 				    overflow: hidden;
@@ -1122,6 +1148,20 @@ $styleG:rgba(255,140,100,1);
 						left: -10px;
 						transition: all 0.5s ease-in-out 0s;
 						width: 250px;
+=======
+				    height: 260px;
+				    width: 230px;
+				    display: block;
+				    overflow: hidden;
+				    position: relative;
+				    img {
+					    height: 260px;
+					    left: -15px;
+					    position: relative;
+					    top: 0;
+					    width: 260px;
+					    border: 0 none;
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 					}
 				}
 				em {
@@ -1137,15 +1177,24 @@ $styleG:rgba(255,140,100,1);
 					padding: 0 3px;
 					position: absolute;
 					text-align: center;
+<<<<<<< HEAD
 					top: 230px;
+=======
+					top: 254px;
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 					width: 100px;
 				}
 				.other {
 				    margin: 0 8px;
 				    overflow: hidden;
 				    position: relative;
+<<<<<<< HEAD
 				    .addbtn {
 					    height: 22px;
+=======
+				    .likebtn {
+					    height: 25px;
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
 					    overflow: hidden;
 					}
 					.info {
@@ -1214,6 +1263,7 @@ $styleG:rgba(255,140,100,1);
 	}
 }
 
+<<<<<<< HEAD
 #itemG{
 	.styleG{
 		padding-bottom:10px; 
@@ -1486,3 +1536,5 @@ $styleG:rgba(255,140,100,1);
 }
 
 }
+=======
+>>>>>>> f212929e4523ab9811ce589b5cfb445c55d0bfa5
