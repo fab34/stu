@@ -496,3 +496,29 @@
 2014-06-04 14:37:50 overwrite css/styleAll.css 
 2014-06-04 14:37:51     error sass/styleAll.scss (Line 6: Invalid CSS after "...general/hacks";": expected selector or at-rule, was "<<<<<<< HEAD")
 2014-06-04 14:37:51 overwrite css/styleAll.css 
+2014-06-04 14:46:36     error sass/styleAll.scss (Line 40: Invalid CSS after "}": expected selector or at-rule, was "=======")
+2014-06-04 14:46:36 overwrite css/styleAll.css 
+2014-06-04 14:46:42     error sass/styleAll.scss (Line 44: Invalid CSS after "...oration: none;}": expected selector or at-rule, was "<<<<<<< HEAD")
+2014-06-04 14:46:42 overwrite css/styleAll.css 
+2014-06-04 14:46:48     error sass/styleAll.scss (Line 63: Invalid CSS after "...(255,180,50,1);": expected selector or at-rule, was "<<<<<<< HEAD")
+2014-06-04 14:46:48 overwrite css/styleAll.css 
+2014-06-04 14:46:54     error sass/styleAll.scss (Line 135: Invalid CSS after "					color:$wht01;": expected "}", was "<<<<<<< HEAD")
+2014-06-04 14:46:54 overwrite css/styleAll.css 
+2014-06-04 14:47:29     error sass/styleAll.scss (Line 408: Invalid CSS after "					color:$wht01;": expected "}", was "<<<<<<< HEAD")
+2014-06-04 14:47:29 overwrite css/styleAll.css 
+2014-06-04 14:47:44     error sass/styleAll.scss (Line 552: Invalid CSS after "					}": expected "}", was "<<<<<<< HEAD")
+2014-06-04 14:47:44 overwrite css/styleAll.css 
+2014-06-04 14:48:08     error sass/styleAll.scss (Line 552: Invalid CSS after "					}": expected "}", was "<<<<<<< HEAD")
+2014-06-04 14:48:08 identical css/styleAll.css 
+2014-06-04 14:48:50     error sass/styleAll.scss (Line 967: Invalid CSS after "}": expected selector or at-rule, was "<<<<<<< HEAD")
+2014-06-04 14:48:50 overwrite css/styleAll.css 
+2014-06-04 14:49:10     error sass/styleAll.scss (Line 1105: Invalid CSS after "				.imgdiv {": expected "}", was "<<<<<<< HEAD")
+2014-06-04 14:49:10 overwrite css/styleAll.css 
+2014-06-04 14:49:45     error sass/styleAll.scss (Line 1140: Invalid CSS after "...-align: center;": expected "}", was "<<<<<<< HEAD")
+2014-06-04 14:49:45 overwrite css/styleAll.css 
+2014-06-04 14:49:58     error sass/styleAll.scss (Line 1147: Invalid CSS after "...tion: relative;": expected "}", was "<<<<<<< HEAD")
+2014-06-04 14:49:58 overwrite css/styleAll.css 
+2014-06-04 14:50:11     error sass/styleAll.scss (Line 1217: Invalid CSS after "}": expected selector or at-rule, was "<<<<<<< HEAD")
+2014-06-04 14:50:11 overwrite css/styleAll.css 
+2014-06-04 14:50:34 overwrite css/styleAll.css 
+2014-06-04 14:50:46 identical css/styleAll.css 
