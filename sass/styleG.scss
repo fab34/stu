@@ -3,6 +3,40 @@
 @import "compass/utilities";
 @import "compass/utilities/general/hacks";
 
+// Mixins
+@mixin corner($position, $sizeX, $sizeY, $color){
+    border-style: solid;
+    border-width: $sizeX $sizeY $sizeX $sizeY;
+    @if $position == "tl" {
+    border-color: 
+    	$color
+    	transparent
+    	transparent
+    	$color;
+	}
+	@if $position == "tr" {
+	border-color: 
+		$color
+		$color
+		transparent
+		transparent;
+	}
+	@if $position == "br" {
+	border-color: 
+		transparent
+	    $color
+	    $color
+	    transparent;
+	}
+  	@if $position == "bl" {
+  	border-color: 
+    	transparent
+      	transparent
+      	$color
+      	$color;
+    }
+}
+
 html{font-size:62.5%;font-family:"微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;}
 body{font-size:1.2rem;}
 ol, ul {list-style: none outside none;}
@@ -33,6 +67,7 @@ $styleG:rgba(255,140,100,1);
 	margin:0 auto;
 	padding: 10px;
 }
+
 #itemG{
 	.styleG{
 		padding-bottom:10px; 
@@ -161,7 +196,7 @@ $styleG:rgba(255,140,100,1);
 		    margin: 0 10px;
 		    min-height: 1px;
 		    width: 215px;
-		    .water-item {
+		    li.water-item {
 			    background: #fff;
 			    box-shadow: 0 5px 8px #c3c3c3;
 			    margin-top: 20px;
@@ -171,51 +206,40 @@ $styleG:rgba(255,140,100,1);
 			    &:hover .img-list{
 					height: 71px; 
 				}
-			    .weekly-love {
-				    background: url("../images/tab-G.png") no-repeat 0 0;
-				    color:#fff;
-				    font:bold 1.6rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
-				    height: 33px;
-				    margin-left: -4px;
-				    top: 182px;
-				    padding-left:6px;
-				    position: absolute;
-				    width: 125px;
-				    z-index: 10;
-
-				}
 				.cover {
 				    position: relative;
+				    width:215px;
+				    overflow: hidden;
 				    img {
+				    	//height:230px;
+				    	//margin-left:-5px;
 				    	border: 0 none;
 				    	display: block;
 					    transition: all 0.3s ease-in-out 0s;
 					}
-					a:hover{
+					/*a:hover{
 						img {
 					    	opacity:0.8;
 					    	transition: all 0.3s ease-in-out 0s;
 						}
-					}
+					}*/
 					.info {
-					    background:rgba(255, 0, 0, 0.8);
-					    border-radius: 2px;
-					    border-bottom-right-radius:0;
-						border-top-right-radius:0;
-					    color: rgb(255, 255, 255);
-					    font-family: verdana;
-					    height: 16px;
-					    line-height: 15px;
-					    margin-top: -20px;
-					    padding: 1px 5px;
+					    background:rgba(252, 255, 255, 0.9);
+						border-top-left-radius:6px;
+					    color: darken(red,10%);
+					    font:bold 1.3rem/1.6rem verdana;
+					    height: 17px;
+					    margin-top: -19px;
+					    padding: 1px 5px 1px 7px;
 					    position: absolute;
-					    right: 0px;
+					    right: 0;
+					    box-shadow: 0 0 0 #fff, -1px -1px 1px rgba(0, 0, 0, 0.2);
 					    .yen {
-						    font-family: Arial;
-						    font-style: normal;
+						    font: normal 1.2rem Arial;
 						}
 					}
 				}
+				
 				.img-list {
 					height: 0;
 					//height: 71px; 
@@ -262,6 +286,57 @@ $styleG:rgba(255,140,100,1);
 					padding: 6px 10px 10px;
 				}
 			}
+			&:nth-child(odd){
+				li.water-item .cover img {
+					height:215px;
+				}
+			}
+			&:nth-child(even){
+				li.water-item .cover img {
+					height:235px;
+					margin-left:-5px;
+				}
+			}
 		}
 	}
+}
+
+.label {
+	height: 30px;
+  	position: absolute;
+  	right: -4px;
+  	top: -8px;
+  	z-index: 9;
+	.back-side {
+    	@include corner("br", 4px, 4px, lighten($gry02,20%));
+    	position: absolute;
+    	left: -8px;
+    	top: -0px; // donno why is this needed :) but it fixes it
+	}
+  	.front-side {
+    	position: relative;
+	    padding: 4px 8px 4px;
+    	background: darken($gry02,30%);
+    	color: lighten(yellow,40%);
+    	font:normal 1.1rem/1.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+    	text-align: center;
+    	text-shadow: 0 1px 0 darken($gry02,40%);
+    	&:before, &:after {
+        content:"";
+        display: block;
+        position: absolute;
+        bottom: -6px;
+    }
+
+    &:before {
+        left: 0; 
+        @include corner("tl", 3px, 30px, darken($gry02,30%));
+    }
+
+    &:after {
+        right: 0; 
+        @include corner("tr", 3px, 30px, darken($gry02,30%));
+    }
+}
+
 }

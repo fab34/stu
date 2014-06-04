@@ -227,7 +227,7 @@ a {
   min-height: 1px;
   width: 215px;
 }
-#itemG .boxdiv .water-col .water-item {
+#itemG .boxdiv .water-col li.water-item {
   background: #fff;
   box-shadow: 0 5px 8px #c3c3c3;
   margin-top: 20px;
@@ -235,77 +235,66 @@ a {
   table-layout: fixed;
   word-break: break-all;
 }
-#itemG .boxdiv .water-col .water-item:hover .img-list {
+#itemG .boxdiv .water-col li.water-item:hover .img-list {
   height: 71px;
 }
-#itemG .boxdiv .water-col .water-item .weekly-love {
-  background: url("../images/tab-G.png") no-repeat 0 0;
-  color: #fff;
-  font: bold 1.6rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
-  height: 33px;
-  margin-left: -4px;
-  top: 182px;
-  padding-left: 6px;
-  position: absolute;
-  width: 125px;
-  z-index: 10;
-}
-#itemG .boxdiv .water-col .water-item .cover {
+#itemG .boxdiv .water-col li.water-item .cover {
   position: relative;
+  width: 215px;
+  overflow: hidden;
+  /*a:hover{
+  	img {
+      	opacity:0.8;
+      	transition: all 0.3s ease-in-out 0s;
+  	}
+  }*/
 }
-#itemG .boxdiv .water-col .water-item .cover img {
+#itemG .boxdiv .water-col li.water-item .cover img {
   border: 0 none;
   display: block;
   transition: all 0.3s ease-in-out 0s;
 }
-#itemG .boxdiv .water-col .water-item .cover a:hover img {
-  opacity: 0.8;
-  transition: all 0.3s ease-in-out 0s;
-}
-#itemG .boxdiv .water-col .water-item .cover .info {
-  background: rgba(255, 0, 0, 0.8);
-  border-radius: 2px;
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  color: white;
-  font-family: verdana;
-  height: 16px;
-  line-height: 15px;
-  margin-top: -20px;
-  padding: 1px 5px;
+#itemG .boxdiv .water-col li.water-item .cover .info {
+  background: rgba(252, 255, 255, 0.9);
+  border-top-left-radius: 6px;
+  color: #cc0000;
+  font: bold 1.3rem/1.6rem verdana;
+  height: 17px;
+  margin-top: -19px;
+  padding: 1px 5px 1px 7px;
   position: absolute;
-  right: 0px;
+  right: 0;
+  box-shadow: 0 0 0 white, -1px -1px 1px rgba(0, 0, 0, 0.2);
 }
-#itemG .boxdiv .water-col .water-item .cover .info .yen {
-  font-family: Arial;
-  font-style: normal;
+#itemG .boxdiv .water-col li.water-item .cover .info .yen {
+  font: normal 1.2rem Arial;
 }
-#itemG .boxdiv .water-col .water-item .img-list {
+#itemG .boxdiv .water-col li.water-item .img-list {
   height: 0;
   margin-top: 1px;
   overflow: hidden;
   transition: all 0.5s ease-in-out 0s;
   width: 216px;
 }
-#itemG .boxdiv .water-col .water-item .img-list img {
+#itemG .boxdiv .water-col li.water-item .img-list img {
   display: block;
   float: left;
   margin-right: 1px;
 }
-#itemG .boxdiv .water-col .water-item .pdName {
+#itemG .boxdiv .water-col li.water-item .pdName {
   color: #1d1d1d;
   margin-top: 5px;
   padding: 0 10px 5px;
   line-height: 1.8rem;
 }
-#itemG .boxdiv .water-col .water-item .actions {
+#itemG .boxdiv .water-col li.water-item .actions {
   position: relative;
   z-index: 1;
 }
-#itemG .boxdiv .water-col .water-item .actions .dg-sns-widget {
+#itemG .boxdiv .water-col li.water-item .actions .dg-sns-widget {
   padding: 0 10px 5px;
 }
-#itemG .boxdiv .water-col .water-item .actions .reply-num {
+#itemG .boxdiv .water-col li.water-item .actions .reply-num {
   background: url("http://img02.taobaocdn.com/tps/i2/T17bsEXjtXXXauUnsh-180-177.png") no-repeat scroll -167px -58px rgba(0, 0, 0, 0);
   color: #cdcdcd;
   display: block;
@@ -317,10 +306,60 @@ a {
   right: 10px;
   top: 0;
 }
-#itemG .boxdiv .water-col .water-item .desc {
+#itemG .boxdiv .water-col li.water-item .desc {
   border-top: 1px dashed #ccc;
   color: #6a6a6a;
   line-height: 1.6rem;
   margin-top: 4px;
   padding: 6px 10px 10px;
+}
+#itemG .boxdiv .water-col:nth-child(odd) li.water-item .cover img {
+  height: 215px;
+}
+#itemG .boxdiv .water-col:nth-child(even) li.water-item .cover img {
+  height: 235px;
+  margin-left: -5px;
+}
+
+.label {
+  height: 30px;
+  position: absolute;
+  right: -4px;
+  top: -8px;
+  z-index: 9;
+}
+.label .back-side {
+  border-style: solid;
+  border-width: 4px 4px 4px 4px;
+  border-color: transparent #666666 #666666 transparent;
+  position: absolute;
+  left: -8px;
+  top: -0px;
+}
+.label .front-side {
+  position: relative;
+  padding: 4px 8px 4px;
+  background: black;
+  color: #ffffcc;
+  font: normal 1.1rem/1.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+  text-align: center;
+  text-shadow: 0 1px 0 black;
+}
+.label .front-side:before, .label .front-side:after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -6px;
+}
+.label .front-side:before {
+  left: 0;
+  border-style: solid;
+  border-width: 3px 30px 3px 30px;
+  border-color: black transparent transparent black;
+}
+.label .front-side:after {
+  right: 0;
+  border-style: solid;
+  border-width: 3px 30px 3px 30px;
+  border-color: black black transparent transparent;
 }

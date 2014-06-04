@@ -3,10 +3,50 @@
 @import "compass/utilities";
 @import "compass/utilities/general/hacks";
 
+// Mixins
+@mixin corner($position, $sizeX, $sizeY, $color){
+    border-style: solid;
+    border-width: $sizeX $sizeY $sizeX $sizeY;
+    @if $position == "tl" {
+    border-color: 
+    	$color
+    	transparent
+    	transparent
+    	$color;
+	}
+	@if $position == "tr" {
+	border-color: 
+		$color
+		$color
+		transparent
+		transparent;
+	}
+	@if $position == "br" {
+	border-color: 
+		transparent
+	    $color
+	    $color
+	    transparent;
+	}
+  	@if $position == "bl" {
+  	border-color: 
+    	transparent
+      	transparent
+      	$color
+      	$color;
+    }
+}
+
 html{font-size:62.5%;font-family:"微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;}
 body{font-size:1.2rem;}
 ol, ul {list-style: none outside none;}
 a {text-decoration: none;}
+.clearfix:after {
+	clear: both;
+	content: " ";
+	display: block;
+	height: 0;
+}
 
 $red01:#cc0000;
 $red02:#a00000;
@@ -20,6 +60,7 @@ $styleC:rgba(192,100,100,1);
 $styleD:rgba(255,100,128,1);
 $styleE:rgba(206,168,78,1);
 $styleF:rgba(255,180,50,1);
+$styleG:rgba(255,140,100,1);
 
 #slowLife{
 	width: 950px;
@@ -364,7 +405,7 @@ $styleF:rgba(255,180,50,1);
 					padding-top:10px;
 					margin:0 12px 0 46px;
 					color:$wht01;
-					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;;
+					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 					}
 				
 				.eyeIcon {
@@ -923,7 +964,6 @@ $styleF:rgba(255,180,50,1);
 	}
 }
 
-
 #itemF{
 	.styleF{
 		padding-bottom:10px; 
@@ -1174,3 +1214,275 @@ $styleF:rgba(255,180,50,1);
 	}
 }
 
+#itemG{
+	.styleG{
+		padding-bottom:10px; 
+		.head{
+			height: 53px;
+			overflow: hidden;
+			position: relative;
+		}
+		.backBarBg{
+			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht01));
+			border-top: 2px solid $styleG;
+			bottom:0;
+			height: 41px;
+			position: absolute;
+			width: 100%;
+			z-index: 1;
+		}
+		.infoBlock{
+			@include border-radius(10px);
+			border-top-left-radius:0;
+			border-top-right-radius:0;
+			background-color:$styleG;
+			height:46px;
+			left: 20px;
+			max-width:auto;
+			min-width:150px;
+			position:absolute;
+			top:1px;
+			z-index:9;
+			box-shadow:1px 1px 2px rgba($bk01,0.6);
+			.cornerL{
+				position: absolute;
+				left:-11px;
+				top:0;
+				height:0;
+				width:0;
+				border-bottom:11px solid darken($styleG,11%);
+				border-left:11px solid transparent;
+				border-right:0 solid transparent;
+			}
+			.cornerR{
+				position: absolute;
+				right:-11px;
+				top:0;
+				height:0;
+				width:0;
+				border-bottom:11px solid darken($styleG,11%);
+				border-left:0 solid transparent;
+				border-right:11px solid transparent;
+			}
+			.infoCont{
+				color:$wht01;
+				.floor{
+					color:$styleG;
+					font:bold 1.6rem/2.2rem Arial;
+					padding-left:17px;
+					position:absolute;
+					top:9px;
+					z-index:9;
+				}
+				.title{
+					padding-top:10px;
+					margin:0 12px 0 46px;
+					color:$wht01;
+					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;;
+					}
+				
+				.eyeIcon {
+				    position:absolute;
+				    margin: 0 auto;
+				    width: 32px;
+				    height: 40px;
+				    overflow: hidden;
+				    background:transparent;
+				    top:4px;
+				    left:10px;
+				    z-index:2;
+					.downArr {
+					    border-top: 12px $wht01 solid;
+					    border-right: 8px transparent solid;
+					    border-bottom:0px transparent solid;
+					    border-left: 8px transparent solid;
+					    left:8px;
+					    position: absolute;
+					    top:25px;
+					    &:after {
+							@include border-radius(28px);
+						    @include transform(rotate(0deg));
+							background-color: $wht01;
+						    content: "";
+						    display: block;
+						    height:28px;
+						    left: -14px;
+						    position: absolute;
+						    top: -36px;
+						    width: 28px;
+						}
+					}
+				}
+			}
+		}
+		.rightmore {
+		    margin-top: 24px;
+		    position: absolute;
+		    right:10px;
+		    text-align: right;
+		    width: 500px;
+		    z-index:9;
+		    a{
+		    	color:rgba($bk01,0.4);
+		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+		    	padding-right:4px;
+		    	&:hover{
+					text-decoration: underline;
+					color:$red01;
+				}
+		    }   
+		}
+	}
+
+	.boxdiv{
+	    background-color: rgba(0, 0, 0, 0);
+	    padding: 5px;
+	    .water-col {
+		    float: left;
+		    margin: 0 10px;
+		    min-height: 1px;
+		    width: 215px;
+		    li.water-item {
+			    background: #fff;
+			    box-shadow: 0 5px 8px #c3c3c3;
+			    margin-top: 20px;
+			    position: relative;
+			    table-layout: fixed;
+			    word-break: break-all;
+			    &:hover .img-list{
+					height: 71px; 
+				}
+				.cover {
+				    position: relative;
+				    width:215px;
+				    overflow: hidden;
+				    img {
+				    	//height:230px;
+				    	//margin-left:-5px;
+				    	border: 0 none;
+				    	display: block;
+					    transition: all 0.3s ease-in-out 0s;
+					}
+					/*a:hover{
+						img {
+					    	opacity:0.8;
+					    	transition: all 0.3s ease-in-out 0s;
+						}
+					}*/
+					.info {
+					    background:rgba(252, 255, 255, 0.9);
+						border-top-left-radius:6px;
+					    color: darken(red,10%);
+					    font:bold 1.3rem/1.6rem verdana;
+					    height: 17px;
+					    margin-top: -19px;
+					    padding: 1px 5px 1px 7px;
+					    position: absolute;
+					    right: 0;
+					    box-shadow: 0 0 0 #fff, -1px -1px 1px rgba(0, 0, 0, 0.2);
+					    .yen {
+						    font: normal 1.2rem Arial;
+						}
+					}
+				}
+				
+				.img-list {
+					height: 0;
+					//height: 71px; 
+					margin-top: 1px;
+					overflow: hidden;
+					transition: all 0.5s ease-in-out 0s;
+					width: 216px;
+					img {
+						display: block;
+						float: left;
+						margin-right: 1px;
+					}
+				}
+				.pdName {
+					color: darken($gry01,80%);
+					margin-top: 5px;
+					padding: 0 10px 5px;
+					line-height: 1.8rem;
+				}
+				.actions {
+					position: relative;
+					z-index: 1;
+					.dg-sns-widget {
+						padding: 0 10px 5px;
+					}
+					.reply-num {
+						background: url("http://img02.taobaocdn.com/tps/i2/T17bsEXjtXXXauUnsh-180-177.png") no-repeat scroll -167px -58px rgba(0, 0, 0, 0);
+						color: rgb(205, 205, 205);
+						display: block;
+						height: 22px;
+						line-height: 21px;
+						overflow: hidden;
+						padding-left: 18px;
+						position: absolute;
+						right: 10px;
+						top: 0;
+					}
+				}
+				.desc { //description
+					border-top: 1px dashed #ccc;
+					color: darken($gry01,50%);
+					line-height: 1.6rem;
+					margin-top: 4px;
+					padding: 6px 10px 10px;
+				}
+			}
+			&:nth-child(odd){
+				li.water-item .cover img {
+					height:215px;
+				}
+			}
+			&:nth-child(even){
+				li.water-item .cover img {
+					height:235px;
+					margin-left:-5px;
+				}
+			}
+		}
+	}
+}
+
+.label {
+	height: 30px;
+  	position: absolute;
+  	right: -4px;
+  	top: -8px;
+  	z-index: 9;
+	.back-side {
+    	@include corner("br", 4px, 4px, lighten($gry02,20%));
+    	position: absolute;
+    	left: -8px;
+    	top: -0px; // donno why is this needed :) but it fixes it
+	}
+  	.front-side {
+    	position: relative;
+	    padding: 4px 8px 4px;
+    	background: darken($gry02,30%);
+    	color: lighten(yellow,40%);
+    	font:normal 1.1rem/1.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+    	text-align: center;
+    	text-shadow: 0 1px 0 darken($gry02,40%);
+    	&:before, &:after {
+        content:"";
+        display: block;
+        position: absolute;
+        bottom: -6px;
+    }
+
+    &:before {
+        left: 0; 
+        @include corner("tl", 3px, 30px, darken($gry02,30%));
+    }
+
+    &:after {
+        right: 0; 
+        @include corner("tr", 3px, 30px, darken($gry02,30%));
+    }
+}
+
+}
