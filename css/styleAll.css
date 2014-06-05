@@ -309,19 +309,13 @@ a {
 }
 #itemC .carLeftNav li .info i, #itemC .carRightNav li .info i {
   color: white;
-  font: normal  1.4rem/1.6rem arial bolder;
-  font-family: arial;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: bolder;
-  padding: 2px 0 0 5px;
+  font: normal 1.1rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+  padding: 0 0 0 4px;
 }
 #itemC .carLeftNav li .info span, #itemC .carRightNav li .info span {
   color: white;
-  font-family: arial;
-  font-size: 1.8rem;
-  font-weight: 700;
-  padding-right: 8px;
+  font: normal 1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  font-weight: 600;
 }
 #itemC .carLeftNav li .mark, #itemC .carRightNav li .mark {
   background-color: black;
@@ -551,18 +545,23 @@ a {
   border-bottom: 1px dashed #e0e0e0;
   display: block;
   margin-top: 5px;
+  position: relative;
   width: 225px;
 }
 #itemD .boxdiv li.linediv .item a .price em {
+  background-color: white;
   border: 1px solid #c9585c;
   border-radius: 5px;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   color: #c9585c;
-  float: left;
+  font: normal 1.2rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
   height: 16px;
-  line-height: 16px;
-  margin: 7px 3px;
-  padding: 0 5px 1px;
-  font-style: normal;
+  left: 0;
+  margin: -16px 0 0 0;
+  padding: 1px 5px 0;
+  position: absolute;
+  z-index: 9;
 }
 #itemD .boxdiv li.linediv .item a .price .xj {
   color: #c90e12;
@@ -571,10 +570,14 @@ a {
   font-size: 20px;
   font-weight: bolder;
 }
+#itemD .boxdiv li.linediv .item a .price .xj .xjt {
+  color: #333333;
+  font: normal 1.1rem/1.4rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+}
 #itemD .boxdiv li.linediv .item a .price del.yj {
-  color: #6b6b6b;
+  color: #999999;
   float: right;
-  font-size: 12px;
+  font-size: 1.2rem;
 }
 #itemD .boxdiv li.linediv .item a .price del.yj .ykj {
   padding: 0 3px;
@@ -582,8 +585,8 @@ a {
 #itemD .boxdiv li.linediv .item a .text {
   color: #2a2a2a;
   display: block;
-  height: 42px;
-  line-height: 20px;
+  font: normal 1.2rem/1.8rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+  padding: 4px 0 6px 0;
   transition: all 0.3s ease-in-out 0s;
   width: 225px;
 }
@@ -869,12 +872,17 @@ a {
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item .pricediv .price {
   color: #c90e12;
-  font-family: arial;
-  font-size: 1.6rem;
-  font-weight: bolder;
-  padding: 0 8px 0 0;
+  float: right;
+  font: bold 1.6rem/1.8rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+  padding: 0 6px 0 0;
+}
+#itemE .boxdiv .sli ul.slnav li .boxli .itemul .item .pricediv .price .xjt {
+  color: #333333;
+  font: bold 1.2rem/1.8rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+  padding: 0 2px 0 0;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item .pricediv del {
+  display: none;
   color: #969696;
   float: right;
   font-size: 12px;
@@ -1158,7 +1166,7 @@ a {
 #itemF .boxdiv ul li .imgdiv img {
   border: 0 none;
   height: 240px;
-  left: -5px;
+  left: -10px;
   position: relative;
   top: 0;
   width: 240px;
@@ -1436,6 +1444,7 @@ a {
   box-shadow: 0 0 0 white, -1px -1px 1px rgba(0, 0, 0, 0.2);
 }
 #itemG .boxdiv .water-col li.water-item .cover .info .yen {
+  color: #1a1a1a;
   font: normal 1.2rem Arial;
 }
 #itemG .boxdiv .water-col li.water-item .img-list {
@@ -1490,45 +1499,63 @@ a {
   margin-left: -5px;
 }
 
+li.water-item:hover .label {
+  	/*&:before {
+          @include corner("tl", 3px, 30px, $red01);
+      }
+      &:after {
+          @include corner("tr", 3px, 30px, $red01);
+      }*/
+}
+li.water-item:hover .label .back-side {
+  border-style: solid;
+  border-width: 3px 3px 3px 3px;
+  border-color: transparent #660000 #660000 transparent;
+}
+li.water-item:hover .label .front-side {
+  background: #cc0000;
+  text-shadow: 0 1px 0 #330000;
+}
+
 .label {
   height: 30px;
   position: absolute;
-  right: -4px;
-  top: -8px;
+  right: -3px;
+  top: -7px;
   z-index: 9;
 }
 .label .back-side {
   border-style: solid;
-  border-width: 4px 4px 4px 4px;
+  border-width: 3px 3px 3px 3px;
   border-color: transparent #666666 #666666 transparent;
   position: absolute;
-  left: -8px;
+  left: -6px;
   top: -0px;
 }
 .label .front-side {
-  position: relative;
-  padding: 4px 8px 4px;
   background: black;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.6);
   color: #ffffcc;
   font: normal 1.1rem/1.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
+  padding: 4px 8px 4px;
+  position: relative;
   text-align: center;
   text-shadow: 0 1px 0 black;
+  	    /*&:before {
+  	        left: 0; 
+  	        @include corner("tl", 3px, 30px, darken($gry02,30%));
+  	    }
+  
+  	    &:after {
+  	        right: 0; 
+  	        @include corner("tr", 3px, 30px, darken($gry02,30%));
+  	    }*/
 }
 .label .front-side:before, .label .front-side:after {
+  bottom: -6px;
   content: "";
   display: block;
   position: absolute;
-  bottom: -6px;
-}
-.label .front-side:before {
-  left: 0;
-  border-style: solid;
-  border-width: 3px 30px 3px 30px;
-  border-color: black transparent transparent black;
-}
-.label .front-side:after {
-  right: 0;
-  border-style: solid;
-  border-width: 3px 30px 3px 30px;
-  border-color: black black transparent transparent;
 }
