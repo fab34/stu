@@ -1,0 +1,174 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+q, blockquote {
+  quotes: none;
+}
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+a img {
+  border: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+.navBar {
+  background: #333;
+  border: 2px #333 solid;
+  height: 40px;
+  margin: 0 0 20px;
+  position: relative;
+  width: 800px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+.navBar a {
+  color: transparent;
+  display: block;
+  float: left;
+  font: normal 1rem/40px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  letter-spacing: 1px;
+  padding: 0 8px;
+  text-transform: uppercase;
+  text-shadow: white 0 0 4px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.navBar a:hover {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: white 0px 0px 1px;
+}
+
+.navBar2 {
+  background: #333;
+  border: 2px #333 solid;
+  color: #fff;
+  height: 40px;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+  position: relative;
+  text-decoration: none;
+  width: 720px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+}
+.navBar2 a {
+  color: #fff;
+  display: block;
+  float: left;
+  font: normal 1em/40px Arial;
+  letter-spacing: 1px;
+  padding: 0 8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.navBar2:hover {
+  color: transparent;
+  text-shadow: white 0 0 4px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+.navBar2:hover a {
+  color: transparent;
+  position: relative;
+}
+.navBar2:hover a:hover {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: black 3px 3px 10px;
+}
+.navBar2:hover a:hover:before {
+  position: absolute;
+  bottom: -2px;
+  left: 40%;
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-bottom: 0.6em solid white;
+  border-left: 0.4em solid transparent;
+  border-right: 0.4em solid transparent;
+}
+
+.tooltip {
+  max-width: 20em;
+  margin: 0 auto;
+  position: relative;
+  background: #3498db;
+  padding: .5em;
+  border-radius: .3em;
+  filter: drop-shadow(0 0.15em 0.1em rgba(0, 0, 0, 0.25));
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+.tooltip:before {
+  top: 100%;
+  left: 1em;
+  position: absolute;
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-top: 1.5em solid #3498db;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+}

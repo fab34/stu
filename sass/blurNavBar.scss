@@ -1,0 +1,180 @@
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/utilities/general/hacks";
+
+// Size helper mixin
+// ---
+// @param [number] $width: width
+// @param [number] $height ($width): height
+// ---
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+// [Private] 
+// Position helper mixin
+// Article about it: http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
+// ---
+// @param [string] $position: position type
+// @param [list] $args: list of offsets and values
+// ---
+@mixin _position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i
+    and $i + 1 <= length($args)
+    and type-of( nth($args, $i + 1) ) == number {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+// Absolute positioning helper mixin
+// Article about it: http://hugogiraudel.com/2013/08/05/offsets-sass-mixin/
+// ---
+// @param [list] $args: list of offsets and values
+// ---
+@mixin absolute($args) {
+  @include _position(absolute, $args);
+}
+// Arrow helper mixin
+// ---
+// @param [string] $direction: arrow direction
+// @param [list] $position: list of offsets and values
+// @param [color] $color (inherit): arrow color
+// @param [number] $size (1em): arrow size
+// ---
+@mixin triangle($direction, $position, $color: currentColor, $size: 1em) {
+  // Make sure the direction is valid
+  @if not index(top right bottom left, $direction) {
+    @warn "Direction must be one of top, right, bottom or left.";
+  }
+
+  @else {
+    @include absolute($position); // Position
+    @include size(0); // Size
+    content: '';
+    z-index: 2;
+
+    border-#{opposite-position($direction)}: $size * 1.5 solid $color;
+    $perpendicular-borders: $size solid transparent;
+    
+    @if $direction == top or $direction == bottom {
+      border-left:   $perpendicular-borders;
+      border-right:  $perpendicular-borders;
+    }
+
+    @else if $direction == right or $direction == left {
+      border-bottom: $perpendicular-borders;
+      border-top:    $perpendicular-borders;
+    }
+  }
+}
+
+
+.navBar{
+	background:#333;
+	border: 2px #333 solid;
+	height: 40px;
+	margin: 0 0 20px;
+	position: relative;
+	width:800px;
+	@include border-radius(8px);
+	a{
+		color: transparent;
+		display: block;
+		float:left;
+		font:normal 1rem/40px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+		letter-spacing: 1px;
+		padding:0 8px;
+		text-transform: uppercase;
+		@include text-shadow(#ffffff 0 0 4px);
+		@include transition(all 0.3s ease-in-out);
+		&:hover{
+			color: #fff;
+			text-decoration:none;
+			@include text-shadow(#fff 0px 0px 1px);
+		}
+	}
+}
+
+.navBar2{
+	background:#333;
+	border: 2px #333 solid;
+	color: #fff;
+	height: 40px;
+	margin: 0 auto 20px;
+	padding:0 10px;
+	position: relative;
+	text-decoration:none;
+	width:720px;
+	@include border-radius(8px);
+	a{
+		color: #fff;
+		display: block;
+		float:left;
+		font:normal 1em/40px Arial;
+		letter-spacing: 1px;
+		padding:0 8px;
+		text-transform: uppercase;
+		text-decoration: none;
+		@include transition(all 0.3s ease-in-out);
+	}
+	&:hover{
+		color: transparent;
+		@include text-shadow(#fff 0 0 4px);
+		@include transition(all 0.1s ease-in-out);
+		a{
+			color: transparent;
+			position: relative;
+			&:hover{
+				color: #fff;
+				text-decoration:none;
+				@include text-shadow(#000 3px 3px 10px);
+				// Triangle
+				&:before {
+					position: absolute;
+					@include triangle(
+					    $direction : top, 
+					    $position  : bottom -2px left 40%, 
+					    $color     : #fff,
+					    $size      : .4em
+					);
+				}
+			}
+		}
+	}
+}
+
+
+.tooltip { 
+  // Centering
+  max-width: 20em;
+  margin: 0 auto;
+  
+  // Enable absolute positioning for pseudo-element
+  position: relative;
+  
+  // Aesthetics
+  background: #3498db;
+  padding: .5em;
+  border-radius: .3em;
+  filter: drop-shadow(0 .15em .1em rgba(0,0,0,.25));
+  
+  // Font
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  
+  // Triangle
+  &:before {
+    @include triangle(
+      $direction : bottom, 
+      $position  : top 100% left 1em, 
+      $color     : #3498db
+    );
+  }
+}

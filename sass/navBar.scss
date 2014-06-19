@@ -1,0 +1,204 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/utilities/general/hacks";
+
+@import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
+
+$navBg:rgba(224,0,97,1);
+$spcStrBg:rgba(255,244,228,1);
+$spcNavTxt:rgba(255,0,125,1);
+$black:rgba(0,0,0,1);
+$wht:rgba(255,255,255,1);
+
+.spcNavwrap{
+	margin:0 auto;
+	padding-top:50px;
+	width:960px;
+}
+ul#spcStrNav{
+	//@include background-image(linear-gradient(-90deg,$navBg,rgba(68,68,68,0.13)));
+	//@include border-radius(0px);
+	//@include box-shadow(rgba(0,0,0,0.2) 0px 2px 1px);
+
+	background-color:$navBg;
+	display:inline-block;
+	font-size:0;
+	padding:0;
+	position:relative;
+	z-index:999;
+	zoom:1;
+	*display:inline;
+
+	>li{
+		display:block;
+		float:left;
+		font-size:0;
+		position:relative;
+		white-space:nowrap;
+		border-right:1px solid lighten($navBg, 20%);
+		border-left:1px solid $navBg;
+		&:first-child{
+			border-left:1px solid lighten($navBg, 20%);
+		}
+		&:last-child{
+			border-right:none;
+		}
+		&:hover{
+			border:1px solid $black;
+			border-top:none;
+			border-bottom:none;
+		}
+		&:hover>a{
+			//@include box-shadow(rgba(0,0,0,0.1) 0 0 5px 0 inset);
+			background:$wht;
+			color:$black;
+			text-decoration:none;
+		}
+		&:hover>ul{
+			opacity:1;
+			visibility:visible;
+			z-index:1;
+		}
+		>a{
+			line-height: 34px;
+			//@include transition(all 0.1s ease-in-out);
+			background-color:transparent;
+			padding:0 6px;
+		}
+
+		>ul{
+			//@include transition(all 0.1s ease-in-out);
+			background-color:$spcStrBg;
+			border:1px solid $black;
+			border-top:none;
+			left:0;
+			opacity:0;
+			position:absolute;
+			left:-1px;
+			top:100%;
+			visibility:hidden;
+			z-index:9;
+			/*span{
+				background-image:none;
+				padding-right:17px;
+			}*/
+
+			>li{
+				//float:none;
+				position: relative;
+				a{
+					//@include transition(all 0.1s ease-in-out);
+					background-color:transparent;
+					border-bottom:1px dotted lighten($black, 80%);
+					color:$spcNavTxt;
+					font:15px Arimo,Arial,Helvetica,sans-serif;
+					height:32px;
+					padding:0 10px;
+					line-height: 32px;
+					text-align:left;
+					text-decoration:none;
+				}
+				&:hover>a{
+					background-color:$wht;
+					border:1px solid lighten($black, 70%);
+					border-left:none;
+					border-right:$wht;
+					color:$spcNavTxt;
+					margin-top:-1px;
+					margin-right:-1px;
+					text-decoration:none;
+				}
+				&:hover>ul{
+					opacity:1;
+					visibility:visible;
+				}
+				&:first-child:hover >a{
+					border-top:none;
+					height:32px;
+					margin-top:0;
+				}
+				&:last-child >a{
+					border:none;
+				}
+				&:first-child >ul{
+					border-top:none;
+				}
+
+				>ul{
+					border:1px solid lighten($black, 70%);
+					//border-left:1px solid lighten($black, 70%);
+					//height:297px;
+					left:100%;
+					min-height:70px;
+					opacity:0;
+					overflow: hidden;
+					position:absolute;
+					top:0;
+					visibility:hidden;
+					width:280px;
+					z-index:-1;
+					li{
+						float:left;
+						&:nth-child(even) >a{
+							border-right:none;
+						}
+						a{
+							background:$wht;
+							border-bottom:1px solid $wht;
+							border-right:1px dotted lighten($black,90%);
+							color:lighten($black, 50%);
+							font:13px/32px Arimo,Arial,Helvetica,sans-serif;
+							padding:0 4px 0 6px;
+							width:125px;
+							&:hover{
+								color:$spcNavTxt;
+							}
+						}
+					}
+				}
+			}
+			
+		}
+
+	}
+
+	
+
+	a{
+		background-repeat:repeat;
+		border-style:none;
+		border-width:0;
+		color:#FFFFFF;
+		cursor:pointer;
+		display:block;
+		font:15px Arimo,Arial,Helvetica,sans-serif;
+		padding:0;
+		text-align:left;
+		text-decoration:none;
+		vertical-align:middle;
+
+		&:active, &:focus{
+			outline-style:none;
+		}
+	}
+
+	/*img{
+		border:none;
+		margin-right:3px;
+		vertical-align:middle;
+	}
+
+	span{
+		background-image:url("../images/arrowmain.png");
+		background-position:right center;
+		background-repeat:no-repeat;
+		display:block;
+		overflow:visible;
+		padding-right:25px;
+	}*/
+	
+}
+* html ul#spcStrNav li a{
+	display:inline-block;
+}
