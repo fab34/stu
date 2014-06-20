@@ -70,20 +70,15 @@ ul#spcStrNav {
   z-index: 999;
   zoom: 1;
   *display: inline;
-  	/*img{
-  		border:none;
-  		margin-right:3px;
-  		vertical-align:middle;
-  	}
-  
-  	span{
-  		background-image:url("../images/arrowmain.png");
-  		background-position:right center;
-  		background-repeat:no-repeat;
-  		display:block;
-  		overflow:visible;
-  		padding-right:25px;
-  	}*/
+  /*
+  span{
+  	background-image:url("../images/arrowmain.png");
+  	background-position:right center;
+  	background-repeat:no-repeat;
+  	display:block;
+  	overflow:visible;
+  	padding-right:25px;
+  }*/
 }
 ul#spcStrNav > li {
   display: block;
