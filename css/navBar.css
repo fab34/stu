@@ -1,68 +1,214 @@
 @import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  font-size: 100%;
-  vertical-align: baseline;
-}
-
 html {
-  line-height: 1;
+  font-size: 62.5%;
+  /*10 ÷ 16 × 100% = 62.5%*/
+  font-family: "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 }
 
-ol, ul {
+body {
+  font-size: 1.2em;
+  font-size: 1.2rem;
+  -webkit-text-size-adjust: none;
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* *
+ * SCSS Variables
+ * */
+/* eo:SCSS Variables */
+/* *
+ * SCSS Mixins
+ * */
+/* eo:SCSS Mixins */
+/* *
+ * SCSS Functions
+ * */
+.arrow-top {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-bottom-color: #94c6fd;
+}
+
+.arrow-right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+}
+
+.arrow-bottom {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-top-color: #94c6fd;
+}
+
+.arrow-left {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-right-color: #94c6fd;
+}
+
+/* eo:SCSS Functions */
+.arrow-default {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-top-color: #94c6fd;
+}
+
+#arrows {
+  *zoom: 1;
   list-style: none;
 }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+#arrows:before, #arrows:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
 }
-
-caption, th, td {
-  text-align: left;
-  font-weight: normal;
-  vertical-align: middle;
+#arrows:after {
+  clear: both;
 }
-
-q, blockquote {
-  quotes: none;
+#arrows li {
+  float: left;
+  width: calc(100%/4);
 }
-q:before, q:after, blockquote:before, blockquote:after {
-  content: "";
-  content: none;
+#arrows li.title {
+  font-size: 2em;
+  margin: 0 0 25px;
+  width: 100%;
 }
-
-a img {
-  border: none;
+#arrows li.title ~ .title {
+  margin-top: 50px;
 }
-
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+#arrows li .button-cta {
+  background-color: #94c6fd;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
   display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  position: relative;
+  text-shadow: 0 1px 1px #499efc;
+  width: calc(100% - (30px + 5px));
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+}
+#arrows li .button-cta:hover {
+  color: white;
+}
+#arrows li .button-cta:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 15px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+#arrows li .button-w-cta {
+  background-color: #94c6fd;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  position: relative;
+  text-shadow: 0 1px 1px #499efc;
+  width: calc(100% - (30px + 5px));
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+  padding-right: 35px;
+}
+#arrows li .button-w-cta:hover {
+  color: white;
+}
+#arrows li .button-w-cta:before {
+  content: '';
+  background: white;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+#arrows li .button-w-cta:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 8px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+  position: absolute;
+  right: 1px;
+  top: 7px;
 }
 
-.spcNavwrap {
+header {
+  width: 1008px;
   margin: 0 auto;
-  padding-top: 50px;
-  width: 960px;
+}
+header hgroup {
+  height: 110px;
+}
+header .mainNav {
+  height: 36px;
+  background: url(../images/space_4x4w.gif) repeat-x;
+  left: 22px;
+  position: relative;
+  z-index: 9;
+}
+header .mainNav .storeNavCornerL, header .mainNav .storeNavCornerR {
+  display: inline-block;
+  height: 34px;
+  background: url(../images/demo/menuCorner.png) no-repeat 0 0;
+}
+header .mainNav .storeNavCornerL {
+  width: 37px;
+  background-position: left top;
+  float: left;
+}
+header .mainNav .storeNavCornerR {
+  width: 36px;
+  background-position: right top;
+  float: left;
 }
 
 ul#spcStrNav {
-  background-color: #e00061;
   display: inline-block;
   font-size: 0;
   padding: 0;
@@ -80,7 +226,22 @@ ul#spcStrNav {
   	padding-right:25px;
   }*/
 }
+ul#spcStrNav .sStore {
+  background: #a00052 url(../images/demo/shopTop.png) repeat-x;
+}
+ul#spcStrNav .sStore > a {
+  color: #ff0;
+}
+ul#spcStrNav .sStore > a:hover {
+  background: #ff6692 url(../images/demo/shopTop.png) repeat-x;
+}
+ul#spcStrNav .sStore:hover > a {
+  background: #ff6692 url(../images/demo/shopTop.png) repeat-x;
+  color: #ff0;
+  text-decoration: none;
+}
 ul#spcStrNav > li {
+  background-color: #e00061;
   display: block;
   float: left;
   font-size: 0;
@@ -89,16 +250,19 @@ ul#spcStrNav > li {
   border-right: 1px solid #ff4797;
   border-left: 1px solid #e00061;
 }
-ul#spcStrNav > li:first-child {
-  border-left: 1px solid #ff4797;
-}
-ul#spcStrNav > li:last-child {
+ul#spcStrNav > li:first-child, ul#spcStrNav > li:last-child {
+  background-color: transparent;
   border-right: none;
+  border-left: none;
 }
 ul#spcStrNav > li:hover {
   border: 1px solid black;
   border-top: none;
   border-bottom: none;
+}
+ul#spcStrNav > li:hover:first-child, ul#spcStrNav > li:hover:last-child {
+  border-right: none;
+  border-left: none;
 }
 ul#spcStrNav > li:hover > a {
   background: white;
@@ -111,8 +275,10 @@ ul#spcStrNav > li:hover > ul {
   z-index: 1;
 }
 ul#spcStrNav > li > a {
-  line-height: 34px;
   background-color: transparent;
+  height: 34px;
+  line-height: 36px;
+  overflow: hidden;
   padding: 0 6px;
 }
 ul#spcStrNav > li > ul {
@@ -156,6 +322,7 @@ ul#spcStrNav > li > ul > li:hover > a {
   text-decoration: none;
 }
 ul#spcStrNav > li > ul > li:hover > ul {
+  background: white;
   opacity: 1;
   visibility: visible;
 }

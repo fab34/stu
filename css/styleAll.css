@@ -209,7 +209,7 @@ a {
   z-index: 9;
 }
 #itemC .styleC .rightmore a {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   font: 1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
   padding-right: 4px;
 }
@@ -224,6 +224,7 @@ a {
   overflow: hidden;
   position: relative;
   width: 950px;
+  margin: 0 auto;
   margin-bottom: 30px;
 }
 #itemC .boxdiv .carLeft {
@@ -478,7 +479,7 @@ a {
   z-index: 9;
 }
 #itemD .styleD .rightmore a {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   font: 1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
   padding-right: 4px;
 }
@@ -716,7 +717,7 @@ a {
   z-index: 9;
 }
 #itemE .styleE .rightmore a {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   font: 1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
   padding-right: 4px;
 }
@@ -1128,7 +1129,7 @@ a {
   z-index: 9;
 }
 #itemF .styleF .rightmore a {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   font: 1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
   padding-right: 4px;
 }
@@ -1386,7 +1387,7 @@ a {
   z-index: 9;
 }
 #itemG .styleG .rightmore a {
-  color: rgba(0, 0, 0, 0.4);
+  color: rgba(0, 0, 0, 0.6);
   font: 1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
   padding-right: 4px;
 }
@@ -1396,11 +1397,11 @@ a {
 }
 #itemG .boxdiv {
   background-color: rgba(0, 0, 0, 0);
-  padding: 5px;
+  padding: 0 8px;
 }
 #itemG .boxdiv .water-col {
   float: left;
-  margin: 0 10px;
+  margin: 0 15px;
   min-height: 1px;
   width: 215px;
 }

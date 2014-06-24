@@ -1,35 +1,27 @@
-@import "base";
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/utilities/general/hacks";
 
-header{
-	width: 1008px;
-	margin: 0 auto;
-	hgroup {
-		height: 110px;
-	}
-	.mainNav{
-		height: 36px;
-		background: url(../images/space_4x4w.gif) repeat-x;
-		left:22px;
-		position: relative;
-		z-index: 9;
-		.storeNavCornerL,.storeNavCornerR{
-			display: inline-block;
-			height: 34px;
-			background: url(../images/demo/menuCorner.png) no-repeat 0 0;
-		}
-		.storeNavCornerL{
-			width: 37px;
-			background-position: left top;
-			float: left;
-		}
-		.storeNavCornerR{
-			width: 36px;
-			background-position: right top;
-			float: left;
-		}
-	}
+@import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
+
+$navBg:rgba(224,0,97,1);
+$spcStrBg:rgba(255,244,228,1);
+$spcNavTxt:rgba(255,0,125,1);
+$black:rgba(0,0,0,1);
+$wht:rgba(255,255,255,1);
+
+.spcNavwrap{
+	margin:0 auto;
+	padding-top:50px;
+	width:960px;
 }
 ul#spcStrNav{
+	//@include background-image(linear-gradient(-90deg,$navBg,rgba(68,68,68,0.13)));
+	//@include border-radius(0px);
+	//@include box-shadow(rgba(0,0,0,0.2) 0px 2px 1px);
+
+	background-color:$navBg;
 	display:inline-block;
 	font-size:0;
 	padding:0;
@@ -37,22 +29,7 @@ ul#spcStrNav{
 	z-index:999;
 	zoom:1;
 	*display:inline;
-	.sStore{
-	  background: #a00052 url(../images/demo/shopTop.png) repeat-x;
-		>a{
-			color: #ff0;
-			&:hover{
-		  		background: #ff6692 url(../images/demo/shopTop.png) repeat-x;
-			}
-		}
-	}
-	.sStore:hover>a{
-		background: #ff6692 url(../images/demo/shopTop.png) repeat-x;
-		color: #ff0;
-		text-decoration:none;
-	}
 	>li{
-		background-color:$navBg;
 		display:block;
 		float:left;
 		font-size:0;
@@ -60,19 +37,16 @@ ul#spcStrNav{
 		white-space:nowrap;
 		border-right:1px solid lighten($navBg, 20%);
 		border-left:1px solid $navBg;
-		&:first-child,&:last-child{
-			background-color:transparent;
+		&:first-child{
+			border-left:1px solid lighten($navBg, 20%);
+		}
+		&:last-child{
 			border-right:none;
-			border-left:none;
 		}
 		&:hover{
 			border:1px solid $black;
 			border-top:none;
 			border-bottom:none;
-			&:first-child,&:last-child{
-				border-right:none;
-				border-left:none;
-			}
 		}
 		&:hover>a{
 			//@include box-shadow(rgba(0,0,0,0.1) 0 0 5px 0 inset);
@@ -86,11 +60,9 @@ ul#spcStrNav{
 			z-index:1;
 		}
 		>a{
-			background-color:transparent;
-			height:34px;
-			line-height: 36px;
+			line-height: 34px;
 			//@include transition(all 0.1s ease-in-out);
-			overflow:hidden;
+			background-color:transparent;
 			padding:0 6px;
 		}
 
@@ -137,7 +109,6 @@ ul#spcStrNav{
 					text-decoration:none;
 				}
 				&:hover>ul{
-					background:$wht;
 					opacity:1;
 					visibility:visible;
 				}
@@ -188,7 +159,10 @@ ul#spcStrNav{
 			}
 			
 		}
+
 	}
+
+	
 
 	a{
 		background-repeat:repeat;
@@ -216,7 +190,8 @@ ul#spcStrNav{
 		display:block;
 		overflow:visible;
 		padding-right:25px;
-	}*/	
+	}*/
+	
 }
 * html ul#spcStrNav li a{
 	display:inline-block;

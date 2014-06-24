@@ -177,7 +177,7 @@ $styleG:rgba(255,140,100,1);
 		    width: 500px;
 		    z-index:9;
 		    a{
-		    	color:rgba($bk01,0.4);
+		    	color:rgba($bk01,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -195,6 +195,7 @@ $styleG:rgba(255,140,100,1);
 	    overflow: hidden;
 	    position: relative;
 	    width: 950px;
+	    margin:0 auto; 
 	    margin-bottom:30px; 
 	    .carLeft {
 		    height: 460px;
@@ -444,7 +445,7 @@ $styleG:rgba(255,140,100,1);
 		    width: 500px;
 		    z-index:9;
 		    a{
-		    	color:rgba($bk01,0.4);
+		    	color:rgba($bk01,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -675,7 +676,7 @@ $styleG:rgba(255,140,100,1);
 		    width: 500px;
 		    z-index:9;
 		    a{
-		    	color:rgba($bk01,0.4);
+		    	color:rgba($bk01,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -1081,7 +1082,7 @@ $styleG:rgba(255,140,100,1);
 		    width: 500px;
 		    z-index:9;
 		    a{
-		    	color:rgba($bk01,0.4);
+		    	color:rgba($bk01,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -1331,7 +1332,7 @@ $styleG:rgba(255,140,100,1);
 		    width: 500px;
 		    z-index:9;
 		    a{
-		    	color:rgba($bk01,0.4);
+		    	color:rgba($bk01,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -1344,10 +1345,10 @@ $styleG:rgba(255,140,100,1);
 
 	.boxdiv{
 	    background-color: rgba(0, 0, 0, 0);
-	    padding: 5px;
+	    padding: 0 8px;
 	    .water-col {
 		    float: left;
-		    margin: 0 10px;
+		    margin: 0 15px;
 		    min-height: 1px;
 		    width: 215px;
 		    li.water-item {

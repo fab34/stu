@@ -1,0 +1,644 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
+html {
+  font-size: 62.5%;
+  /*10 ÷ 16 × 100% = 62.5%*/
+  font-family: "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+}
+
+body {
+  font-size: 1.2em;
+  font-size: 1.2rem;
+  -webkit-text-size-adjust: none;
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+
+/* *
+ * SCSS Variables
+ * */
+/* eo:SCSS Variables */
+/* *
+ * SCSS Mixins
+ * */
+/* eo:SCSS Mixins */
+/* *
+ * SCSS Functions
+ * */
+.arrow-top {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-bottom-color: #94c6fd;
+}
+
+.arrow-right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+}
+
+.arrow-bottom {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-top-color: #94c6fd;
+}
+
+.arrow-left {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-right-color: #94c6fd;
+}
+
+/* eo:SCSS Functions */
+.arrow-default {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-top-color: #94c6fd;
+}
+
+#arrows {
+  *zoom: 1;
+  list-style: none;
+}
+#arrows:before, #arrows:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+#arrows:after {
+  clear: both;
+}
+#arrows li {
+  float: left;
+  width: calc(100%/4);
+}
+#arrows li.title {
+  font-size: 2em;
+  margin: 0 0 25px;
+  width: 100%;
+}
+#arrows li.title ~ .title {
+  margin-top: 50px;
+}
+#arrows li .button-cta {
+  background-color: #94c6fd;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  position: relative;
+  text-shadow: 0 1px 1px #499efc;
+  width: calc(100% - (30px + 5px));
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+}
+#arrows li .button-cta:hover {
+  color: white;
+}
+#arrows li .button-cta:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 15px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+#arrows li .button-w-cta {
+  background-color: #94c6fd;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  position: relative;
+  text-shadow: 0 1px 1px #499efc;
+  width: calc(100% - (30px + 5px));
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+  padding-right: 35px;
+}
+#arrows li .button-w-cta:hover {
+  color: white;
+}
+#arrows li .button-w-cta:before {
+  content: '';
+  background: white;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+#arrows li .button-w-cta:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 8px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+  position: absolute;
+  right: 1px;
+  top: 7px;
+}
+
+#wrapMain {
+  background: white;
+  padding: 20px 0 0;
+}
+
+#wrapInner {
+  background: white;
+  margin: 0 auto;
+  position: relative;
+  top: 0;
+  width: 1008px;
+}
+#wrapInner .stoTito {
+  border-bottom: 1px solid rgba(51, 51, 51, 0.2);
+  height: 120px;
+  overflow: hidden;
+  position: relative;
+  width: 1008px;
+}
+#wrapInner .stoTito .desc {
+  bottom: -4px;
+  font: normal 1.2rem/2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  padding: 10px;
+  position: absolute;
+}
+#wrapInner .stoTito .desc li {
+  color: black;
+  float: left;
+  padding-right: 10px;
+}
+#wrapInner .stoTito .desc li a {
+  color: black;
+}
+#wrapInner .stoTito .desc li a:hover {
+  color: #900000;
+  text-decoration: underline;
+}
+#wrapInner .stoTop {
+  background: white;
+}
+#wrapInner .stoTop .page-left-bar {
+  width: 190px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo {
+  background-color: white;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .hd {
+  border-bottom: 1px solid #cccccc;
+  color: #333333;
+  font: normal 1.6rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  font-weight: bold;
+  position: relative;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .hd em {
+  background-color: #c30000;
+  display: inline-block;
+  height: 18px;
+  margin: 0 8px 0 0;
+  vertical-align: text-top;
+  width: 8px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .hd > ul {
+  list-style: none outside none;
+  position: absolute;
+  right: 0;
+  top: 11px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .hd > ul li {
+  float: left;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .hd > ul li a {
+  background: #cccccc;
+  display: inline-block;
+  float: left;
+  height: 12px;
+  margin-left: 2px;
+  width: 12px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .hd > ul li .on {
+  background: #4d4d4d;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd {
+  padding: 5px 0 4px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul {
+  padding: 5px 0 0 15px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li {
+  display: none;
+  height: 231px;
+  overflow: hidden;
+  width: 160px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a {
+  position: relative;
+  color: #cccccc;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a i {
+  color: white;
+  font: normal 1.2rem/1.4rem Arial,sans-serif;
+  height: 43px;
+  left: 0;
+  padding: 1px 0 0 4px;
+  position: absolute;
+  top: -1px;
+  width: 43px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a i b {
+  padding-left: 6px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a .ico-label-HOTbg {
+  background-position: -390px -568px;
+  height: 43px;
+  width: 43px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a img {
+  border: 2px solid #aa0000;
+  height: 156px;
+  width: 156px;
+  vertical-align: top;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a .Gd-name {
+  color: #333333;
+  font-size: 13px;
+  height: 36px;
+  line-height: 1.4;
+  overflow: hidden;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a .Gd-prc {
+  color: #c30000;
+  display: inline-block;
+  font-size: 12px;
+  height: 34px;
+  margin-top: 2px;
+  overflow: hidden;
+  width: 115px;
+  word-wrap: break-word;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a .Gd-prc span {
+  font-size: 19px;
+  font-weight: bold;
+  padding-left: 2px;
+}
+#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li.on {
+  display: block;
+}
+#wrapInner .stoTop .page-left-bar .product-category-bar {
+  position: relative;
+  z-index: 99;
+}
+
+.section-title {
+  position: relative;
+  z-index: 99;
+}
+.section-title .blockTitle {
+  background: #666666;
+  color: white;
+  display: block;
+  font: normal 1.6rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  height: 30px;
+  width: 190px;
+  text-indent: 10px;
+}
+.section-title .more {
+  color: #cccccc;
+  cursor: pointer;
+  font: normal 1.2rem/1.9rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  padding: 7px 7px 0 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.section-title .more .ico-promo-cate-more {
+  background-position: -106px -302px;
+  height: 17px;
+  margin-left: 3px;
+  vertical-align: middle;
+  width: 16px;
+}
+.section-title .section-lists-more {
+  background: white;
+  border: 3px solid #fb3195;
+  display: none;
+  left: 77px;
+  position: absolute;
+  top: 0;
+  width: 220px;
+  z-index: 99;
+}
+.section-title .section-lists-more a {
+  display: block;
+  color: #4d4d4d;
+  font: normal 1.2rem/2.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  background-repeat: no-repeat;
+  border-bottom: 1px dotted #dbdbdb;
+  padding: 0 10px;
+  text-decoration: none;
+}
+.section-title .section-lists-more a:hover {
+  background: #f2f2f2;
+  color: black;
+}
+.section-title .more:hover > .section-lists-more {
+  display: block;
+}
+
+.section-sort li {
+  display: inline-block;
+  height: 3.2rem;
+}
+.section-sort li a {
+  color: #333333;
+  line-height: 3.2rem;
+}
+.section-sort li a:hover {
+  color: #900000;
+}
+.section-sort li:before {
+  margin-right: 5px;
+  content: "|";
+}
+.section-sort li:first-child:before {
+  content: "";
+}
+
+.section-lists a {
+  background-image: url("../images/top_navi_sprite.png");
+  background-repeat: no-repeat;
+  display: block;
+  font: normal 1.3rem/2.4rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  padding: 0 14px 0 20px;
+  position: relative;
+}
+.section-lists .cate-level-1 {
+  background-position: -7300px -448px;
+  font-size: 13px;
+  padding: 0 14px 0 20px !important;
+}
+
+.HIGHLIGHTDOWN {
+  background-position: -10006px -359px;
+  color: #c14346 !important;
+}
+
+.cate-level-2-hassub-open {
+  background-position: -60px -696px;
+  padding: 0 14px 0 42px !important;
+}
+
+.cate-level-2-hassub-close {
+  background-position: -60px -941px;
+  padding: 0 14px 0 42px !important;
+}
+
+.cate-level-2-hassub-close-last {
+  background-position: -60px -1064px;
+  padding: 0 14px 0 42px !important;
+}
+
+.cate-level-3-hassub {
+  background-position: -60px -1188px;
+  padding: 0 14px 0 42px !important;
+}
+
+.cate-level-3-hassub-last {
+  background-position: -60px -1311px;
+  padding: 0 14px 0 42px !important;
+}
+
+.member-navi-bg, .sprite-image {
+  background-image: url("../images/top_navi_sprite.png");
+  background-position: -1500px -2500px;
+  background-repeat: no-repeat;
+}
+
+.promo-category .blockTitle {
+  background: #4d4d4d;
+}
+.promo-category .section-lists .other-category {
+  padding: 6px 0;
+}
+.promo-category .section-lists .other-category a {
+  line-height: 2.2rem;
+  color: #c14346;
+}
+.promo-category .section-lists .other-category a:hover {
+  text-decoration: underline;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.member-navi-bg, .sprite-image {
+  background-image: url("../images/top_navi_sprite.png");
+  background-repeat: no-repeat;
+}
+
+.ico-storeCate-arrow {
+  background-position: -396px -342px;
+  display: none;
+  height: 13px;
+  position: absolute;
+  right: -1px;
+  top: 8px;
+  width: 8px;
+}
+
+.page-left-bar {
+  display: inline-block;
+  padding-bottom: 10px;
+  width: 190px;
+  vertical-align: top;
+}
+
+.productBuilder-infos {
+  display: inline-block;
+  padding-left: 7px;
+  width: 808px;
+  vertical-align: top;
+}
+.productBuilder-infos > div {
+  padding-bottom: 10px;
+}
+
+.speStoMImg {
+  padding-bottom: 10px;
+}
+.speStoMImg .speStoMImg {
+  float: left;
+  height: 405px;
+  overflow: hidden;
+  width: 618px;
+}
+.speStoMImg .speStoPP {
+  float: left;
+  min-height: 300px;
+  overflow: hidden;
+  width: 190px;
+}
+.speStoMImg .speStoPP li {
+  height: 135px;
+  overflow: hidden;
+  position: relative;
+}
+.speStoMImg .speStoPP li img {
+  margin-top: -30px;
+}
+.speStoMImg .speStoPP li .sSPP-name {
+  color: rgba(255, 255, 255, 0);
+  font: normal 1.3rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  height: 36px;
+  overflow: hidden;
+  padding: 0 0 0 10px;
+  position: absolute;
+  top: 110px;
+  width: 180px;
+  white-space: nowrap;
+  word-wrap: break-word;
+  z-index: 9;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.speStoMImg .speStoPP li .sSPP-pri {
+  background: rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  font: normal 1.2rem/2.2rem Arial,sans-serif;
+  height: 36px;
+  position: absolute;
+  top: 110px;
+  padding-left: 8px;
+  overflow: hidden;
+  width: 100%;
+  word-wrap: break-word;
+}
+.speStoMImg .speStoPP li .sSPP-pri span {
+  font: normal 1.9rem/2.2rem Arial,sans-serif;
+  top: 4px;
+}
+.speStoMImg .speStoPP li a:hover .sSPP-name {
+  color: rgba(255, 255, 255, 0.8);
+  display: block;
+  transition: all 0.5s ease-in-out 0s;
+}
+.speStoMImg .speStoPP li a:hover .sSPP-pri {
+  background: rgba(0, 0, 0, 0.6);
+  height: 50px;
+  top: 90px;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.fullscreen {
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0 5px;
+  position: relative;
+  width: 998px;
+}
+
+.lookStory {
+  padding: 0;
+}
+
+.FooterCopyright {
+  margin-top: 25px;
+  padding: 0;
+}
+
+#styleA #wrapMain {
+  background: url(../images/demo/bgStyleA.png) repeat;
+}
+#styleA .stoTito {
+  background: url(../images/demo/stoTitoA.png) no-repeat;
+}
+
+.section-lists {
+  background: #f2f2f2;
+}
+.section-lists a {
+  color: #262626;
+}
+.section-lists a:hover {
+  color: #900000;
+}
+.section-lists a.cate-level-1 {
+  color: white;
+  margin: 2px 0;
+  border-top: 1px dotted #6a3800;
+  border-bottom: 1px dotted #6a3800;
+  position: relative;
+}
+.section-lists a.cate-level-1 i {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 6px;
+  border-style: solid;
+  border-left-color: white;
+  float: right;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+}
+.section-lists a.cate-level-1:hover {
+  color: #ffff80;
+  /*i{
+  	@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
+  }*/
+}
+
+.odd {
+  background: #5b5043;
+}
+
+.even {
+  background: #6f5d49;
+}

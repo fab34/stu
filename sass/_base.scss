@@ -1,0 +1,174 @@
+// ---------------------------------------------------------------------------
+// Imports
+@import "compass/css3";
+@import "compass/utilities";
+@import "compass/utilities/general/hacks";
+
+@import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
+// ---------------------------------------------------------------------------
+// Basic Style
+html{font-size:62.5%;/*10 ÷ 16 × 100% = 62.5%*/font-family:"微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;}
+body{font-size:1.2em;font-size:1.2rem /*1.4 × 10px = 14px */;-webkit-text-size-adjust:none;}
+.clearfix:after {
+	clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+$navBg:rgba(224,0,97,1);
+$spcStrBg:rgba(255,244,228,1);
+$spcNavTxt:rgba(255,0,125,1);
+$black:rgba(0,0,0,1);
+$gray01:rgba(51,51,51,1); //#333
+$red01:rgba(170,0,0,1); //#a00
+$wht:rgba(255,255,255,1);
+$yellow:rgba(255,255,0,1);
+
+$brown01:rgba(106,93,78,1);
+$brown02:rgba(106,56,0,1);
+
+
+//Arrow Mixin
+/* *
+ * SCSS Variables
+ * */
+
+$mainColor: #94c6fd;
+$directions: top, right, bottom, left;
+/* eo:SCSS Variables */
+
+
+/* *
+ * SCSS Mixins
+ * */
+
+@mixin button ( $back: $mainColor, $fore: white, $size: 20px ) {
+  background-color: $back;
+  color: rgba($fore, 0.9);
+  cursor: pointer;
+  display: block;
+  height: $size;
+  line-height: $size;
+  padding: 0 5px;
+  position: relative;
+  text-shadow: 0 1px 1px darken($back, 15%);
+  width: calc(100% - (#{$size} + 5px));
+
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+  &:hover {
+    color: rgba($fore, 1);
+  }
+}
+
+@mixin clearfix () {
+  *zoom: 1;
+  
+  &:before,
+  &:after {
+      content: " "; /* 1 */
+      display: table; /* 2 */
+  }
+
+  &:after {
+      clear: both;
+  }
+}
+
+@mixin arrow ( $dir: bottom, $size: 20px, $color: $mainColor ) {
+
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: $size;
+  border-style: solid;
+  
+  @if $dir == top {
+    border-bottom-color: $color;
+  } @else if $dir == right {
+    border-left-color: $color;
+  } @else if $dir == bottom {
+    border-top-color: $color;
+  } @else if $dir == left {
+    border-right-color: $color;
+  }
+  
+}
+/* eo:SCSS Mixins */
+    
+
+/* *
+ * SCSS Functions
+ * */
+
+@each $direction in $directions {
+  .arrow-#{$direction} {
+    @include arrow($dir: #{$direction});
+  }
+}
+/* eo:SCSS Functions */
+.arrow-default {
+  @include arrow;
+}
+
+#arrows {
+  @include clearfix;
+  
+  list-style: none;
+  li {
+    float: left;
+    width: calc(100%/4);
+    &.title {
+      font-size: 2em;
+      margin: 0 0 25px;
+      width: 100%;
+      ~ .title {
+        margin-top: 50px;
+      }
+    }
+    
+    .button-cta {
+      @include button($size: 30px);
+      &:after {
+        content: '';
+        
+        @include arrow($dir: right, $size: 15px);
+        
+        position: absolute;
+        left: 100%;
+        top: 0;
+      }
+    }
+    
+    .button-w-cta {
+      @include button($size: 30px);
+      padding-right: 35px;
+      
+      &:before {
+        content: '';
+        
+        background: white;
+        border-radius: 10px;
+        height: 20px;
+        width: 20px;
+        
+        position: absolute;
+        right: 5px;
+        top: 5px;
+      }
+      
+      &:after {
+        content: '';
+        
+        @include arrow($dir: right, $size: 8px);
+        
+        position: absolute;
+        right: 1px;
+        top: 7px;
+      }
+    }
+  }
+}
