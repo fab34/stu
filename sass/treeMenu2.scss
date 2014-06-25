@@ -1,0 +1,115 @@
+@import "base";
+
+ul.list{
+    width:190px;
+    overflow:hidden;
+}
+li > input[type=checkbox]{
+  opacity: 0;
+}
+
+label{
+  margin-left: -2px;
+}
+input[type=checkbox]:checked ~ ul{
+  display: none;
+}
+
+input[type=checkbox] + span{
+  margin-left: -9px;
+}
+
+input[type=checkbox] + span:before{
+  content: '\25BC';
+}
+
+input[type=checkbox]:checked + span:before{
+  content: '\25B6';
+}
+
+ul.list,
+ul.list ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+ul.list ul {
+    margin-left:15px;
+    padding:0;
+    position:relative;
+}
+
+ul.list ul:before {
+    content:"";
+    display:block;
+    width:0;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    border-left:1px solid #ccc;
+}
+ul.list li {
+    margin:0;
+    padding:3px 0;
+    text-decoration: none;
+    text-transform: uppercase;
+    font:normal 1.3rem/2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+    position:relative;
+}
+ul.list li label { 
+    text-decoration: none;
+    text-transform: uppercase;
+    font:normal 1.4rem/1.4rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+    color:#333;
+    position:relative;
+}
+ul.list li{
+    li{
+        li{
+            padding-left:20px;
+            
+        }  
+    }
+}
+ul.list label{
+    display:inline-block;
+    cursor:pointer;
+    width:100%;
+    height:20px;
+}
+ul.list li label:hover,
+ul.list li label:hover+ul li label {
+    color: darken($red01, 1%);
+}
+ul.list ul li:before {
+    content:"";
+    display:block;
+    width:15px;
+    height:0;
+    border-top:1px solid #ccc;
+    position:absolute;
+    top:12px;
+    left: 0;
+}
+ul.list ul li:last-child:before {
+    background: none repeat scroll 0 0 $wht;
+    height: auto;
+    top: 10px; 
+    bottom: 0;
+}
+ul.list>li>label{
+    position:absolute;
+    top:6px;
+    left:30px;
+}
+ul.list>li li>label{
+    position:absolute;
+    top:6px;
+    left:30px;
+}
+ul.list>li li li label{
+    position:relative;
+    left:0px;
+    top:-2px;
+}

@@ -39,52 +39,109 @@
     }
     .stoTop{
     	background:$wht;
-    	.page-left-bar {
-		    width: 190px;
-		    .HotSalePromo {
+		.HotSalePromo {
 			    background-color: $wht;
+			    height:265px;
 			    .hd {
 				    border-bottom: 1px solid lighten($black, 80%);
 				    color: $gray01;
-				    font:normal 1.6rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
-				    font-weight: bold;
 				    position: relative;
-				    em {
-					    background-color: lighten($red01, 5%);
-					    display: inline-block;
-					    height: 18px;
-					    margin: 0 8px 0 0;
-					    vertical-align: text-top;
-					    width: 8px;
-					}
+				    padding-bottom:6px;
+				    h3{
+				    	border-left:8px solid lighten($red01, 5%);
+				    	padding-left:10px;
+				    	height: 18px;
+				    	margin-top:6px;
+				    	font:bold 1.6rem/18px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+				    }
 					>ul {
 					    list-style: none outside none;
+					    padding-left:110px;
 					    position: absolute;
-					    right: 0;
-					    top: 11px;
+					    top:3px;
 					    li {
 						    float: left;
-						    a {
+						    >a {
 							    background: lighten($gray01, 60%);
 							    display: inline-block;
 							    float: left;
 							    height: 12px;
 							    margin-left: 2px;
+							    //position: absolute;
 							    width: 12px;
+							    top:0px;
 							}
-							.on {
+							&.on a, &:hover a{
 								background: lighten($gray01, 10%);
+							}
+							.secTabCon{
+								//border:1px solid #f00;
+								display:none;
+								position: absolute;
+								top: 20px;
+								left:0;
+								padding: 10px 0 4px 18px;
+								overflow: hidden;
+								width: 190px;
+								i {
+									color: $wht;
+									font:bold 1.1rem/1.1rem Arial,sans-serif;
+									height: 43px;
+									left: 0;
+									padding: 5px 0 0 3px;
+									position: absolute;
+									top: 7px;
+									left:18px;
+									width: 43px;
+									b {
+										padding-left: 6px;
+									}
+								}
+								.ico-label-HOTbg {
+									background-position: -393px -565px;
+									height: 43px;
+									width: 43px;
+								}
+								img {
+									border: 1px solid lighten($gray01, 60%);
+									height: 160px;
+									width: 160px;
+									vertical-align: top;
+								}
+								.Gd-name {
+									color: $gray01;
+									font:normal 1.3rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+									height: 30px;
+									overflow: hidden;
+									padding-top:4px;
+									width:90%;
+								}
+								.Gd-prc {
+									color: lighten($red01, 5%);
+									display: inline-block;
+									font:normal 1.2rem/2rem Arial,sans-serif;
+									padding-top: 6px;
+									overflow: hidden;
+									word-wrap: break-word;
+									span {
+										font-size: 19px;
+										font-weight: bold;
+									}
+								}
+							}
+							&.on .secTabCon{
+								display:block;
 							}
 						}
 					}
 				}
+				
 				.bd {
     				padding: 5px 0 4px;
     				ul {
 						padding: 5px 0 0 15px;
 						li {
 							display: none;
-							height: 231px;
 							overflow: hidden;
 							width: 160px;
 							a {
@@ -92,48 +149,45 @@
 								color: lighten($gray01, 60%);
 								i {
 									color: $wht;
-									font:normal 1.2rem/1.4rem Arial,sans-serif;
+									font:bold 1.1rem/1.1rem Arial,sans-serif;
 								 	height: 43px;
 									left: 0;
-									padding: 1px 0 0 4px;
+									padding: 6px 0 0 3px;
 									position: absolute;
-									top: -1px;
+									top: 0px;
 									width: 43px;
 									b {
 										padding-left: 6px;
 									}
 								}
 								.ico-label-HOTbg {
-									background-position: -390px -568px;
+									background-position: -393px -565px;
 									height: 43px;
 									width: 43px;
 								}
 								img {
-									border: 2px solid $red01;
+									border: 1px solid lighten($gray01, 60%);
 								 	height: 156px;
 									width: 156px;
 									vertical-align: top;
 								}
 								.Gd-name {
 									color: $gray01;
-									font-size: 13px;
-									height: 36px;
-									line-height: 1.4;
+									font:normal 1.3rem/1.5rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+									height: 30px;
 									overflow: hidden;
+									padding-top:2px;
 								}
 								.Gd-prc {
 									color: lighten($red01, 5%);
 								 	display: inline-block;
-									font-size: 12px;
-									height: 34px;
-									margin-top: 2px;
+									font:normal 1.2rem/2rem Arial,sans-serif;
+									padding-top: 4px;
 									overflow: hidden;
-									width: 115px;
 									word-wrap: break-word;
 									span {
 										font-size: 19px;
 										font-weight: bold;
-										padding-left: 2px;
 									}
 								}
 							}
@@ -143,13 +197,15 @@
 						}
 					}
 				}
-			}
-			.product-category-bar {
-				position: relative;
-				z-index: 99;
-			}
 		}
     }
+}
+.page-left-bar {
+	width: 190px;
+}
+.product-category-bar {
+	position: relative;
+	z-index: 99;
 }
 .section-title {
 	position: relative;
@@ -415,6 +471,7 @@
 #styleA{
 	#wrapMain{ //#styleA background color
 		background: url(../images/demo/bgStyleA.png) repeat;
+		background-attachment:fixed;
 	}
 	.stoTito{ //styleA main Title Img
 		background: url(../images/demo/stoTitoA.png) no-repeat;

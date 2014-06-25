@@ -218,113 +218,168 @@ body {
 #wrapInner .stoTop {
   background: white;
 }
-#wrapInner .stoTop .page-left-bar {
-  width: 190px;
-}
-#wrapInner .stoTop .page-left-bar .HotSalePromo {
+#wrapInner .stoTop .HotSalePromo {
   background-color: white;
+  height: 265px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .hd {
+#wrapInner .stoTop .HotSalePromo .hd {
   border-bottom: 1px solid #cccccc;
   color: #333333;
-  font: normal 1.6rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
-  font-weight: bold;
   position: relative;
+  padding-bottom: 6px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .hd em {
-  background-color: #c30000;
-  display: inline-block;
+#wrapInner .stoTop .HotSalePromo .hd h3 {
+  border-left: 8px solid #c30000;
+  padding-left: 10px;
   height: 18px;
-  margin: 0 8px 0 0;
-  vertical-align: text-top;
-  width: 8px;
+  margin-top: 6px;
+  font: bold 1.6rem/18px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .hd > ul {
+#wrapInner .stoTop .HotSalePromo .hd > ul {
   list-style: none outside none;
+  padding-left: 110px;
   position: absolute;
-  right: 0;
-  top: 11px;
+  top: 3px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .hd > ul li {
+#wrapInner .stoTop .HotSalePromo .hd > ul li {
   float: left;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .hd > ul li a {
+#wrapInner .stoTop .HotSalePromo .hd > ul li > a {
   background: #cccccc;
   display: inline-block;
   float: left;
   height: 12px;
   margin-left: 2px;
   width: 12px;
+  top: 0px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .hd > ul li .on {
+#wrapInner .stoTop .HotSalePromo .hd > ul li.on a, #wrapInner .stoTop .HotSalePromo .hd > ul li:hover a {
   background: #4d4d4d;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd {
+#wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon {
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  padding: 10px 0 4px 18px;
+  overflow: hidden;
+  width: 190px;
+}
+#wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon i {
+  color: white;
+  font: bold 1.1rem/1.1rem Arial,sans-serif;
+  height: 43px;
+  left: 0;
+  padding: 5px 0 0 3px;
+  position: absolute;
+  top: 7px;
+  left: 18px;
+  width: 43px;
+}
+#wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon i b {
+  padding-left: 6px;
+}
+#wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon .ico-label-HOTbg {
+  background-position: -393px -565px;
+  height: 43px;
+  width: 43px;
+}
+#wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon img {
+  border: 1px solid #cccccc;
+  height: 160px;
+  width: 160px;
+  vertical-align: top;
+}
+#wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon .Gd-name {
+  color: #333333;
+  font: normal 1.3rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  height: 30px;
+  overflow: hidden;
+  padding-top: 4px;
+  width: 90%;
+}
+#wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon .Gd-prc {
+  color: #c30000;
+  display: inline-block;
+  font: normal 1.2rem/2rem Arial,sans-serif;
+  padding-top: 6px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+#wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon .Gd-prc span {
+  font-size: 19px;
+  font-weight: bold;
+}
+#wrapInner .stoTop .HotSalePromo .hd > ul li.on .secTabCon {
+  display: block;
+}
+#wrapInner .stoTop .HotSalePromo .bd {
   padding: 5px 0 4px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul {
+#wrapInner .stoTop .HotSalePromo .bd ul {
   padding: 5px 0 0 15px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li {
+#wrapInner .stoTop .HotSalePromo .bd ul li {
   display: none;
-  height: 231px;
   overflow: hidden;
   width: 160px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a {
+#wrapInner .stoTop .HotSalePromo .bd ul li a {
   position: relative;
   color: #cccccc;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a i {
+#wrapInner .stoTop .HotSalePromo .bd ul li a i {
   color: white;
-  font: normal 1.2rem/1.4rem Arial,sans-serif;
+  font: bold 1.1rem/1.1rem Arial,sans-serif;
   height: 43px;
   left: 0;
-  padding: 1px 0 0 4px;
+  padding: 6px 0 0 3px;
   position: absolute;
-  top: -1px;
+  top: 0px;
   width: 43px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a i b {
+#wrapInner .stoTop .HotSalePromo .bd ul li a i b {
   padding-left: 6px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a .ico-label-HOTbg {
-  background-position: -390px -568px;
+#wrapInner .stoTop .HotSalePromo .bd ul li a .ico-label-HOTbg {
+  background-position: -393px -565px;
   height: 43px;
   width: 43px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a img {
-  border: 2px solid #aa0000;
+#wrapInner .stoTop .HotSalePromo .bd ul li a img {
+  border: 1px solid #cccccc;
   height: 156px;
   width: 156px;
   vertical-align: top;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a .Gd-name {
+#wrapInner .stoTop .HotSalePromo .bd ul li a .Gd-name {
   color: #333333;
-  font-size: 13px;
-  height: 36px;
-  line-height: 1.4;
+  font: normal 1.3rem/1.5rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  height: 30px;
   overflow: hidden;
+  padding-top: 2px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a .Gd-prc {
+#wrapInner .stoTop .HotSalePromo .bd ul li a .Gd-prc {
   color: #c30000;
   display: inline-block;
-  font-size: 12px;
-  height: 34px;
-  margin-top: 2px;
+  font: normal 1.2rem/2rem Arial,sans-serif;
+  padding-top: 4px;
   overflow: hidden;
-  width: 115px;
   word-wrap: break-word;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li a .Gd-prc span {
+#wrapInner .stoTop .HotSalePromo .bd ul li a .Gd-prc span {
   font-size: 19px;
   font-weight: bold;
-  padding-left: 2px;
 }
-#wrapInner .stoTop .page-left-bar .HotSalePromo .bd ul li.on {
+#wrapInner .stoTop .HotSalePromo .bd ul li.on {
   display: block;
 }
-#wrapInner .stoTop .page-left-bar .product-category-bar {
+
+.page-left-bar {
+  width: 190px;
+}
+
+.product-category-bar {
   position: relative;
   z-index: 99;
 }
@@ -594,6 +649,7 @@ body {
 
 #styleA #wrapMain {
   background: url(../images/demo/bgStyleA.png) repeat;
+  background-attachment: fixed;
 }
 #styleA .stoTito {
   background: url(../images/demo/stoTitoA.png) no-repeat;
