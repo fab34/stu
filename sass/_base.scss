@@ -5,6 +5,7 @@
 @import "compass/utilities/general/hacks";
 
 @import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
+@import url(../css/font-awesome-4.1.0/css/font-awesome.min.css);
 // ---------------------------------------------------------------------------
 // Basic Style
 html{font-size:62.5%;/*10 ÷ 16 × 100% = 62.5%*/font-family:"微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;}
@@ -16,6 +17,13 @@ body{font-size:1.2em;font-size:1.2rem /*1.4 × 10px = 14px */;-webkit-text-size-
 	height: 0;
 	visibility: hidden;
 }
+
+$contrWh:1008px; //網站整體寬度
+$txtLHor:#900; //滑鼠拖曳過後的樣式顏色
+$font:1.2rem; //全域字型大小
+$lineH:1.8em; //全域行距
+$fontst:"蘋果儷中黑","微軟正黑體","新細明體",Arial,sans-serif; //全域字型
+
 
 $navBg:rgba(224,0,97,1);
 $spcStrBg:rgba(255,244,228,1);

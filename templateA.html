@@ -14,13 +14,41 @@
     <link rel="stylesheet" type="text/css" href="css/navBar.css">
     <link rel="stylesheet" type="text/css" href="css/conWrap.css">
     <link rel="stylesheet" type="text/css" href="css/deco.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/templateA.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/template.js"></script>
 </head>
 <body id="styleA">
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+<div id="shopMenuBar" class="shopMB">
+    <div class="shopNav">
+        <div class="sStore">
+            <a title="Louis Vuitton" href="#">Louis Vuitton</a>
+        </div>
+        <!-- //搜索框 -->
+        <div class="search">
+            <div class="form_left">
+                <input name="keyword" type="text" autocomplete="off"class="searchTerm search-keyword" id="search-keyword" placeholder="商品搜尋">
+                <input type="submit" class="searchButton">
+            </div>
+            <ul id="hotwords" class="hotwords" style="display:none">
+                <li class="hwtitle">本館10大熱門關鍵字：</li>
+                <li><a href='#'><h1>水桶包</h1><span>13776次搜索</span></a></li>
+                <li><a href='#'><h1>水波紋</h1><span>7821次搜索</span></a></li>
+                <li><a href='#'><h1>雪莉包</h1><span>7783次搜索</span></a></li>
+                <li><a href='#'><h1>壓紋</h1><span>7669次搜索</span></a></li>
+                <li><a href='#'><h1>Tote</h1><span>7490次搜索</span></a></li>
+                <li><a href='#'><h1>長夾</h1><span>7106次搜索</span></a></li>
+                <li><a href='#'><h1>零錢</h1><span>5659次搜索</span></a></li>
+                <li><a href='#'><h1>格</h1><span>5532次搜索</span></a></li>
+                <li><a href='#'><h1>肩背</h1><span>4982次搜索</span></a></li>
+                <li><a href='#'><h1>艾瑪包</h1><span>4719次搜索</span></a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 <div id="wrapOuter">
     <div id="top">
         <header>
@@ -215,6 +243,7 @@
                 <li>★ Louis Vuitton 新上市</li>
                 <li><a href="">★ 結帳再85折</a></li>
             </ul>
+            <img class="" src="images/demo/stoTitoA.png">
         </div>
         <!-- top wrap :left-190px + rught-808px -->
         <div class="stoTop">
@@ -1549,9 +1578,6 @@
                     </div>
                 </div>
             </div>
-
-
-
             
             <div class="lookStory">
                 <img src="images/demo/youLookStory.jpg" width="998" height="170">
@@ -1562,8 +1588,6 @@
         </div>
     </div>
 </div>
-
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-    </body>
+<script src="js/searchBox.js"></script>
+</body>
 </html>

@@ -1,11 +1,160 @@
 @import "base";
 
-#wrapMain{ //default background color
-	background:$wht;
-	padding: 20px 0 0;
+//#shopMenuBar
+.shopMB{
+	@include box-shadow(rgba(0,0,0,0.2) 0 2px 3px 0);
+	background-color: rgba(0, 0, 0, 0.8);
+	border-bottom:1px solid rgba(255, 255, 255, 0.8);
+	color: white;
+	display: none;
+	height: 36px;
+	//overflow:hidden;;
+	position: fixed;
+	text-decoration: none;
+	top:0;
+	width:100%;
+	z-index: 999;
+	.shopNav{
+		background: transparent;
+		color: white;
+		display:block;
+		font:normal 1.2rem/36px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+		margin:0 auto;
+		position: relative;
+		width:1008px;
+		a {
+		    display: inline-block;
+		    font:normal 1.2rem/36px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+		    height: 36px;
+		    padding: 0 10px;
+		    color: white;
+		    text-decoration: none;
+		    //margin-right: 20px;
+		    &:hover {
+		    	background-color: #444;
+			}
+		}
+	}
+	.sStore{
+		float:left;
+		height: 36px;
+		position: relative;
+		z-index: 9;
+		>a{
+			background: #a00052 url(../images/demo/shopTop.png) repeat-x;
+			border-right:1px solid lighten($navBg, 20%);
+			border-left:1px solid lighten($navBg, 20%);
+			color: #ff0;
+			font-size:1.5rem;
+			text-align: center;
+			width:120px;
+			&:hover{
+		  		background: #ff6692 url(../images/demo/shopTop.png) repeat-x;
+			}
+		}
+	}
+	/*------ //搜索框 ---------*/
+	.search {
+		background:$wht;
+		float:left;
+		width:200px;
+		.form_left{
+			position:relative;
+			.searchTerm {
+				border: 3px solid #e70072;
+				color: rgba($gray01,0.8);
+				float: left;
+				font:normal 1.5rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+			  	height: 30px;
+			  	outline: none;
+			  	padding: 0 10px;
+			  	width: 100%;
+			 	&:focus{
+					color: #e70072;
+				}
+			}
+			.searchButton {
+				position: absolute;
+				right: -50px;
+				width: 40px;
+				height: 36px;
+				opacity: 0;
+				cursor: pointer;
+			}
+			&:before {
+				position: absolute;
+				right: -50px;
+				width: 40px;
+				height: 36px;
+				line-height: 36px;
+				background: #e70072;
+				text-align: center;
+				color: #fff;
+				border-radius: 5px;
+				font-family: 'FontAwesome';
+				content: '\f002';
+			}
+		}
+		.hotwords{
+			@include box-shadow(rgba(0,0,0,0.5) 0 2px 3px 0);
+			background:#fff;
+			border:#D9D9D9 1px solid;
+			border-top:none;
+			position:absolute;
+			top:36px;
+			left:-1px;
+			width:390px;
+			z-index:999;
+			li:hover,li:hover a,li a:hover{
+				text-decoration:none;
+				background:#ff6692;
+				color:$wht;
+			}
+			button{
+				margin-top:-2px;
+			}
+			li{
+				display:block;
+				height:28px;
+				line-height:28px;
+				&.hwtitle{
+					margin:0 10px;
+					color:darken($gray01, 20%);
+					border-bottom:#EFEFEF 1px solid;
+					&:hover{
+						background:#fff;
+						color:darken($gray01, 20%);
+					}
+				}
+				a{
+					height:28px;
+					line-height:28px;
+					display:block;
+					padding:0 10px;
+					color:rgba($gray01,0.8);
+					h1{
+						font-size:13px;
+						height:28px;
+						line-height:28px;
+						float:left;
+						font-weight:normal;
+					}
+					span{
+						display:block;
+						height:28px;
+						line-height:28px;
+						float:right;
+					}
+				}
+			}
+		}
+	}
 }
 
-
+#wrapMain{ //default background color
+	background:$wht;
+	padding: 10px 0 0;
+}
 #wrapInner{
     background: $wht;
     margin: 0 auto;
@@ -14,7 +163,7 @@
     width: 1008px;
     .stoTito{
     	border-bottom:1px solid rgba($gray01,0.2);
-    	height: 120px;
+    	min-height: 60px;
     	overflow: hidden;
     	position:relative;
     	width: 1008px;
@@ -40,9 +189,9 @@
     .stoTop{
     	background:$wht;
 		.HotSalePromo {
-			    background-color: $wht;
-			    height:265px;
-			    .hd {
+			background-color: $wht;
+			height:265px;
+			.hd {
 				    border-bottom: 1px solid lighten($black, 80%);
 				    color: $gray01;
 				    position: relative;
@@ -134,9 +283,9 @@
 							}
 						}
 					}
-				}
+			}
 				
-				.bd {
+			.bd {
     				padding: 5px 0 4px;
     				ul {
 						padding: 5px 0 0 15px;
@@ -196,7 +345,10 @@
 							display:block;
 						}
 					}
-				}
+			}
+		}
+		.todaySale{
+			height:241px;
 		}
     }
 }
@@ -327,24 +479,24 @@
     background-repeat: no-repeat;
 }
 
-.promo-category{
-	.blockTitle {
-		background:lighten($gray01, 10%);
-	}
-	.section-lists{
-		.other-category{
-			padding:6px 0;
-			a {
-				line-height:2.2rem;
-				color: rgb(193, 67, 70);
-				&:hover{
-					text-decoration: underline;
-				}
-			}
 
+.blockTitle {
+	background:lighten($gray01, 10%);
+}
+.section-lists{
+	padding-bottom:10px;
+	.other-category{
+		padding:6px 0;
+		a {
+			line-height:2.2rem;
+			color: rgb(193, 67, 70);
+			&:hover{
+				text-decoration: underline;
+			}
 		}
 	}
 }
+
 .inline-block {
 	display: inline-block;
 }
@@ -469,46 +621,185 @@
 
 //頁面自訂
 #styleA{
-	#wrapMain{ //#styleA background color
+	#wrapMain{ //#style background color
 		background: url(../images/demo/bgStyleA.png) repeat;
 		background-attachment:fixed;
 	}
-	.stoTito{ //styleA main Title Img
-		background: url(../images/demo/stoTitoA.png) no-repeat;
+	.stoTito{ //style main Title Img
+		//background: url(../images/demo/stoTitoA.png) no-repeat;
 	}
-}
-.section-lists{
-	background:lighten($gray01, 75%);
-	a {
-		color: darken($gray01, 5%);
-		&:hover{
-			color:darken($red01, 5%);
+	.section-lists{
+		background:lighten($gray01, 75%);
+		a {
+			color: darken($gray01, 5%);
+			&:hover{
+				color:darken($red01, 5%);
+			}
+		}
+		a.cate-level-1 {
+			color: $wht;
+			margin:2px 0;
+			border-top:1px dotted $brown02;
+			border-bottom:1px dotted $brown02;
+			position: relative;
+			i {
+				@include arrow($dir: right, $size: 6px, $color: $wht);
+				float:right;
+				position: absolute;
+				top:6px;
+				right:4px;
+			}
+			&:hover{
+				color:lighten($yellow, 25%);
+				/*i{
+					@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
+				}*/
+			}
 		}
 	}
-	a.cate-level-1 {
-		color: $wht;
-		margin:2px 0;
-		border-top:1px dotted $brown02;
-		border-bottom:1px dotted $brown02;
-		position: relative;
-		i {
-			@include arrow($dir: right, $size: 6px, $color: $wht);
-			float:right;
-			position: absolute;
-			top:6px;
-			right:4px;
-		}
-		&:hover{
-			color:lighten($yellow, 25%);
-			/*i{
-				@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
-			}*/
-		}
+	.odd {
+		background: darken($brown01, 5%);
+	}
+	.even {
+		background: saturate($brown01, 5%);
 	}
 }
-.odd {
-	background: darken($brown01, 5%);
+
+#styleB{
+	#wrapMain{ //#style background color
+		background: url(../images/demo/bgStyleB.png) repeat;
+		background-attachment:fixed;
+	}
+	.stoTito{ //style main Title Img
+		//background: url(../images/demo/stoTitoB.png) no-repeat;
+	}
+	.section-lists{
+		background:lighten($red01, 63%);
+		a {
+			color: darken($gray01, 5%);
+			&:hover{
+				color:darken($red01, 5%);
+			}
+		}
+		a.cate-level-1 {
+			color: $wht;
+			margin:2px 0;
+			border-top:1px dotted $brown02;
+			border-bottom:1px dotted $brown02;
+			position: relative;
+			i {
+				@include arrow($dir: right, $size: 6px, $color: $wht);
+				float:right;
+				position: absolute;
+				top:6px;
+				right:4px;
+			}
+			&:hover{
+				color:lighten($yellow, 25%);
+				/*i{
+					@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
+				}*/
+			}
+		}
+	}
+	.odd {
+		background: #bb7572;
+	}
+	.even {
+		background: #bb7572;
+	}
 }
-.even {
-	background: saturate($brown01, 5%);
+
+#styleC{
+	#wrapMain{ //#style background color
+		//background: url(../images/demo/bgStyleB.png) repeat;
+		//background-attachment:fixed;
+		background:#fff;
+	}
+	.stoTito{ //style main Title Img
+		//background: url(../images/demo/stoTitoB.png) no-repeat;
+	}
+	.section-lists{
+		background:#d5cfc8;
+		a {
+			color: darken($gray01, 5%);
+			&:hover{
+				color:darken($red01, 5%);
+			}
+		}
+		a.cate-level-1 {
+			color: $wht;
+			margin:2px 0;
+			border-top:1px dotted $brown02;
+			border-bottom:1px dotted $brown02;
+			position: relative;
+			i {
+				@include arrow($dir: right, $size: 6px, $color: $wht);
+				float:right;
+				position: absolute;
+				top:6px;
+				right:4px;
+			}
+			&:hover{
+				color:$black;
+				text-decoration:none;
+				/*i{
+					@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
+				}*/
+			}
+		}
+	}
+	.odd {
+		background: #9f9fa0;
+	}
+	.even {
+		background: darken(#9f9fa0, 5%);
+	}
+}
+
+#styleD{
+	#wrapMain{ //#style background color
+		//background: url(../images/demo/bgStyleB.png) repeat;
+		//background-attachment:fixed;
+		background:#fff;
+	}
+	.stoTito{ //style main Title Img
+		//background: url(../images/demo/stoTitoB.png) no-repeat;
+	}
+	.section-lists{
+		background:#fffde1;
+		a {
+			color: darken($gray01, 5%);
+			&:hover{
+				color:darken($red01, 5%);
+			}
+		}
+		a.cate-level-1 {
+			color: $wht;
+			margin:2px 0;
+			border-top:1px dotted $brown02;
+			border-bottom:1px dotted $brown02;
+			position: relative;
+			i {
+				@include arrow($dir: right, $size: 6px, $color: $wht);
+				float:right;
+				position: absolute;
+				top:6px;
+				right:4px;
+			}
+			&:hover{
+				color:$black;
+				text-decoration:none;
+				/*i{
+					@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
+				}*/
+			}
+		}
+	}
+	.odd {
+		background: #f4ad06;
+	}
+	.even {
+		background: darken(#f4ad06, 5%);
+	}
 }

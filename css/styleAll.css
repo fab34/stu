@@ -728,10 +728,11 @@ a {
 #itemE .boxdiv {
   display: block;
   height: 680px;
+  margin-left: 24px;
 }
 #itemE .boxdiv .sli {
   position: relative;
-  width: 950px;
+  width: 980px;
 }
 #itemE .boxdiv .sli ul.slnav {
   min-height: 395px;
@@ -1150,7 +1151,7 @@ a {
   border: 1px solid white;
   display: block;
   float: left;
-  margin: 5px 0 5px 4px;
+  margin: 8px;
   transition: all 0.3s ease-in-out 0s;
 }
 #itemF .boxdiv ul li .libox {

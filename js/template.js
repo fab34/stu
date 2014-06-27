@@ -22,7 +22,7 @@ $(document).ready(function(){
         $(".carRightNav>li.deful").addClass('active');
     });
 
-    //顯示所在大圖
+    //自由配-(顯示所在大圖)
     $(".carCon li").each(function(index, element){
         $(element).attr("class", 'hide');
     });
@@ -78,4 +78,24 @@ $(document).ready(function(){
         $(".slnav li").removeClass('slactive');
         $(".slnav #sli-1").addClass('slactive');
     });
+
+});
+
+
+// Show or hide the sticky #shopMenuBar
+$(document).ready(function() {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 290) {
+            $('.shopMB').fadeIn(290);
+        } else {
+            $('.shopMB').fadeOut(290);
+        }
+    });
+            
+    // Animate the scroll to top
+    /*$('.shopMB').click(function(event) {
+        event.preventDefault();
+                
+        $('html, body').animate({scrollTop: 0}, 300);
+    })*/
 });

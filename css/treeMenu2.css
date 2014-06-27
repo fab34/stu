@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
+@import url(../css/font-awesome-4.1.0/css/font-awesome.min.css);
 html {
   font-size: 62.5%;
   /*10 ÷ 16 × 100% = 62.5%*/

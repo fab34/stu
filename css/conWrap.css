@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
+@import url(../css/font-awesome-4.1.0/css/font-awesome.min.css);
 html {
   font-size: 62.5%;
   /*10 ÷ 16 × 100% = 62.5%*/
@@ -178,9 +179,161 @@ body {
   top: 7px;
 }
 
+.shopMB {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px 0;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 2px 3px 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+  color: white;
+  display: none;
+  height: 36px;
+  position: fixed;
+  text-decoration: none;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  /*------ //搜索框 ---------*/
+}
+.shopMB .shopNav {
+  background: transparent;
+  color: white;
+  display: block;
+  font: normal 1.2rem/36px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  margin: 0 auto;
+  position: relative;
+  width: 1008px;
+}
+.shopMB .shopNav a {
+  display: inline-block;
+  font: normal 1.2rem/36px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  height: 36px;
+  padding: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+.shopMB .shopNav a:hover {
+  background-color: #444;
+}
+.shopMB .sStore {
+  float: left;
+  height: 36px;
+  position: relative;
+  z-index: 9;
+}
+.shopMB .sStore > a {
+  background: #a00052 url(../images/demo/shopTop.png) repeat-x;
+  border-right: 1px solid #ff4797;
+  border-left: 1px solid #ff4797;
+  color: #ff0;
+  font-size: 1.5rem;
+  text-align: center;
+  width: 120px;
+}
+.shopMB .sStore > a:hover {
+  background: #ff6692 url(../images/demo/shopTop.png) repeat-x;
+}
+.shopMB .search {
+  background: white;
+  float: left;
+  width: 200px;
+}
+.shopMB .search .form_left {
+  position: relative;
+}
+.shopMB .search .form_left .searchTerm {
+  border: 3px solid #e70072;
+  color: rgba(51, 51, 51, 0.8);
+  float: left;
+  font: normal 1.5rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
+  height: 30px;
+  outline: none;
+  padding: 0 10px;
+  width: 100%;
+}
+.shopMB .search .form_left .searchTerm:focus {
+  color: #e70072;
+}
+.shopMB .search .form_left .searchButton {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  opacity: 0;
+  cursor: pointer;
+}
+.shopMB .search .form_left:before {
+  position: absolute;
+  right: -50px;
+  width: 40px;
+  height: 36px;
+  line-height: 36px;
+  background: #e70072;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'FontAwesome';
+  content: '\f002';
+}
+.shopMB .search .hotwords {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px 0;
+  -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px 0;
+  box-shadow: rgba(0, 0, 0, 0.5) 0 2px 3px 0;
+  background: #fff;
+  border: #D9D9D9 1px solid;
+  border-top: none;
+  position: absolute;
+  top: 36px;
+  left: -1px;
+  width: 390px;
+  z-index: 999;
+}
+.shopMB .search .hotwords li:hover, .shopMB .search .hotwords li:hover a, .shopMB .search .hotwords li a:hover {
+  text-decoration: none;
+  background: #ff6692;
+  color: white;
+}
+.shopMB .search .hotwords button {
+  margin-top: -2px;
+}
+.shopMB .search .hotwords li {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+}
+.shopMB .search .hotwords li.hwtitle {
+  margin: 0 10px;
+  color: black;
+  border-bottom: #EFEFEF 1px solid;
+}
+.shopMB .search .hotwords li.hwtitle:hover {
+  background: #fff;
+  color: black;
+}
+.shopMB .search .hotwords li a {
+  height: 28px;
+  line-height: 28px;
+  display: block;
+  padding: 0 10px;
+  color: rgba(51, 51, 51, 0.8);
+}
+.shopMB .search .hotwords li a h1 {
+  font-size: 13px;
+  height: 28px;
+  line-height: 28px;
+  float: left;
+  font-weight: normal;
+}
+.shopMB .search .hotwords li a span {
+  display: block;
+  height: 28px;
+  line-height: 28px;
+  float: right;
+}
+
 #wrapMain {
   background: white;
-  padding: 20px 0 0;
+  padding: 10px 0 0;
 }
 
 #wrapInner {
@@ -192,7 +345,7 @@ body {
 }
 #wrapInner .stoTito {
   border-bottom: 1px solid rgba(51, 51, 51, 0.2);
-  height: 120px;
+  min-height: 60px;
   overflow: hidden;
   position: relative;
   width: 1008px;
@@ -374,6 +527,9 @@ body {
 #wrapInner .stoTop .HotSalePromo .bd ul li.on {
   display: block;
 }
+#wrapInner .stoTop .todaySale {
+  height: 241px;
+}
 
 .page-left-bar {
   width: 190px;
@@ -509,17 +665,21 @@ body {
   background-repeat: no-repeat;
 }
 
-.promo-category .blockTitle {
+.blockTitle {
   background: #4d4d4d;
 }
-.promo-category .section-lists .other-category {
+
+.section-lists {
+  padding-bottom: 10px;
+}
+.section-lists .other-category {
   padding: 6px 0;
 }
-.promo-category .section-lists .other-category a {
+.section-lists .other-category a {
   line-height: 2.2rem;
   color: #c14346;
 }
-.promo-category .section-lists .other-category a:hover {
+.section-lists .other-category a:hover {
   text-decoration: underline;
 }
 
@@ -651,27 +811,23 @@ body {
   background: url(../images/demo/bgStyleA.png) repeat;
   background-attachment: fixed;
 }
-#styleA .stoTito {
-  background: url(../images/demo/stoTitoA.png) no-repeat;
-}
-
-.section-lists {
+#styleA .section-lists {
   background: #f2f2f2;
 }
-.section-lists a {
+#styleA .section-lists a {
   color: #262626;
 }
-.section-lists a:hover {
+#styleA .section-lists a:hover {
   color: #900000;
 }
-.section-lists a.cate-level-1 {
+#styleA .section-lists a.cate-level-1 {
   color: white;
   margin: 2px 0;
   border-top: 1px dotted #6a3800;
   border-bottom: 1px dotted #6a3800;
   position: relative;
 }
-.section-lists a.cate-level-1 i {
+#styleA .section-lists a.cate-level-1 i {
   display: block;
   width: 0;
   height: 0;
@@ -684,17 +840,153 @@ body {
   top: 6px;
   right: 4px;
 }
-.section-lists a.cate-level-1:hover {
+#styleA .section-lists a.cate-level-1:hover {
   color: #ffff80;
   /*i{
   	@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
   }*/
 }
-
-.odd {
+#styleA .odd {
   background: #5b5043;
 }
-
-.even {
+#styleA .even {
   background: #6f5d49;
+}
+
+#styleB #wrapMain {
+  background: url(../images/demo/bgStyleB.png) repeat;
+  background-attachment: fixed;
+}
+#styleB .section-lists {
+  background: #ffecec;
+}
+#styleB .section-lists a {
+  color: #262626;
+}
+#styleB .section-lists a:hover {
+  color: #900000;
+}
+#styleB .section-lists a.cate-level-1 {
+  color: white;
+  margin: 2px 0;
+  border-top: 1px dotted #6a3800;
+  border-bottom: 1px dotted #6a3800;
+  position: relative;
+}
+#styleB .section-lists a.cate-level-1 i {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 6px;
+  border-style: solid;
+  border-left-color: white;
+  float: right;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+}
+#styleB .section-lists a.cate-level-1:hover {
+  color: #ffff80;
+  /*i{
+  	@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
+  }*/
+}
+#styleB .odd {
+  background: #bb7572;
+}
+#styleB .even {
+  background: #bb7572;
+}
+
+#styleC #wrapMain {
+  background: #fff;
+}
+#styleC .section-lists {
+  background: #d5cfc8;
+}
+#styleC .section-lists a {
+  color: #262626;
+}
+#styleC .section-lists a:hover {
+  color: #900000;
+}
+#styleC .section-lists a.cate-level-1 {
+  color: white;
+  margin: 2px 0;
+  border-top: 1px dotted #6a3800;
+  border-bottom: 1px dotted #6a3800;
+  position: relative;
+}
+#styleC .section-lists a.cate-level-1 i {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 6px;
+  border-style: solid;
+  border-left-color: white;
+  float: right;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+}
+#styleC .section-lists a.cate-level-1:hover {
+  color: black;
+  text-decoration: none;
+  /*i{
+  	@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
+  }*/
+}
+#styleC .odd {
+  background: #9f9fa0;
+}
+#styleC .even {
+  background: #929293;
+}
+
+#styleD #wrapMain {
+  background: #fff;
+}
+#styleD .section-lists {
+  background: #fffde1;
+}
+#styleD .section-lists a {
+  color: #262626;
+}
+#styleD .section-lists a:hover {
+  color: #900000;
+}
+#styleD .section-lists a.cate-level-1 {
+  color: white;
+  margin: 2px 0;
+  border-top: 1px dotted #6a3800;
+  border-bottom: 1px dotted #6a3800;
+  position: relative;
+}
+#styleD .section-lists a.cate-level-1 i {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 6px;
+  border-style: solid;
+  border-left-color: white;
+  float: right;
+  position: absolute;
+  top: 6px;
+  right: 4px;
+}
+#styleD .section-lists a.cate-level-1:hover {
+  color: black;
+  text-decoration: none;
+  /*i{
+  	@include arrow($dir: right, $size: 6px, $color: lighten($yellow, 25%));
+  }*/
+}
+#styleD .odd {
+  background: #f4ad06;
+}
+#styleD .even {
+  background: #db9b05;
 }
