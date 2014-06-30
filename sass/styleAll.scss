@@ -63,9 +63,12 @@ $styleF:rgba(255,180,50,1);
 $styleG:rgba(255,140,100,1);
 
 #slowLife{
-	width: 950px;
+	background:lighten(#eee, 2%);
 	margin:0 auto;
-	padding: 10px;
+	overflow: hidden;
+	padding:10px;
+	position: relative;
+	width: 988px; //all width:1008px;
 }
 
 #itemC{
@@ -461,16 +464,17 @@ $styleG:rgba(255,140,100,1);
 	    border:none;
 	    overflow: hidden;
 	    position: relative;
-	    width: 950px;
+	    width: 988px;
 	    li.linediv {
 		    float: left;
-		    margin-right: 5px;
-		    &:first-child{
+		    padding:7px;
+		    //margin-right: 8px;
+		    /*&:first-child{
 				margin-left:2px;
 			}
 			&:last-child{
 				margin-right:1px;
-			}
+			}*/
 			.spanimg{
 				display: block;
 				width: 225px;
@@ -688,14 +692,10 @@ $styleG:rgba(255,140,100,1);
 	}
 
 	.boxdiv{
-		display:block;
 		height:680px;
-		margin-left:24px;
 		.sli {
-		    //overflow: hidden;
 		    position: relative;
-		    width: 980px;
-		    //min-height:395px;
+		    width: 988px;
 		    ul.slnav {
 			    min-height: 395px;
 			    z-index:9;
@@ -708,7 +708,7 @@ $styleG:rgba(255,140,100,1);
 			    li{
 			    	float: left;
 			    	margin-right:5px;
-			    	width: 232px;
+			    	width: 242px;
 			    	.tab{
 			    		background-color:$gry03; //#f8f8f8
 					    border:1px solid $gry01;
@@ -723,7 +723,7 @@ $styleG:rgba(255,140,100,1);
 			    	}
 			    	&:last-child .tab{
 			    		margin-right:0;
-				    	width: 237px;
+				    	width: 245px;
 				    }
 				    &.slactive .tab , .tab:hover{
 						margin-left:0;
@@ -750,16 +750,15 @@ $styleG:rgba(255,140,100,1);
 					    display:none;
 					    position:absolute;
 					    top:31px;
+					    width:986px;
 						.notediv {
 						    background-color:$wht01;
 						    position: relative;
-						    width: 948px;
 						    marquee {
 								color: rgb(80, 80, 80);
 								height: 30px;
 								line-height: 30px;
 								margin: 0 5px 0 24px;
-								width: 915px;
 							}
 						    i {
 							    background: url("../images/trumpet.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
@@ -775,12 +774,13 @@ $styleG:rgba(255,140,100,1);
 						    background-color:$wht01;
 						    display: block;
 						    overflow: hidden;
-						    width: 948px;
+						    width: 980px;
 						    padding-bottom:10px;
+						    padding-left:6px;
 						    .item {
 							    display: block;
 							    float: left;
-							    margin-bottom: 5px;
+							    margin:0;
 							    padding:0 0 5px;
 							    &:hover{
 									@include background-image(linear-gradient(top,#ededed,rgba(#ededed,.5),#fefefe));
@@ -788,8 +788,8 @@ $styleG:rgba(255,140,100,1);
 									a {
 										margin: 0;
 										img{
-											height: 231px;
-											width: 231px;
+											height: 242px;
+											width: 242px;
 										}
 									}
 								}
@@ -797,12 +797,12 @@ $styleG:rgba(255,140,100,1);
 								    display: block;
 								    margin: 15px 12px 3px;
 								    img {
-									    height: 213px;
-									    width: 213px;
+									    height: 224px;
+									    width: 224px;
 									}
 								}
 								a.textdiv {
-								    width: 210px;
+								    width: 222px;
 									color: $gry02;
 								    display: block;
 								    height: 28px;
@@ -811,13 +811,13 @@ $styleG:rgba(255,140,100,1);
 								    overflow: hidden;
 								    text-align: center;
 								    transition: all 0.3s ease-in-out 0s;
-								    width: 170px;
 								}
 								.pricediv {
 								    height: 24px;
 								    line-height: 24px;
 								    text-align: left;
 								    padding-left:6px;
+								    width: 96%;
 								    em {
 									    border: 1px solid rgb(201, 88, 92);
 									    border-radius: 5px;
@@ -848,20 +848,6 @@ $styleG:rgba(255,140,100,1);
 										}
 									}
 								}
-								.tooldiv {
-								    margin: 8px auto 3px;
-								    overflow: hidden;
-								    width: 50px;
-								     .sharediv {
-									    background: url("../images/share.png") no-repeat scroll 0 -64px rgba(0, 0, 0, 0);
-										color: rgb(51, 51, 51);
-									    cursor: pointer;
-									    font-size: 13px;
-									    line-height: 16px;
-									    padding-left: 18px;
-									    transition: all 0.3s ease-in-out 0s;
-									}
-								}
 							}
 						}
 					}
@@ -871,105 +857,6 @@ $styleG:rgba(255,140,100,1);
 					}
 			    }
 			}
-		}
-
-		ol .boxli {
-		    border: 1px solid $gry01;
-		    //z-index:1;
-		    display:none;
-		    position:absolute;
-		    top:39px;
-			.notediv {
-			    background-color:$wht01;
-			    position: relative;
-			    width: 948px;
-			    marquee {
-					color: rgb(80, 80, 80);
-					height: 30px;
-					line-height: 30px;
-					margin: 0 5px 0 24px;
-					width: 915px;
-				}
-			    i {
-				    background: url("http://img.taobao.com/L1/142/411490519/modules/tshop-um-hdyg/assets/images/trumpet.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
-				    display: block;
-				    height: 30px;
-				    left: 0;
-				    position: absolute;
-				    top: 0;
-				    width: 30px;
-				}
-			}
-			
-			.itemul {
-			    background-color:$wht01;
-			    display: block;
-			    overflow: hidden;
-			    width: 948px;
-			    .item {
-				    display: block;
-				    float: left;
-				    margin-bottom: 5px;
-				    a {
-					    display: block;
-					    margin: 15px 12px 3px;
-					    img {
-						    height: 213px;
-						    width: 213px;
-						}
-						&:hover{
-							margin: 0 3px;
-							 img {
-							    height: 231px;
-							    width: 231px;
-							}
-						}
-					}
-					a.textdiv {
-					    width: 210px;
-						color: rgb(51, 51, 51);
-					    display: block;
-					    height: 28px;
-					    line-height: 28px;
-					    margin: 0 auto;
-					    overflow: hidden;
-					    text-align: center;
-					    transition: all 0.3s ease-in-out 0s;
-					    width: 170px;
-					}
-					.pricediv {
-					    height: 24px;
-					    line-height: 24px;
-					    text-align: center;
-					    .price {
-						    color: rgb(111, 142, 74);
-						    font-weight: 700;
-						    padding: 0 8px 0 0;
-						}
-						del {
-						    color: rgb(150, 150, 150);
-						}
-					}
-					.tooldiv {
-					    margin: 8px auto 3px;
-					    overflow: hidden;
-					    width: 50px;
-					     .sharediv {
-						    background: url("http://img.taobao.com/L1/142/411490519/modules/tshop-um-hdyg/assets/images/share.png") no-repeat scroll 0 -64px rgba(0, 0, 0, 0);
-							color: rgb(51, 51, 51);
-						    cursor: pointer;
-						    font-size: 13px;
-						    line-height: 16px;
-						    padding-left: 18px;
-						    transition: all 0.3s ease-in-out 0s;
-						}
-					}
-				}
-			}
-		}
-		ol .selNow{
-			display:block;
-			z-index: 9;
 		}
 	}
 }
@@ -1105,7 +992,7 @@ $styleG:rgba(255,140,100,1);
 			    border: 1px solid $wht01;
 			    display: block;
 			    float: left;
-			    margin: 8px;
+			    margin: 7px;
 			    transition: all 0.3s ease-in-out 0s;
 				.libox {
 					position: relative;
@@ -1346,12 +1233,12 @@ $styleG:rgba(255,140,100,1);
 
 	.boxdiv{
 	    background-color: rgba(0, 0, 0, 0);
-	    padding: 0 8px;
+	    padding: 0 6px;
 	    .water-col {
 		    float: left;
-		    margin: 0 15px;
+		    margin: 0 8px;
 		    min-height: 1px;
-		    width: 215px;
+		    width: 230px;
 		    li.water-item {
 			    background: #fff;
 			    box-shadow: 0 5px 8px #c3c3c3;
@@ -1364,7 +1251,7 @@ $styleG:rgba(255,140,100,1);
 				}
 				.cover {
 				    position: relative;
-				    width:215px;
+				    width:230px;
 				    overflow: hidden;
 				    img {
 				    	//height:230px;
@@ -1401,13 +1288,15 @@ $styleG:rgba(255,140,100,1);
 					height: 0;
 					//height: 71px; 
 					margin-top: 1px;
+					margin-left:1px;
 					overflow: hidden;
 					transition: all 0.5s ease-in-out 0s;
-					width: 216px;
+					width: 230px;
 					img {
 						display: block;
 						float: left;
 						margin-right: 1px;
+						width:75px;
 					}
 				}
 				.pdName {
@@ -1445,15 +1334,18 @@ $styleG:rgba(255,140,100,1);
 			}
 			&:nth-child(odd){
 				li.water-item .cover img {
-					height:215px;
+					height:230px;
 				}
 			}
 			&:nth-child(even){
 				li.water-item .cover img {
-					height:235px;
-					margin-left:-5px;
+					height:250px;
+					margin-left:-10px;
 				}
 			}
+		}
+		.water-col:first-child{
+			margin-left: 0;
 		}
 	}
 }

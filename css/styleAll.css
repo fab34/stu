@@ -79,9 +79,12 @@ a {
 }
 
 #slowLife {
-  width: 950px;
+  background: #f3f3f3;
   margin: 0 auto;
+  overflow: hidden;
   padding: 10px;
+  position: relative;
+  width: 988px;
 }
 
 #itemC .styleC {
@@ -492,17 +495,17 @@ a {
   border: none;
   overflow: hidden;
   position: relative;
-  width: 950px;
+  width: 988px;
 }
 #itemD .boxdiv li.linediv {
   float: left;
-  margin-right: 5px;
-}
-#itemD .boxdiv li.linediv:first-child {
-  margin-left: 2px;
-}
-#itemD .boxdiv li.linediv:last-child {
-  margin-right: 1px;
+  padding: 7px;
+    /*&:first-child{
+		margin-left:2px;
+	}
+	&:last-child{
+		margin-right:1px;
+	}*/
 }
 #itemD .boxdiv li.linediv .spanimg {
   display: block;
@@ -726,13 +729,11 @@ a {
   color: #cc0000;
 }
 #itemE .boxdiv {
-  display: block;
   height: 680px;
-  margin-left: 24px;
 }
 #itemE .boxdiv .sli {
   position: relative;
-  width: 980px;
+  width: 988px;
 }
 #itemE .boxdiv .sli ul.slnav {
   min-height: 395px;
@@ -747,7 +748,7 @@ a {
 #itemE .boxdiv .sli ul.slnav li {
   float: left;
   margin-right: 5px;
-  width: 232px;
+  width: 242px;
 }
 #itemE .boxdiv .sli ul.slnav li .tab {
   background-color: #f8f8f8;
@@ -763,7 +764,7 @@ a {
 }
 #itemE .boxdiv .sli ul.slnav li:last-child .tab {
   margin-right: 0;
-  width: 237px;
+  width: 245px;
 }
 #itemE .boxdiv .sli ul.slnav li.slactive .tab, #itemE .boxdiv .sli ul.slnav li .tab:hover {
   margin-left: 0;
@@ -788,18 +789,17 @@ a {
   display: none;
   position: absolute;
   top: 31px;
+  width: 986px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .notediv {
   background-color: white;
   position: relative;
-  width: 948px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .notediv marquee {
   color: #505050;
   height: 30px;
   line-height: 30px;
   margin: 0 5px 0 24px;
-  width: 915px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .notediv i {
   background: url("../images/trumpet.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
@@ -814,13 +814,14 @@ a {
   background-color: white;
   display: block;
   overflow: hidden;
-  width: 948px;
+  width: 980px;
   padding-bottom: 10px;
+  padding-left: 6px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item {
   display: block;
   float: left;
-  margin-bottom: 5px;
+  margin: 0;
   padding: 0 0 5px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item:hover {
@@ -835,19 +836,19 @@ a {
   margin: 0;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item:hover a img {
-  height: 231px;
-  width: 231px;
+  height: 242px;
+  width: 242px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item a {
   display: block;
   margin: 15px 12px 3px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item a img {
-  height: 213px;
-  width: 213px;
+  height: 224px;
+  width: 224px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item a.textdiv {
-  width: 210px;
+  width: 222px;
   color: #333333;
   display: block;
   height: 28px;
@@ -856,13 +857,13 @@ a {
   overflow: hidden;
   text-align: center;
   transition: all 0.3s ease-in-out 0s;
-  width: 170px;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item .pricediv {
   height: 24px;
   line-height: 24px;
   text-align: left;
   padding-left: 6px;
+  width: 96%;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli .itemul .item .pricediv em {
   border: 1px solid #c9585c;
@@ -890,119 +891,9 @@ a {
   font-size: 12px;
   padding-right: 10px;
 }
-#itemE .boxdiv .sli ul.slnav li .boxli .itemul .item .tooldiv {
-  margin: 8px auto 3px;
-  overflow: hidden;
-  width: 50px;
-}
-#itemE .boxdiv .sli ul.slnav li .boxli .itemul .item .tooldiv .sharediv {
-  background: url("../images/share.png") no-repeat scroll 0 -64px rgba(0, 0, 0, 0);
-  color: #333333;
-  cursor: pointer;
-  font-size: 13px;
-  line-height: 16px;
-  padding-left: 18px;
-  transition: all 0.3s ease-in-out 0s;
-}
 #itemE .boxdiv .sli ul.slnav li#sli-2 .boxli, #itemE .boxdiv .sli ul.slnav li#sli-3 .boxli, #itemE .boxdiv .sli ul.slnav li#sli-4 .boxli {
   position: absolute;
   left: 0;
-}
-#itemE .boxdiv ol .boxli {
-  border: 1px solid #e9e9e9;
-  display: none;
-  position: absolute;
-  top: 39px;
-}
-#itemE .boxdiv ol .boxli .notediv {
-  background-color: white;
-  position: relative;
-  width: 948px;
-}
-#itemE .boxdiv ol .boxli .notediv marquee {
-  color: #505050;
-  height: 30px;
-  line-height: 30px;
-  margin: 0 5px 0 24px;
-  width: 915px;
-}
-#itemE .boxdiv ol .boxli .notediv i {
-  background: url("http://img.taobao.com/L1/142/411490519/modules/tshop-um-hdyg/assets/images/trumpet.gif") no-repeat scroll center center rgba(0, 0, 0, 0);
-  display: block;
-  height: 30px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 30px;
-}
-#itemE .boxdiv ol .boxli .itemul {
-  background-color: white;
-  display: block;
-  overflow: hidden;
-  width: 948px;
-}
-#itemE .boxdiv ol .boxli .itemul .item {
-  display: block;
-  float: left;
-  margin-bottom: 5px;
-}
-#itemE .boxdiv ol .boxli .itemul .item a {
-  display: block;
-  margin: 15px 12px 3px;
-}
-#itemE .boxdiv ol .boxli .itemul .item a img {
-  height: 213px;
-  width: 213px;
-}
-#itemE .boxdiv ol .boxli .itemul .item a:hover {
-  margin: 0 3px;
-}
-#itemE .boxdiv ol .boxli .itemul .item a:hover img {
-  height: 231px;
-  width: 231px;
-}
-#itemE .boxdiv ol .boxli .itemul .item a.textdiv {
-  width: 210px;
-  color: #333333;
-  display: block;
-  height: 28px;
-  line-height: 28px;
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
-  transition: all 0.3s ease-in-out 0s;
-  width: 170px;
-}
-#itemE .boxdiv ol .boxli .itemul .item .pricediv {
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-}
-#itemE .boxdiv ol .boxli .itemul .item .pricediv .price {
-  color: #6f8e4a;
-  font-weight: 700;
-  padding: 0 8px 0 0;
-}
-#itemE .boxdiv ol .boxli .itemul .item .pricediv del {
-  color: #969696;
-}
-#itemE .boxdiv ol .boxli .itemul .item .tooldiv {
-  margin: 8px auto 3px;
-  overflow: hidden;
-  width: 50px;
-}
-#itemE .boxdiv ol .boxli .itemul .item .tooldiv .sharediv {
-  background: url("http://img.taobao.com/L1/142/411490519/modules/tshop-um-hdyg/assets/images/share.png") no-repeat scroll 0 -64px rgba(0, 0, 0, 0);
-  color: #333333;
-  cursor: pointer;
-  font-size: 13px;
-  line-height: 16px;
-  padding-left: 18px;
-  transition: all 0.3s ease-in-out 0s;
-}
-#itemE .boxdiv ol .selNow {
-  display: block;
-  z-index: 9;
 }
 
 #itemF .styleF {
@@ -1151,7 +1042,7 @@ a {
   border: 1px solid white;
   display: block;
   float: left;
-  margin: 8px;
+  margin: 7px;
   transition: all 0.3s ease-in-out 0s;
 }
 #itemF .boxdiv ul li .libox {
@@ -1398,13 +1289,13 @@ a {
 }
 #itemG .boxdiv {
   background-color: rgba(0, 0, 0, 0);
-  padding: 0 8px;
+  padding: 0 6px;
 }
 #itemG .boxdiv .water-col {
   float: left;
-  margin: 0 15px;
+  margin: 0 8px;
   min-height: 1px;
-  width: 215px;
+  width: 230px;
 }
 #itemG .boxdiv .water-col li.water-item {
   background: #fff;
@@ -1419,7 +1310,7 @@ a {
 }
 #itemG .boxdiv .water-col li.water-item .cover {
   position: relative;
-  width: 215px;
+  width: 230px;
   overflow: hidden;
   /*a:hover{
   	img {
@@ -1452,14 +1343,16 @@ a {
 #itemG .boxdiv .water-col li.water-item .img-list {
   height: 0;
   margin-top: 1px;
+  margin-left: 1px;
   overflow: hidden;
   transition: all 0.5s ease-in-out 0s;
-  width: 216px;
+  width: 230px;
 }
 #itemG .boxdiv .water-col li.water-item .img-list img {
   display: block;
   float: left;
   margin-right: 1px;
+  width: 75px;
 }
 #itemG .boxdiv .water-col li.water-item .pdName {
   color: #1d1d1d;
@@ -1494,11 +1387,14 @@ a {
   padding: 6px 10px 10px;
 }
 #itemG .boxdiv .water-col:nth-child(odd) li.water-item .cover img {
-  height: 215px;
+  height: 230px;
 }
 #itemG .boxdiv .water-col:nth-child(even) li.water-item .cover img {
-  height: 235px;
-  margin-left: -5px;
+  height: 250px;
+  margin-left: -10px;
+}
+#itemG .boxdiv .water-col:first-child {
+  margin-left: 0;
 }
 
 li.water-item:hover .label {
