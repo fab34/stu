@@ -2,65 +2,9 @@
 @import "compass/css3";
 @import "compass/utilities";
 @import "compass/utilities/general/hacks";
+@import "base";
+@import "zindex";
 
-// Mixins
-@mixin corner($position, $sizeX, $sizeY, $color){
-    border-style: solid;
-    border-width: $sizeX $sizeY $sizeX $sizeY;
-    @if $position == "tl" {
-    border-color: 
-    	$color
-    	transparent
-    	transparent
-    	$color;
-	}
-	@if $position == "tr" {
-	border-color: 
-		$color
-		$color
-		transparent
-		transparent;
-	}
-	@if $position == "br" {
-	border-color: 
-		transparent
-	    $color
-	    $color
-	    transparent;
-	}
-  	@if $position == "bl" {
-  	border-color: 
-    	transparent
-      	transparent
-      	$color
-      	$color;
-    }
-}
-
-html{font-size:62.5%;font-family:"微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;}
-body{font-size:1.2rem;}
-ol, ul {list-style: none outside none;}
-a {text-decoration: none;}
-.clearfix:after {
-	clear: both;
-	content: " ";
-	display: block;
-	height: 0;
-}
-
-$red01:#cc0000;
-$red02:#a00000;
-$redPrice:#c90e12;
-$wht01:#ffffff;
-$bk01:#000000;
-$gry01:#e9e9e9;
-$gry02:#333333;
-$gry03:#f8f8f8;
-$styleC:rgba(192,100,100,1);
-$styleD:rgba(255,100,128,1);
-$styleE:rgba(206,168,78,1);
-$styleF:rgba(255,180,50,1);
-$styleG:rgba(255,140,100,1);
 
 #slowLife{
 	background:lighten(#eee, 2%);
@@ -80,13 +24,12 @@ $styleG:rgba(255,140,100,1);
 			position: relative;
 		}
 		.backBarBg{
-			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht01));
+			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht));
 			border-top: 2px solid $styleC;
 			bottom:0;
 			height: 41px;
 			position: absolute;
 			width: 100%;
-			z-index: 1;
 		}
 		.infoBlock{
 			@include border-radius(10px);
@@ -99,8 +42,8 @@ $styleG:rgba(255,140,100,1);
 			min-width:150px;
 			position:absolute;
 			top:1px;
-			z-index:9;
-			box-shadow:1px 1px 2px rgba($bk01,0.6);
+			z-index: index($z, infoBlock);
+			box-shadow:1px 1px 2px rgba($black,0.6);
 			.cornerL{
 				position: absolute;
 				left:-11px;
@@ -122,19 +65,19 @@ $styleG:rgba(255,140,100,1);
 				border-right:11px solid transparent;
 			}
 			.infoCont{
-				color:$wht01;
+				color:$wht;
 				.floor{
 					color:$styleC;//cc0000
 					font:bold 1.6rem/2.2rem Arial;
 					padding-left:17px;
 					position:absolute;
 					top:9px;
-					z-index:9;
+					z-index: index($z, floor);
 				}
 				.title{
 					padding-top:10px;
 					margin:0 12px 0 46px;
-					color:$wht01;
+					color:$wht;
 					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 					}
 				
@@ -147,9 +90,9 @@ $styleG:rgba(255,140,100,1);
 				    background:transparent;
 				    top:4px;
 				    left:10px;
-				    z-index:2;
+				    z-index: index($z, eyeIcon);
 					.downArr {
-					    border-top: 12px $wht01 solid;
+					    border-top: 12px $wht solid;
 					    border-right: 8px transparent solid;
 					    border-bottom:0px transparent solid;
 					    border-left: 8px transparent solid;
@@ -159,7 +102,7 @@ $styleG:rgba(255,140,100,1);
 					    &:after {
 							@include border-radius(28px);
 						    @include transform(rotate(0deg));
-							background-color: $wht01;
+							background-color: $wht;
 						    content: "";
 						    display: block;
 						    height:28px;
@@ -178,9 +121,9 @@ $styleG:rgba(255,140,100,1);
 		    right:10px;
 		    text-align: right;
 		    width: 500px;
-		    z-index:9;
+		    z-index: index($z, rightmore);
 		    a{
-		    	color:rgba($bk01,0.6);
+		    	color:rgba($black,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -192,7 +135,7 @@ $styleG:rgba(255,140,100,1);
 	}
 
 	.boxdiv{
-	    background-color:$wht01;
+	    background-color:$wht;
 	    border: 1px solid $gry01;
 	    height: 465px;
 	    overflow: hidden;
@@ -257,7 +200,6 @@ $styleG:rgba(255,140,100,1);
 		width: 225px;
 		li{
 			position:absolute;
-			z-index:1;
 			img {
 				height: 225px;
 				width: 225px;
@@ -278,26 +220,26 @@ $styleG:rgba(255,140,100,1);
 		width: 110px;
 		overflow: hidden;
 		.info {
-			background-color:$bk01;
+			background-color:$black;
 			display:block;
 			position:absolute;
 			width: 100%;
 			padding:4px 0;
-			z-index: 3;
+			z-index: index($z, info);
 			bottom:-30px;
 			i {
-				color:$wht01;
+				color:$wht;
 				font:normal 1.1rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 				padding: 0 0 0 4px;
 			}
 			span {
-				color:$wht01;
+				color:$wht;
 				font:normal 1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 				font-weight: 600;
 			}
 		}
 		.mark {
-			background-color:$bk01;
+			background-color:$black;
 			display: block;
 			height: 110px;
 			left: 0;
@@ -306,14 +248,13 @@ $styleG:rgba(255,140,100,1);
 			top: 0;
 			transition: all 0.3s ease-in-out 0s;
 			width: 110px;
-			z-index: 2;
+			z-index: index($z, mark);
 		}
 		img {
 			border: 0 none;
 			height: 110px;
 			position:absolute;
 			width: 110px;
-			z-index: 1;
 		}
 		&:hover {
 			.info {
@@ -348,13 +289,12 @@ $styleG:rgba(255,140,100,1);
 			position: relative;
 		}
 		.backBarBg{
-			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht01));
+			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht));
 			border-top: 2px solid $styleD;
 			bottom:0;
 			height: 41px;
 			position: absolute;
 			width: 100%;
-			z-index: 1;
 		}
 		.infoBlock{
 			@include border-radius(10px);
@@ -367,8 +307,8 @@ $styleG:rgba(255,140,100,1);
 			min-width:150px;
 			position:absolute;
 			top:1px;
-			z-index:9;
-			box-shadow:1px 1px 2px rgba($bk01,0.6);
+			z-index: index($z, infoBlock);
+			box-shadow:1px 1px 2px rgba($black,0.6);
 			.cornerL{
 				position: absolute;
 				left:-11px;
@@ -390,19 +330,19 @@ $styleG:rgba(255,140,100,1);
 				border-right:11px solid transparent;
 			}
 			.infoCont{
-				color:$wht01;
+				color:$wht;
 				.floor{
 					color:$styleD;//cc0000
 					font:bold 1.6rem/2.2rem Arial;
 					padding-left:17px;
 					position:absolute;
 					top:9px;
-					z-index:9;
+					z-index: index($z, floor);
 				}
 				.title{
 					padding-top:10px;
 					margin:0 12px 0 46px;
-					color:$wht01;
+					color:$wht;
 					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 					}
 				
@@ -415,9 +355,9 @@ $styleG:rgba(255,140,100,1);
 				    background:transparent;
 				    top:4px;
 				    left:10px;
-				    z-index:2;
+				    z-index: index($z, eyeIcon);
 					.downArr {
-					    border-top: 12px $wht01 solid;
+					    border-top: 12px $wht solid;
 					    border-right: 8px transparent solid;
 					    border-bottom:0px transparent solid;
 					    border-left: 8px transparent solid;
@@ -427,7 +367,7 @@ $styleG:rgba(255,140,100,1);
 					    &:after {
 							@include border-radius(28px);
 						    @include transform(rotate(0deg));
-							background-color: $wht01;
+							background-color: $wht;
 						    content: "";
 						    display: block;
 						    height:28px;
@@ -446,9 +386,9 @@ $styleG:rgba(255,140,100,1);
 		    right:10px;
 		    text-align: right;
 		    width: 500px;
-		    z-index:9;
+		    z-index: index($z, rightmore);
 		    a{
-		    	color:rgba($bk01,0.6);
+		    	color:rgba($black,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -460,7 +400,7 @@ $styleG:rgba(255,140,100,1);
 	}
 
 	.boxdiv{
-	    background-color:$wht01;
+	    background-color:$wht;
 	    border:none;
 	    overflow: hidden;
 	    position: relative;
@@ -523,7 +463,7 @@ $styleG:rgba(255,140,100,1);
 					    position: relative;
 					    width: 225px;
 					    em {
-					    	background-color: $wht01;
+					    	background-color: $wht;
 						    border: 1px solid rgb(201, 88, 92);
 						    border-radius: 5px;
 						    border-bottom-left-radius:0;
@@ -535,7 +475,7 @@ $styleG:rgba(255,140,100,1);
 						    margin:-16px 0 0 0;
 						    padding: 1px 5px 0;
 						    position: absolute;
-						    z-index:9;
+						    z-index: index($z, em);
 						}
 						.xj {
 						    color: $redPrice;
@@ -580,13 +520,12 @@ $styleG:rgba(255,140,100,1);
 			position: relative;
 		}
 		.backBarBg{
-			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht01));
+			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht));
 			border-top: 2px solid $styleE;
 			bottom:0;
 			height: 41px;
 			position: absolute;
 			width: 100%;
-			z-index: 1;
 		}
 		.infoBlock{
 			@include border-radius(10px);
@@ -599,8 +538,8 @@ $styleG:rgba(255,140,100,1);
 			min-width:150px;
 			position:absolute;
 			top:1px;
-			z-index:9;
-			box-shadow:1px 1px 2px rgba($bk01,0.6);
+			z-index: index($z, infoBlock);
+			box-shadow:1px 1px 2px rgba($black,0.6);
 			.cornerL{
 				position: absolute;
 				left:-11px;
@@ -622,19 +561,19 @@ $styleG:rgba(255,140,100,1);
 				border-right:11px solid transparent;
 			}
 			.infoCont{
-				color:$wht01;
+				color:$wht;
 				.floor{
 					color:$styleE;//cc0000
 					font:bold 1.6rem/2.2rem Arial;
 					padding-left:17px;
 					position:absolute;
 					top:9px;
-					z-index:9;
+					z-index: index($z, floor);
 				}
 				.title{
 					padding-top:10px;
 					margin:0 12px 0 46px;
-					color:$wht01;
+					color:$wht;
 					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;;
 					}
 				
@@ -647,9 +586,9 @@ $styleG:rgba(255,140,100,1);
 				    background:transparent;
 				    top:4px;
 				    left:10px;
-				    z-index:2;
+				    z-index: index($z, eyeIcon);
 					.downArr {
-					    border-top: 12px $wht01 solid;
+					    border-top: 12px $wht solid;
 					    border-right: 8px transparent solid;
 					    border-bottom:0px transparent solid;
 					    border-left: 8px transparent solid;
@@ -659,7 +598,7 @@ $styleG:rgba(255,140,100,1);
 					    &:after {
 							@include border-radius(28px);
 						    @include transform(rotate(0deg));
-							background-color: $wht01;
+							background-color: $wht;
 						    content: "";
 						    display: block;
 						    height:28px;
@@ -678,9 +617,9 @@ $styleG:rgba(255,140,100,1);
 		    right:10px;
 		    text-align: right;
 		    width: 500px;
-		    z-index:9;
+		    z-index: index($z, rightmore);
 		    a{
-		    	color:rgba($bk01,0.6);
+		    	color:rgba($black,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -698,11 +637,11 @@ $styleG:rgba(255,140,100,1);
 		    width: 988px;
 		    ul.slnav {
 			    min-height: 395px;
-			    z-index:9;
+			    z-index: index($z, slnav);
 			    display:block;
 			    position:absolute;
 			    li:hover .boxli{
-			    	z-index:9;
+			    	z-index:index($z, boxli);
 			    	display:block;
 			    }
 			    li{
@@ -727,32 +666,31 @@ $styleG:rgba(255,140,100,1);
 				    }
 				    &.slactive .tab , .tab:hover{
 						margin-left:0;
-						background:$bk01;
+						background:$black;
 						border-bottom:none;
 						span {
 						    background-image: url("../images/star.png");
 						    background-position: left center;
 						    background-repeat: no-repeat;
 						    padding-left: 20px;
-						    color:$wht01;
+						    color:$wht;
 						    font-size:1.8rem;
 						}
 					}
 
 					&.slactive .boxli{
-						z-index:9;
+						z-index: index($z, boxli);
 						display:block;
 					}
 
 					.boxli {
 					    border: 1px solid $gry01;
-					    z-index:1;
 					    display:none;
 					    position:absolute;
 					    top:31px;
 					    width:986px;
 						.notediv {
-						    background-color:$wht01;
+						    background-color:$wht;
 						    position: relative;
 						    marquee {
 								color: rgb(80, 80, 80);
@@ -771,7 +709,7 @@ $styleG:rgba(255,140,100,1);
 							}
 						}
 						.itemul {
-						    background-color:$wht01;
+						    background-color:$wht;
 						    display: block;
 						    overflow: hidden;
 						    width: 980px;
@@ -870,13 +808,12 @@ $styleG:rgba(255,140,100,1);
 			position: relative;
 		}
 		.backBarBg{
-			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht01));
+			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht));
 			border-top: 2px solid $styleF;
 			bottom:0;
 			height: 41px;
 			position: absolute;
 			width: 100%;
-			z-index: 1;
 		}
 		.infoBlock{
 			@include border-radius(10px);
@@ -889,8 +826,8 @@ $styleG:rgba(255,140,100,1);
 			min-width:150px;
 			position:absolute;
 			top:1px;
-			z-index:9;
-			box-shadow:1px 1px 2px rgba($bk01,0.6);
+			z-index: index($z, infoBlock);
+			box-shadow:1px 1px 2px rgba($black,0.6);
 			.cornerL{
 				position: absolute;
 				left:-11px;
@@ -912,19 +849,19 @@ $styleG:rgba(255,140,100,1);
 				border-right:11px solid transparent;
 			}
 			.infoCont{
-				color:$wht01;
+				color:$wht;
 				.floor{
 					color:$styleF;
 					font:bold 1.6rem/2.2rem Arial;
 					padding-left:17px;
 					position:absolute;
 					top:9px;
-					z-index:9;
+					z-index: index($z, floor);
 				}
 				.title{
 					padding-top:10px;
 					margin:0 12px 0 46px;
-					color:$wht01;
+					color:$wht;
 					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;;
 					}
 				
@@ -937,9 +874,9 @@ $styleG:rgba(255,140,100,1);
 				    background:transparent;
 				    top:4px;
 				    left:10px;
-				    z-index:2;
+				    z-index: index($z, eyeIcon);
 					.downArr {
-					    border-top: 12px $wht01 solid;
+					    border-top: 12px $wht solid;
 					    border-right: 8px transparent solid;
 					    border-bottom:0px transparent solid;
 					    border-left: 8px transparent solid;
@@ -949,7 +886,7 @@ $styleG:rgba(255,140,100,1);
 					    &:after {
 							@include border-radius(28px);
 						    @include transform(rotate(0deg));
-							background-color: $wht01;
+							background-color: $wht;
 						    content: "";
 						    display: block;
 						    height:28px;
@@ -968,9 +905,9 @@ $styleG:rgba(255,140,100,1);
 		    right:10px;
 		    text-align: right;
 		    width: 500px;
-		    z-index:9;
+		    z-index: index($z, rightmore);
 		    a{
-		    	color:rgba($bk01,0.6);
+		    	color:rgba($black,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -982,14 +919,14 @@ $styleG:rgba(255,140,100,1);
 	}
 
 	.boxdiv{
-	    background-color: $wht01;
+	    background-color: $wht;
 	    border: 1px solid $gry01;
 	    padding:0 0 5px 0;
 	    ul {
 		    display: block;
 		    overflow: hidden;
 		    li {
-			    border: 1px solid $wht01;
+			    border: 1px solid $wht;
 			    display: block;
 			    float: left;
 			    margin: 7px;
@@ -1053,7 +990,7 @@ $styleG:rgba(255,140,100,1);
 					    top: 26px;
 					    transition: height 0.3s ease-in-out 0s;
 					    width: 100%;
-					    z-index: 99;
+					    z-index: index($z, info);
 					    .price {
 					    	color: $redPrice;
 							font-family: arial;
@@ -1120,13 +1057,12 @@ $styleG:rgba(255,140,100,1);
 			position: relative;
 		}
 		.backBarBg{
-			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht01));
+			@include background-image(linear-gradient(top,#eeeeee,rgba(#eeeeee,.5),$wht));
 			border-top: 2px solid $styleG;
 			bottom:0;
 			height: 41px;
 			position: absolute;
 			width: 100%;
-			z-index: 1;
 		}
 		.infoBlock{
 			@include border-radius(10px);
@@ -1139,8 +1075,8 @@ $styleG:rgba(255,140,100,1);
 			min-width:150px;
 			position:absolute;
 			top:1px;
-			z-index:9;
-			box-shadow:1px 1px 2px rgba($bk01,0.6);
+			z-index: index($z, infoBlock);
+			box-shadow:1px 1px 2px rgba($black,0.6);
 			.cornerL{
 				position: absolute;
 				left:-11px;
@@ -1162,19 +1098,19 @@ $styleG:rgba(255,140,100,1);
 				border-right:11px solid transparent;
 			}
 			.infoCont{
-				color:$wht01;
+				color:$wht;
 				.floor{
 					color:$styleG;
 					font:bold 1.6rem/2.2rem Arial;
 					padding-left:17px;
 					position:absolute;
 					top:9px;
-					z-index:9;
+					z-index: index($z, floor);
 				}
 				.title{
 					padding-top:10px;
 					margin:0 12px 0 46px;
-					color:$wht01;
+					color:$wht;
 					font:bold 2rem/2.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;;
 					}
 				
@@ -1187,9 +1123,9 @@ $styleG:rgba(255,140,100,1);
 				    background:transparent;
 				    top:4px;
 				    left:10px;
-				    z-index:2;
+				    z-index: index($z, eyeIcon);
 					.downArr {
-					    border-top: 12px $wht01 solid;
+					    border-top: 12px $wht solid;
 					    border-right: 8px transparent solid;
 					    border-bottom:0px transparent solid;
 					    border-left: 8px transparent solid;
@@ -1199,7 +1135,7 @@ $styleG:rgba(255,140,100,1);
 					    &:after {
 							@include border-radius(28px);
 						    @include transform(rotate(0deg));
-							background-color: $wht01;
+							background-color: $wht;
 						    content: "";
 						    display: block;
 						    height:28px;
@@ -1218,9 +1154,9 @@ $styleG:rgba(255,140,100,1);
 		    right:10px;
 		    text-align: right;
 		    width: 500px;
-		    z-index:9;
+		    z-index: index($z, rightmore);
 		    a{
-		    	color:rgba($bk01,0.6);
+		    	color:rgba($black,0.6);
 		    	font:1.5rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
 		    	padding-right:4px;
 		    	&:hover{
@@ -1260,12 +1196,6 @@ $styleG:rgba(255,140,100,1);
 				    	display: block;
 					    transition: all 0.3s ease-in-out 0s;
 					}
-					/*a:hover{
-						img {
-					    	opacity:0.8;
-					    	transition: all 0.3s ease-in-out 0s;
-						}
-					}*/
 					.info {
 					    background:rgba(252, 255, 255, 0.9);
 						border-top-left-radius:6px;
@@ -1307,7 +1237,6 @@ $styleG:rgba(255,140,100,1);
 				}
 				.actions {
 					position: relative;
-					z-index: 1;
 					.dg-sns-widget {
 						padding: 0 10px 5px;
 					}
@@ -1357,12 +1286,6 @@ li.water-item:hover .label{
 							background: $red01;
 							text-shadow: 0 1px 0 darken($red01,30%);
 						}
-						/*&:before {
-					        @include corner("tl", 3px, 30px, $red01);
-					    }
-					    &:after {
-					        @include corner("tr", 3px, 30px, $red01);
-					    }*/
 					}
 .label {
 	height: 30px;
@@ -1370,6 +1293,7 @@ li.water-item:hover .label{
   	right: -3px;
   	top: -7px;
   	z-index: 9;
+  	z-index: index($z, label);
 	.back-side {
     	@include corner("br", 3px, 3px, lighten($gry02,20%));
     	position: absolute;
@@ -1380,7 +1304,7 @@ li.water-item:hover .label{
   		background: darken($gry02,30%);
   		border-bottom-left-radius:6px;
   		border-bottom-right-radius:6px;
-  		box-shadow:0 1px 1px rgba($bk01,0.6);
+  		box-shadow:0 1px 1px rgba($black,0.6);
   		color: lighten(yellow,40%);
   		font:normal 1.1rem/1.2rem "微軟正黑體","蘋果儷中黑","新細明體",Arial;
   		padding: 4px 8px 4px;
@@ -1393,15 +1317,5 @@ li.water-item:hover .label{
 	        display: block;
 	        position: absolute; 
 	    }
-
-	    /*&:before {
-	        left: 0; 
-	        @include corner("tl", 3px, 30px, darken($gry02,30%));
-	    }
-
-	    &:after {
-	        right: 0; 
-	        @include corner("tr", 3px, 30px, darken($gry02,30%));
-	    }*/
 	}
 }

@@ -12,6 +12,10 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+ol, ul {
+  list-style: none outside none;
+}
+
 .clearfix:after {
   clear: both;
   content: "";
@@ -192,7 +196,7 @@ body {
   text-decoration: none;
   top: 0;
   width: 100%;
-  z-index: 999;
+  z-index: 17;
   /*------ //搜索框 ---------*/
 }
 .shopMB .shopNav {
@@ -219,7 +223,7 @@ body {
   float: left;
   height: 36px;
   position: relative;
-  z-index: 9;
+  z-index: 7;
 }
 .shopMB .sStore > a {
   background: #a00052 url(../images/demo/shopTop.png) repeat-x;
@@ -286,7 +290,7 @@ body {
   top: 36px;
   left: -1px;
   width: 390px;
-  z-index: 999;
+  z-index: 18;
 }
 .shopMB .search .hotwords li:hover, .shopMB .search .hotwords li:hover a, .shopMB .search .hotwords li a:hover {
   text-decoration: none;
@@ -365,7 +369,7 @@ body {
   color: black;
 }
 #wrapInner .stoTito .desc li a:hover {
-  color: #900000;
+  color: #870000;
   text-decoration: underline;
 }
 #wrapInner .stoTop {
@@ -382,7 +386,7 @@ body {
   padding-bottom: 6px;
 }
 #wrapInner .stoTop .HotSalePromo .hd h3 {
-  border-left: 8px solid #c30000;
+  border-left: 8px solid #ba0000;
   padding-left: 10px;
   height: 18px;
   margin-top: 6px;
@@ -452,7 +456,7 @@ body {
   width: 90%;
 }
 #wrapInner .stoTop .HotSalePromo .hd > ul li .secTabCon .Gd-prc {
-  color: #c30000;
+  color: #ba0000;
   display: inline-block;
   font: normal 1.2rem/2rem Arial,sans-serif;
   padding-top: 6px;
@@ -513,7 +517,7 @@ body {
   padding-top: 2px;
 }
 #wrapInner .stoTop .HotSalePromo .bd ul li a .Gd-prc {
-  color: #c30000;
+  color: #ba0000;
   display: inline-block;
   font: normal 1.2rem/2rem Arial,sans-serif;
   padding-top: 4px;
@@ -537,12 +541,12 @@ body {
 
 .product-category-bar {
   position: relative;
-  z-index: 99;
+  z-index: 15;
 }
 
 .section-title {
   position: relative;
-  z-index: 99;
+  z-index: 14;
 }
 .section-title .blockTitle {
   background: #666666;
@@ -577,7 +581,7 @@ body {
   position: absolute;
   top: 0;
   width: 220px;
-  z-index: 99;
+  z-index: 13;
 }
 .section-title .section-lists-more a {
   display: block;
@@ -605,7 +609,7 @@ body {
   line-height: 3.2rem;
 }
 .section-sort li a:hover {
-  color: #900000;
+  color: #870000;
 }
 .section-sort li:before {
   margin-right: 5px;
@@ -753,7 +757,7 @@ body {
   width: 180px;
   white-space: nowrap;
   word-wrap: break-word;
-  z-index: 9;
+  z-index: 4;
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
@@ -818,7 +822,7 @@ body {
   color: #262626;
 }
 #styleA .section-lists a:hover {
-  color: #900000;
+  color: #870000;
 }
 #styleA .section-lists a.cate-level-1 {
   color: white;
@@ -858,13 +862,13 @@ body {
   background-attachment: fixed;
 }
 #styleB .section-lists {
-  background: #ffecec;
+  background: #fff7f7;
 }
 #styleB .section-lists a {
   color: #262626;
 }
 #styleB .section-lists a:hover {
-  color: #900000;
+  color: #870000;
 }
 #styleB .section-lists a.cate-level-1 {
   color: white;
@@ -909,7 +913,7 @@ body {
   color: #262626;
 }
 #styleC .section-lists a:hover {
-  color: #900000;
+  color: #870000;
 }
 #styleC .section-lists a.cate-level-1 {
   color: white;
@@ -946,16 +950,16 @@ body {
 }
 
 #styleD #wrapMain {
-  background: #fff;
+  background: white;
 }
 #styleD .section-lists {
-  background: #fffde1;
+  background: rgba(255, 255, 0, 0.1);
 }
 #styleD .section-lists a {
   color: #262626;
 }
 #styleD .section-lists a:hover {
-  color: #900000;
+  color: #b30000;
 }
 #styleD .section-lists a.cate-level-1 {
   color: white;

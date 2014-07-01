@@ -10,6 +10,7 @@
 // Basic Style
 html{font-size:62.5%;/*10 ÷ 16 × 100% = 62.5%*/font-family:"微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;}
 body{font-size:1.2em;font-size:1.2rem /*1.4 × 10px = 14px */;-webkit-text-size-adjust:none;}
+ol, ul {list-style: none outside none;}
 .clearfix:after {
 	clear: both;
 	content: "";
@@ -24,19 +25,27 @@ $font:1.2rem; //全域字型大小
 $lineH:1.8em; //全域行距
 $fontst:"蘋果儷中黑","微軟正黑體","新細明體",Arial,sans-serif; //全域字型
 
-
 $navBg:rgba(224,0,97,1);
 $spcStrBg:rgba(255,244,228,1);
 $spcNavTxt:rgba(255,0,125,1);
+
 $black:rgba(0,0,0,1);
-$gray01:rgba(51,51,51,1); //#333
-$red01:rgba(170,0,0,1); //#a00
+$brown01:rgba(106,93,78,1);
+$brown02:rgba(106,56,0,1);
+$gry01:#e9e9e9;
+$gry02:#333333;
+$gry03:#f8f8f8;
+$red01:#cc0000;
+$red02:#a00000;
+$redPrice:#c90e12;
 $wht:rgba(255,255,255,1);
 $yellow:rgba(255,255,0,1);
 
-$brown01:rgba(106,93,78,1);
-$brown02:rgba(106,56,0,1);
-
+$styleC:rgba(192,100,100,1);
+$styleD:rgba(255,100,128,1);
+$styleE:rgba(206,168,78,1);
+$styleF:rgba(255,180,50,1);
+$styleG:rgba(255,140,100,1);
 
 //Arrow Mixin
 /* *
@@ -47,6 +56,39 @@ $mainColor: #94c6fd;
 $directions: top, right, bottom, left;
 /* eo:SCSS Variables */
 
+// Mixins
+@mixin corner($position, $sizeX, $sizeY, $color){
+    border-style: solid;
+    border-width: $sizeX $sizeY $sizeX $sizeY;
+    @if $position == "tl" {
+    border-color: 
+      $color
+      transparent
+      transparent
+      $color;
+  }
+  @if $position == "tr" {
+  border-color: 
+    $color
+    $color
+    transparent
+    transparent;
+  }
+  @if $position == "br" {
+  border-color: 
+    transparent
+      $color
+      $color
+      transparent;
+  }
+    @if $position == "bl" {
+    border-color: 
+      transparent
+        transparent
+        $color
+        $color;
+    }
+}
 
 /* *
  * SCSS Mixins
