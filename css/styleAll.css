@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo&subset=latin,cyrillic,latin-ext);
+@import url(../css/font-awesome-4.1.0/css/font-awesome.min.css);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -56,26 +58,185 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 html {
   font-size: 62.5%;
+  /*10 ÷ 16 × 100% = 62.5%*/
   font-family: "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 }
 
 body {
+  font-size: 1.2em;
   font-size: 1.2rem;
+  -webkit-text-size-adjust: none;
 }
 
 ol, ul {
   list-style: none outside none;
 }
 
-a {
-  text-decoration: none;
-}
-
 .clearfix:after {
   clear: both;
-  content: " ";
+  content: "";
   display: block;
   height: 0;
+  visibility: hidden;
+}
+
+/* *
+ * SCSS Variables
+ * */
+/* eo:SCSS Variables */
+/* *
+ * SCSS Mixins
+ * */
+/* eo:SCSS Mixins */
+/* *
+ * SCSS Functions
+ * */
+.arrow-top {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-bottom-color: #94c6fd;
+}
+
+.arrow-right {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+}
+
+.arrow-bottom {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-top-color: #94c6fd;
+}
+
+.arrow-left {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-right-color: #94c6fd;
+}
+
+/* eo:SCSS Functions */
+.arrow-default {
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  border-top-color: #94c6fd;
+}
+
+#arrows {
+  *zoom: 1;
+  list-style: none;
+}
+#arrows:before, #arrows:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+#arrows:after {
+  clear: both;
+}
+#arrows li {
+  float: left;
+  width: calc(100%/4);
+}
+#arrows li.title {
+  font-size: 2em;
+  margin: 0 0 25px;
+  width: 100%;
+}
+#arrows li.title ~ .title {
+  margin-top: 50px;
+}
+#arrows li .button-cta {
+  background-color: #94c6fd;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  position: relative;
+  text-shadow: 0 1px 1px #499efc;
+  width: calc(100% - (30px + 5px));
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+}
+#arrows li .button-cta:hover {
+  color: white;
+}
+#arrows li .button-cta:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 15px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+#arrows li .button-w-cta {
+  background-color: #94c6fd;
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  display: block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 5px;
+  position: relative;
+  text-shadow: 0 1px 1px #499efc;
+  width: calc(100% - (30px + 5px));
+  -webkit-transition: color 500ms;
+  transition: color 500ms;
+  padding-right: 35px;
+}
+#arrows li .button-w-cta:hover {
+  color: white;
+}
+#arrows li .button-w-cta:before {
+  content: '';
+  background: white;
+  border-radius: 10px;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+#arrows li .button-w-cta:after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-width: 8px;
+  border-style: solid;
+  border-left-color: #94c6fd;
+  position: absolute;
+  right: 1px;
+  top: 7px;
 }
 
 #slowLife {
@@ -106,7 +267,6 @@ a {
   height: 41px;
   position: absolute;
   width: 100%;
-  z-index: 1;
 }
 #itemC .styleC .infoBlock {
   -webkit-border-radius: 10px;
@@ -123,7 +283,7 @@ a {
   min-width: 150px;
   position: absolute;
   top: 1px;
-  z-index: 9;
+  z-index: 12;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 #itemC .styleC .infoBlock .cornerL {
@@ -155,7 +315,7 @@ a {
   padding-left: 17px;
   position: absolute;
   top: 9px;
-  z-index: 9;
+  z-index: 5;
 }
 #itemC .styleC .infoBlock .infoCont .title {
   padding-top: 10px;
@@ -209,7 +369,7 @@ a {
   right: 10px;
   text-align: right;
   width: 500px;
-  z-index: 9;
+  z-index: 11;
 }
 #itemC .styleC .rightmore a {
   color: rgba(0, 0, 0, 0.6);
@@ -283,7 +443,6 @@ a {
 }
 #itemC .carCon li {
   position: absolute;
-  z-index: 1;
 }
 #itemC .carCon li img {
   height: 225px;
@@ -308,7 +467,7 @@ a {
   position: absolute;
   width: 100%;
   padding: 4px 0;
-  z-index: 3;
+  z-index: 16;
   bottom: -30px;
 }
 #itemC .carLeftNav li .info i, #itemC .carRightNav li .info i {
@@ -331,14 +490,13 @@ a {
   top: 0;
   transition: all 0.3s ease-in-out 0s;
   width: 110px;
-  z-index: 2;
+  z-index: 3;
 }
 #itemC .carLeftNav li img, #itemC .carRightNav li img {
   border: 0 none;
   height: 110px;
   position: absolute;
   width: 110px;
-  z-index: 1;
 }
 #itemC .carLeftNav li:hover .info, #itemC .carRightNav li:hover .info {
   opacity: 0.75;
@@ -376,7 +534,6 @@ a {
   height: 41px;
   position: absolute;
   width: 100%;
-  z-index: 1;
 }
 #itemD .styleD .infoBlock {
   -webkit-border-radius: 10px;
@@ -393,7 +550,7 @@ a {
   min-width: 150px;
   position: absolute;
   top: 1px;
-  z-index: 9;
+  z-index: 12;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 #itemD .styleD .infoBlock .cornerL {
@@ -425,7 +582,7 @@ a {
   padding-left: 17px;
   position: absolute;
   top: 9px;
-  z-index: 9;
+  z-index: 5;
 }
 #itemD .styleD .infoBlock .infoCont .title {
   padding-top: 10px;
@@ -479,7 +636,7 @@ a {
   right: 10px;
   text-align: right;
   width: 500px;
-  z-index: 9;
+  z-index: 11;
 }
 #itemD .styleD .rightmore a {
   color: rgba(0, 0, 0, 0.6);
@@ -614,7 +771,6 @@ a {
   height: 41px;
   position: absolute;
   width: 100%;
-  z-index: 1;
 }
 #itemE .styleE .infoBlock {
   -webkit-border-radius: 10px;
@@ -631,7 +787,7 @@ a {
   min-width: 150px;
   position: absolute;
   top: 1px;
-  z-index: 9;
+  z-index: 12;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 #itemE .styleE .infoBlock .cornerL {
@@ -663,7 +819,7 @@ a {
   padding-left: 17px;
   position: absolute;
   top: 9px;
-  z-index: 9;
+  z-index: 5;
 }
 #itemE .styleE .infoBlock .infoCont .title {
   padding-top: 10px;
@@ -717,7 +873,7 @@ a {
   right: 10px;
   text-align: right;
   width: 500px;
-  z-index: 9;
+  z-index: 11;
 }
 #itemE .styleE .rightmore a {
   color: rgba(0, 0, 0, 0.6);
@@ -737,12 +893,12 @@ a {
 }
 #itemE .boxdiv .sli ul.slnav {
   min-height: 395px;
-  z-index: 9;
+  z-index: 8;
   display: block;
   position: absolute;
 }
 #itemE .boxdiv .sli ul.slnav li:hover .boxli {
-  z-index: 9;
+  z-index: 10;
   display: block;
 }
 #itemE .boxdiv .sli ul.slnav li {
@@ -780,12 +936,11 @@ a {
   font-size: 1.8rem;
 }
 #itemE .boxdiv .sli ul.slnav li.slactive .boxli {
-  z-index: 9;
+  z-index: 10;
   display: block;
 }
 #itemE .boxdiv .sli ul.slnav li .boxli {
   border: 1px solid #e9e9e9;
-  z-index: 1;
   display: none;
   position: absolute;
   top: 31px;
@@ -915,7 +1070,6 @@ a {
   height: 41px;
   position: absolute;
   width: 100%;
-  z-index: 1;
 }
 #itemF .styleF .infoBlock {
   -webkit-border-radius: 10px;
@@ -932,7 +1086,7 @@ a {
   min-width: 150px;
   position: absolute;
   top: 1px;
-  z-index: 9;
+  z-index: 12;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 #itemF .styleF .infoBlock .cornerL {
@@ -964,7 +1118,7 @@ a {
   padding-left: 17px;
   position: absolute;
   top: 9px;
-  z-index: 9;
+  z-index: 5;
 }
 #itemF .styleF .infoBlock .infoCont .title {
   padding-top: 10px;
@@ -1018,7 +1172,7 @@ a {
   right: 10px;
   text-align: right;
   width: 500px;
-  z-index: 9;
+  z-index: 11;
 }
 #itemF .styleF .rightmore a {
   color: rgba(0, 0, 0, 0.6);
@@ -1103,7 +1257,7 @@ a {
   top: 26px;
   transition: height 0.3s ease-in-out 0s;
   width: 100%;
-  z-index: 99;
+  z-index: 16;
 }
 #itemF .boxdiv ul li .other .info .price {
   color: #c90e12;
@@ -1173,7 +1327,6 @@ a {
   height: 41px;
   position: absolute;
   width: 100%;
-  z-index: 1;
 }
 #itemG .styleG .infoBlock {
   -webkit-border-radius: 10px;
@@ -1190,7 +1343,7 @@ a {
   min-width: 150px;
   position: absolute;
   top: 1px;
-  z-index: 9;
+  z-index: 12;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
 }
 #itemG .styleG .infoBlock .cornerL {
@@ -1222,7 +1375,7 @@ a {
   padding-left: 17px;
   position: absolute;
   top: 9px;
-  z-index: 9;
+  z-index: 5;
 }
 #itemG .styleG .infoBlock .infoCont .title {
   padding-top: 10px;
@@ -1276,7 +1429,7 @@ a {
   right: 10px;
   text-align: right;
   width: 500px;
-  z-index: 9;
+  z-index: 11;
 }
 #itemG .styleG .rightmore a {
   color: rgba(0, 0, 0, 0.6);
@@ -1312,12 +1465,6 @@ a {
   position: relative;
   width: 230px;
   overflow: hidden;
-  /*a:hover{
-  	img {
-      	opacity:0.8;
-      	transition: all 0.3s ease-in-out 0s;
-  	}
-  }*/
 }
 #itemG .boxdiv .water-col li.water-item .cover img {
   border: 0 none;
@@ -1362,7 +1509,6 @@ a {
 }
 #itemG .boxdiv .water-col li.water-item .actions {
   position: relative;
-  z-index: 1;
 }
 #itemG .boxdiv .water-col li.water-item .actions .dg-sns-widget {
   padding: 0 10px 5px;
@@ -1397,14 +1543,6 @@ a {
   margin-left: 0;
 }
 
-li.water-item:hover .label {
-  	/*&:before {
-          @include corner("tl", 3px, 30px, $red01);
-      }
-      &:after {
-          @include corner("tr", 3px, 30px, $red01);
-      }*/
-}
 li.water-item:hover .label .back-side {
   border-style: solid;
   border-width: 3px 3px 3px 3px;
@@ -1421,6 +1559,7 @@ li.water-item:hover .label .front-side {
   right: -3px;
   top: -7px;
   z-index: 9;
+  z-index: 6;
 }
 .label .back-side {
   border-style: solid;
@@ -1441,15 +1580,6 @@ li.water-item:hover .label .front-side {
   position: relative;
   text-align: center;
   text-shadow: 0 1px 0 black;
-  	    /*&:before {
-  	        left: 0; 
-  	        @include corner("tl", 3px, 30px, darken($gry02,30%));
-  	    }
-  
-  	    &:after {
-  	        right: 0; 
-  	        @include corner("tr", 3px, 30px, darken($gry02,30%));
-  	    }*/
 }
 .label .front-side:before, .label .front-side:after {
   bottom: -6px;

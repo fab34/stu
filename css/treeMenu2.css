@@ -12,6 +12,10 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+ol, ul {
+  list-style: none outside none;
+}
+
 .clearfix:after {
   clear: both;
   content: "";
@@ -262,7 +266,7 @@ ul.list label {
 
 ul.list li label:hover,
 ul.list li label:hover + ul li label {
-  color: #a50000;
+  color: #c70000;
 }
 
 ul.list ul li:before {

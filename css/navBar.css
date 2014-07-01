@@ -12,6 +12,10 @@ body {
   -webkit-text-size-adjust: none;
 }
 
+ol, ul {
+  list-style: none outside none;
+}
+
 .clearfix:after {
   clear: both;
   content: "";

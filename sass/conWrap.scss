@@ -1,4 +1,5 @@
 @import "base";
+@import "zindex";
 
 //#shopMenuBar
 .shopMB{
@@ -13,7 +14,7 @@
 	text-decoration: none;
 	top:0;
 	width:100%;
-	z-index: 999;
+	z-index: index($z, shopMB);
 	.shopNav{
 		background: transparent;
 		color: white;
@@ -39,7 +40,7 @@
 		float:left;
 		height: 36px;
 		position: relative;
-		z-index: 9;
+		z-index: index($z, sStore);
 		>a{
 			background: #a00052 url(../images/demo/shopTop.png) repeat-x;
 			border-right:1px solid lighten($navBg, 20%);
@@ -62,7 +63,7 @@
 			position:relative;
 			.searchTerm {
 				border: 3px solid #e70072;
-				color: rgba($gray01,0.8);
+				color: rgba($gry02,0.8);
 				float: left;
 				font:normal 1.5rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 			  	height: 30px;
@@ -104,7 +105,7 @@
 			top:36px;
 			left:-1px;
 			width:390px;
-			z-index:999;
+			z-index: index($z, hotwords);
 			li:hover,li:hover a,li a:hover{
 				text-decoration:none;
 				background:#ff6692;
@@ -119,11 +120,11 @@
 				line-height:28px;
 				&.hwtitle{
 					margin:0 10px;
-					color:darken($gray01, 20%);
+					color:darken($gry02, 20%);
 					border-bottom:#EFEFEF 1px solid;
 					&:hover{
 						background:#fff;
-						color:darken($gray01, 20%);
+						color:darken($gry02, 20%);
 					}
 				}
 				a{
@@ -131,7 +132,7 @@
 					line-height:28px;
 					display:block;
 					padding:0 10px;
-					color:rgba($gray01,0.8);
+					color:rgba($gry02,0.8);
 					h1{
 						font-size:13px;
 						height:28px;
@@ -162,7 +163,7 @@
     top: 0;
     width: 1008px;
     .stoTito{
-    	border-bottom:1px solid rgba($gray01,0.2);
+    	border-bottom:1px solid rgba($gry02,0.2);
     	min-height: 60px;
     	overflow: hidden;
     	position:relative;
@@ -179,7 +180,7 @@
     			a{
     				color:$black;
     				&:hover{
-    					color:darken($red01, 5%);
+    					color:darken($red02, 5%);
     					text-decoration: underline;
     				}
     			}
@@ -193,11 +194,11 @@
 			height:265px;
 			.hd {
 				    border-bottom: 1px solid lighten($black, 80%);
-				    color: $gray01;
+				    color: $gry02;
 				    position: relative;
 				    padding-bottom:6px;
 				    h3{
-				    	border-left:8px solid lighten($red01, 5%);
+				    	border-left:8px solid lighten($red02, 5%);
 				    	padding-left:10px;
 				    	height: 18px;
 				    	margin-top:6px;
@@ -211,7 +212,7 @@
 					    li {
 						    float: left;
 						    >a {
-							    background: lighten($gray01, 60%);
+							    background: lighten($gry02, 60%);
 							    display: inline-block;
 							    float: left;
 							    height: 12px;
@@ -221,7 +222,7 @@
 							    top:0px;
 							}
 							&.on a, &:hover a{
-								background: lighten($gray01, 10%);
+								background: lighten($gry02, 10%);
 							}
 							.secTabCon{
 								//border:1px solid #f00;
@@ -252,13 +253,13 @@
 									width: 43px;
 								}
 								img {
-									border: 1px solid lighten($gray01, 60%);
+									border: 1px solid lighten($gry02, 60%);
 									height: 160px;
 									width: 160px;
 									vertical-align: top;
 								}
 								.Gd-name {
-									color: $gray01;
+									color: $gry02;
 									font:normal 1.3rem/1.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 									height: 30px;
 									overflow: hidden;
@@ -266,7 +267,7 @@
 									width:90%;
 								}
 								.Gd-prc {
-									color: lighten($red01, 5%);
+									color: lighten($red02, 5%);
 									display: inline-block;
 									font:normal 1.2rem/2rem Arial,sans-serif;
 									padding-top: 6px;
@@ -295,7 +296,7 @@
 							width: 160px;
 							a {
 								position: relative;
-								color: lighten($gray01, 60%);
+								color: lighten($gry02, 60%);
 								i {
 									color: $wht;
 									font:bold 1.1rem/1.1rem Arial,sans-serif;
@@ -315,20 +316,20 @@
 									width: 43px;
 								}
 								img {
-									border: 1px solid lighten($gray01, 60%);
+									border: 1px solid lighten($gry02, 60%);
 								 	height: 156px;
 									width: 156px;
 									vertical-align: top;
 								}
 								.Gd-name {
-									color: $gray01;
+									color: $gry02;
 									font:normal 1.3rem/1.5rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 									height: 30px;
 									overflow: hidden;
 									padding-top:2px;
 								}
 								.Gd-prc {
-									color: lighten($red01, 5%);
+									color: lighten($red02, 5%);
 								 	display: inline-block;
 									font:normal 1.2rem/2rem Arial,sans-serif;
 									padding-top: 4px;
@@ -357,13 +358,13 @@
 }
 .product-category-bar {
 	position: relative;
-	z-index: 99;
+	z-index: index($z, product-category-bar);
 }
 .section-title {
 	position: relative;
-	z-index: 99;
+	z-index: index($z, section-title);
 	.blockTitle {
-		background:lighten($gray01, 20%); //defaul
+		background:lighten($gry02, 20%); //defaul
 		color:$wht;
 		display: block;
 		font:normal 1.6rem/30px "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
@@ -372,7 +373,7 @@
 		text-indent: 10px;
 	}
 	.more {
-		color: lighten($gray01, 60%);
+		color: lighten($gry02, 60%);
 		cursor: pointer;
 		font:normal 1.2rem/1.9rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 		padding: 7px 7px 0 0;
@@ -395,17 +396,17 @@
 		position: absolute;
 		top: 0;
 		width: 220px;
-		z-index: 99;
+		z-index: index($z, section-lists-more);
 		a {
 			display: block;
-			color: lighten($gray01, 10%);
+			color: lighten($gry02, 10%);
 			font:normal 1.2rem/2.6rem "微軟正黑體","蘋果儷中黑","新細明體",Arial,sans-serif;
 			background-repeat: no-repeat;
 			border-bottom: 1px dotted rgb(219, 219, 219);
 			padding: 0 10px;
 			text-decoration: none;
 			&:hover{
-				background:lighten($gray01, 75%);
+				background:lighten($gry02, 75%);
 				color:$black;
 			}
 		}
@@ -419,10 +420,10 @@
 		display:inline-block;
 		height:3.2rem;
 		a{
-			color: $gray01;
+			color: $gry02;
 			line-height: 3.2rem;
 			&:hover{
-				color:darken($red01, 5%);
+				color:darken($red02, 5%);
 			}
 		}
 		&:before {
@@ -481,7 +482,7 @@
 
 
 .blockTitle {
-	background:lighten($gray01, 10%);
+	background:lighten($gry02, 10%);
 }
 .section-lists{
 	padding-bottom:10px;
@@ -560,7 +561,7 @@
 				width:180px;
 				white-space : nowrap;
 				word-wrap: break-word;
-				z-index: 9;
+				z-index: index($z, sSPP-name);
 				text-overflow:ellipsis;
 				-o-text-overflow:ellipsis;
 				text-overflow:ellipsis;
@@ -629,11 +630,11 @@
 		//background: url(../images/demo/stoTitoA.png) no-repeat;
 	}
 	.section-lists{
-		background:lighten($gray01, 75%);
+		background:lighten($gry02, 75%);
 		a {
-			color: darken($gray01, 5%);
+			color: darken($gry02, 5%);
 			&:hover{
-				color:darken($red01, 5%);
+				color:darken($red02, 5%);
 			}
 		}
 		a.cate-level-1 {
@@ -674,11 +675,11 @@
 		//background: url(../images/demo/stoTitoB.png) no-repeat;
 	}
 	.section-lists{
-		background:lighten($red01, 63%);
+		background:lighten($red02, 67%);
 		a {
-			color: darken($gray01, 5%);
+			color: darken($gry02, 5%);
 			&:hover{
-				color:darken($red01, 5%);
+				color:darken($red02, 5%);
 			}
 		}
 		a.cate-level-1 {
@@ -722,9 +723,9 @@
 	.section-lists{
 		background:#d5cfc8;
 		a {
-			color: darken($gray01, 5%);
+			color: darken($gry02, 5%);
 			&:hover{
-				color:darken($red01, 5%);
+				color:darken($red02, 5%);
 			}
 		}
 		a.cate-level-1 {
@@ -761,15 +762,15 @@
 	#wrapMain{ //#style background color
 		//background: url(../images/demo/bgStyleB.png) repeat;
 		//background-attachment:fixed;
-		background:#fff;
+		background:$wht;
 	}
 	.stoTito{ //style main Title Img
 		//background: url(../images/demo/stoTitoB.png) no-repeat;
 	}
 	.section-lists{
-		background:#fffde1;
+		background:rgba($yellow,0.1);
 		a {
-			color: darken($gray01, 5%);
+			color: darken($gry02, 5%);
 			&:hover{
 				color:darken($red01, 5%);
 			}
